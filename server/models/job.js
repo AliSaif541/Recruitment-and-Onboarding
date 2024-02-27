@@ -11,11 +11,11 @@ const userSchema = new mongoose.Schema({
          required: true
         },
     salary: {
-        type: Number,
+        type: String,
          required: true
         },
     job_type: {
-        type: Number,
+        type: String,
          required: true
         },
     location: {
