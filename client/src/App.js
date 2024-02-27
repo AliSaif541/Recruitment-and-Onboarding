@@ -1,10 +1,15 @@
 import './App.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Careers from './pages/careers'
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/careers" element={<Careers />} />
+		  </Routes>
+    </BrowserRouter>
   );
 }
 
