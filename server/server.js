@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const jobRoutes = require("./routes/job");
 const HRRoutes = require("./routes/hr");
+const applicantRoutes = require("./routes/jobApplicant");
 
 const app = express();
 app.use(express.json());
@@ -21,5 +22,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/recruitment")
 
 app.use("/api/job", jobRoutes);
 app.use("/api/hr", HRRoutes);
+app.use("/api/jobApplicant", applicantRoutes);
 
 module.exports = app;

@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 
 function JobCard({ _id, name, company, salary, location, job_type, description, index, setCurrentJob }) {
   const handleClick = () => {
-    setCurrentJob([_id, name, company, salary, location, job_type, description]);
+    setCurrentJob({
+      _id,
+      name,
+      company,
+      salary,
+      location,
+      job_type,
+      description
+    });
   };
   
   return (

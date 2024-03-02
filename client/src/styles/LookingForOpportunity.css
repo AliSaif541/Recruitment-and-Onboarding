@@ -1,0 +1,235 @@
+.contact {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: inherit;
+  }
+  
+  .looking-for-a,
+  .lorem-ipsum-dolor1 {
+    margin: 0;
+    width: 563px;
+    position: relative;
+    font-weight: 400;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  
+  .looking-for-a {
+    height: 90px;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-family: inherit;
+  }
+  
+  .lorem-ipsum-dolor1 {
+    height: 100px;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    color: #000;
+  }
+  
+  .contact-parent,
+  .looking-for-a-new-opportunity-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .looking-for-a-new-opportunity-parent {
+    gap: 35px 0;
+    font-size: 42px;
+    color: #132745;
+    font-family: "Archivo Black";
+  }
+  
+  .contact-parent {
+    gap: 41px 0;
+    min-width: 563px;
+    max-width: 100%;
+  }
+  
+  .full-name {
+    margin: 0;
+    width: 192px;
+    position: relative;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-family: Manrope;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .text {
+    border: 1px solid #dcdcdc;
+    outline: 0;
+    background-color: #fff;
+    align-self: stretch;
+    height: 51px;
+    position: relative;
+    border-radius: 11px;
+    box-sizing: border-box;
+    min-width: 250px;
+    max-width: 500px;
+  }
+  
+  .materialsymbolsarrowforward,
+  .submit {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .materialsymbolsarrowforward {
+    flex: 1;
+    flex-direction: column;
+    gap: 12px 0;
+  }
+  
+  .submit {
+    align-self: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  
+  .contact-number {
+    margin: 0;
+    width: 308px;
+    position: relative;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-family: Manrope;
+    color: #000;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .text1 {
+    border: 1px solid #dcdcdc;
+    outline: 0;
+    background-color: #fff;
+    align-self: stretch;
+    height: 51px;
+    position: relative;
+    border-radius: 11px;
+    box-sizing: border-box;
+    min-width: 250px;
+    max-width: 500px;
+  }
+  
+  .contact-number-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px 0;
+  }
+  
+  .frame-item {
+    height: 70px;
+    width: 208px;
+    position: relative;
+    background-color: #7cd3d2;
+    display: none;
+  }
+  
+  .submit1 {
+    position: relative;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    color: #fff;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  .material-symbolsarrow-forward-icon {
+    height: 31px;
+    width: 31px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  
+  .rectangle-group {
+    cursor: pointer;
+    border: 0;
+    padding: 10px 23px 10px 41px;
+    background-color: #7cd3d2;
+    width: 175px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+  
+  .rectangle-group:hover {
+    background-color: #4aa19e;
+  }
+  
+  .group,
+  .group1,
+  .looking-for-opportunity1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin-left: 1.25%;
+  }
+  
+  .group1 {
+    margin: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 44px 0;
+    min-width: 421px;
+  }
+  
+  .group,
+  .looking-for-opportunity1 {
+    flex-direction: row;
+  }
+  
+  .group {
+    flex: 1;
+    gap: 0 67px;
+  }
+  
+  .looking-for-opportunity1 {
+    align-self: stretch;
+    /* padding: 0 40px 39px 9px; */
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 25px;
+    color: #7cd3d2;
+    font-family: Manrope;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .contact-parent {
+      flex: 1;
+    }
+    .group {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .contact {
+      font-size: 21px;
+    }
+  }
+  

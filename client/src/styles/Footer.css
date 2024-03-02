@@ -1,0 +1,32 @@
+.footer {
+    width: 100%;
+    display: grid;
+}
+
+.footer-text-container {
+    background-color: #7cd3d2;
+    width: 95%;
+    height: 80px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+}
+
+.devsinc {
+    justify-self: start;
+    padding-left: 50px;
+}
+
+.company-2022 {
+    position: absolute;
+    justify-self: center;
+}
+
+.devsinc, .company-2022 {
+    font-size: 17px;
+    font-family: Actor;
+    color: #fff;
+}

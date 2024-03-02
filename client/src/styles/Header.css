@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+img {
+  height: 100px;
+}
+
+.header {
+  background-color: #7cd3d2;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 2fr 2fr 2fr;
+  justify-self: end;
+  align-items: center;
+  margin-right: 25px;
+  font-size: 17px;
+  font-family: Actor;
+  color: #333;
+}
+
+.sign-in {
+  font-size: 17px;
+  font-family: Actor;
+  color: #333;
+}
+
+.frame-b {
+  cursor: pointer;
+  border: 2px solid #ffc1dc;
+  padding: 10px 24px 10px 28px;
+  background-color: transparent;
+  width: 117px;
+  border-radius: 100px;
+}
+
+.frame-b:hover {
+  background-color: rgba(230, 168, 194, 0.09);
+  border: 2px solid #e6a8c2;
+  box-sizing: border-box;
+}

@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
          required: true
         },
     contact_number: {
-        type: SVGAnimatedNumberList,
+        type: String,
          required: true
         },
     cover_letter: {
@@ -24,11 +24,14 @@ const userSchema = new mongoose.Schema({
         },
     experience: {
         type: String,
-            required: true
+         required: true
         },
     education: {
         type: String,
          required: true
+        },
+    resume: {
+        type: String
         },
     jobID: {
         type: mongoose.Schema.Types.ObjectId,
@@ -41,11 +44,12 @@ const jobApplicantValidate = (data) => {
     const schema = Joi.object({
         name: Joi.string().required().label("name"),
         email: Joi.string().required().label("email"),
-        contact_number: Joi.number().required().label("Contact_Number"), 
+        contact_number: Joi.string().required().label("Contact_Number"), 
         cover_letter: Joi.string().required().label("cover_letter"),
         years_of_exp: Joi.number().required().label("years_of_exp"),
         education: Joi.string().required().label("education"),
         experience: Joi.string().required().label("experience"),
+        resume: Joi.string().label("resume"),
         jobID: Joi.string().required().label("jobID")
     });
 
