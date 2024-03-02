@@ -31,8 +31,9 @@ const userSchema = new mongoose.Schema({
          required: true
         },
     jobID: {
-
-    }
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    },
 });
 
 const jobApplicant = mongoose.model("jobApplicant", userSchema);
@@ -45,7 +46,7 @@ const jobApplicantValidate = (data) => {
         years_of_exp: Joi.number().required().label("years_of_exp"),
         education: Joi.string().required().label("education"),
         experience: Joi.string().required().label("experience"),
-        jobID:
+        jobID: Joi.string().required().label("jobID")
     });
 
   return schema.validate(data)

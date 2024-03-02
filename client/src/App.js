@@ -1,4 +1,4 @@
-import './App.css';
+import './styling/App.css';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Careers from './pages/careers'
