@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobCard from '../components/jobCard';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-function Careers() {
+function Careers({ setCurrentJob }) {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
@@ -18,6 +20,7 @@ function Careers() {
 
   return (
     <div>
+      <Header />
       <div className='Intro-container'>
         <img className='Intro-Img' src="" />
         <div className='Intro-text'>
@@ -32,9 +35,9 @@ function Careers() {
       <div className='Job-Postings-Container'>
         <h2>Latest Openings</h2>
         <div className='Job-Blocks'>
-          {jobs.map(job => (
-              <JobCard key={job.id} {...job} />
-            ))}
+          {jobs.map((job, index) => (
+            <JobCard key={index} {...job} index={index} setCurrentJob={setCurrentJob} />
+          ))}
         </div>
       </div>
 
@@ -52,6 +55,7 @@ function Careers() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
