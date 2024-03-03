@@ -1,0 +1,115 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.SignUp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.Img-Part {
+    height: 100%;
+    background-color: #7CD3D2;
+    display: grid;
+}
+
+img {
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+    height: 50%;
+}
+
+.Title, .Headings {
+    color: #3751FE;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Title {
+    padding-left: 50px;
+    align-self: end;
+}
+
+.Headings {
+    text-align: center;
+}
+
+.Headings, .Welcome{
+    justify-self: center;
+}
+
+.Welcome {
+    align-self: start;
+    text-align: center;
+}
+
+.SignUp-Form {
+    align-self: start;
+    display: grid;
+}
+
+.signup-input-div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.user-inp {
+    width: 70%;
+    justify-self: center;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    height: 42px;
+    border-radius: 5px;
+}
+
+.Form-Div {
+    display: grid;
+}
+
+.login-btn, .signup-btn {
+    width: 100px;
+    height: 30px;
+    justify-self: center;
+}
+
+.Link {
+    display: grid;
+    justify-self: center;
+    text-decoration: none;
+}
+
+.custom-error {
+    justify-self: center;
+}
+
+.login-btn {
+    background-color: #3751FE;
+    color: white;
+    border: white;
+}
+
+.signup-btn {
+    background-color: white;
+    color: #0C31F1;
+    border: 1.5px solid #3751FE;
+}
+
+.signup-btn:hover {
+    cursor: pointer;
+    background-color: #e5e5e5;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    background-color: #0020ee;
+}
+
+.SignUP-Container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr 6fr;
+    align-items: center;
+}

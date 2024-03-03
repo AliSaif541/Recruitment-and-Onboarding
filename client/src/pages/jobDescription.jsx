@@ -84,11 +84,11 @@ function JobDescription({ currentJob }) {
             <div className='Form-Container'>
                 <h2>Apply for this role</h2>
                 <form onSubmit={handleSubmit}>
-                    <input className="user-inp" type="text" placeholder="Full Name" name='name' onChange={handleInputChange} />
-                    <input className="user-inp" type="text" placeholder="Email" name='email' onChange={handleInputChange} />
-                    <input className="user-inp" type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} />
-                    <input type="file" name="resume" accept=".pdf" onChange={handleFileChange} />
-                    <input className="user-inp" type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} />
+                    <input className="user-inp" type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
+                    <input className="user-inp" type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
+                    <input className="user-inp" type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
+                    <input type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
+                    <input className="user-inp" type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
                     <button type="submit">Send Application</button>
                 </form>
             </div>
