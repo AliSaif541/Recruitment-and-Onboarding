@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Recruitment and Onboarding System willoptimize the recruitment and onboarding procedures within a company by leveraging technology, process improvements, and best practices to reduce time-to-hire and enhance the new hire experience.
+The Recruitment and Onboarding System optimizes the recruitment and onboarding procedures within a company by leveraging technology, process improvements, and best practices to reduce time-to-hire and enhance the new hire experience.
 
 ## Technologies Used
 
