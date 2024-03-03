@@ -1,9 +1,9 @@
-.footer {
+.footer-real {
     width: 100%;
     display: grid;
 }
 
-.footer-text-container {
+.footer-text-container-real {
     background-color: #7cd3d2;
     width: 95%;
     height: 80px;
@@ -15,12 +15,12 @@
     align-items: center;
 }
 
-.devsinc {
+.devsinc-real {
     justify-self: start;
     padding-left: 50px;
 }
 
-.company-2022 {
+.company-2022-real {
     position: absolute;
     justify-self: center;
 }

@@ -10,6 +10,7 @@ import PostAJob from './pages/postAJob';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import HRDashboard from './pages/HRDashboard'
+import Aboutus from './pages/Aboutus';
 
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
         <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
         <Route path='postajob' element={<PostAJob />} />
+        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/hr" element={<HRDashboard />} />
