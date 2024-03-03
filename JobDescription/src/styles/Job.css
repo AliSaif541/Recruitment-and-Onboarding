@@ -1,0 +1,261 @@
+.recruit {
+    position: relative;
+    font-weight: 800;
+    display: none;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    max-width: 100%; /* Prevent any element from exceeding the viewport width */
+  }
+  .frame-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #32ffce;
+    width: 100%;
+    height: 100%;
+  }
+  .material-symbolsarrow-forward-icon {
+    position: absolute;
+    top: 19px;
+    left: 23px;
+    width: 31px;
+    height: 31px;
+    overflow: hidden;
+  }
+  .rectangle-parent {
+    width: 77px;
+    height: 70px;
+    position: relative;
+    display: none;
+  }
+  .image-1-icon,
+  .job-child {
+    position: relative;
+    display: none;
+    max-width: 100%;
+  }
+  .job-child {
+    width: 700px;
+    height: 81px;
+    border-radius: 11px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+  }
+  .image-1-icon {
+    width: 1728px;
+    height: 544px;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .frame-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 22, 49, 0.9);
+    z-index: 1;
+  }
+  .frontend-developer,
+  .manchester-uk {
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+    display: inline-block;
+    z-index: 2;
+  }
+  .frontend-developer {
+    height: 87px;
+    font-size: inherit;
+    text-transform: uppercase;
+    font-family: inherit;
+    max-width: 100%;
+  }
+  .manchester-uk {
+    height: 49px;
+    font-size: 36px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+  }
+  .background-frame,
+  .image-1-parent {
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .image-1-parent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 233px 144px 162px;
+    position: relative;
+    gap: 12px 0;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    max-width: 100%;
+  }
+  .background-frame {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 151px;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 80px;
+    color: #fff;
+    font-family: "Archivo Black";
+  }
+  .apply-button-frame,
+  .background-frame,
+  .main-group-frame {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .apply-button-frame {
+    width: 1485px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 76px 0;
+  }
+  .main-group-frame {
+    width: 1570px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 20px 122px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  .frame-inner {
+    height: 100px;
+    width: 1539px;
+    position: relative;
+    background-color: #7cd3d2;
+    display: none;
+    max-width: 100%;
+  }
+  .company-2022,
+  .devsinc {
+    width: 80.7px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .company-2022 {
+    width: 387.8px;
+    max-width: 100%;
+  }
+  .company-footer,
+  .job,
+  .rectangle-group {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .rectangle-group {
+    flex: 1;
+    background-color: #7cd3d2;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 38px 76px;
+    gap: 424px;
+    max-width: 100%;
+  }
+  .company-footer,
+  .job {
+    text-align: left;
+    color: #fff;
+  }
+  .company-footer {
+    width: 1554px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 15px 0 0;
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-family: Actor;
+  }
+  .job {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 55px;
+    gap: 3px 0;
+    letter-spacing: normal;
+    font-size: 40px;
+    font-family: Manrope;
+  }
+  @media screen and (max-width: 1200px) {
+    .image-1-parent {
+      padding-left: 72px;
+      padding-right: 72px;
+      box-sizing: border-box;
+    }
+    .main-group-frame {
+      padding-bottom: 51px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .recruit {
+      font-size: 32px;
+    }
+    .frontend-developer {
+      font-size: 40px;
+    }
+    .manchester-uk {
+      font-size: 29px;
+    }
+    .rectangle-group {
+      flex-wrap: wrap;
+      gap: 424px;
+      padding-left: 38px;
+      padding-right: 38px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .image-1-parent {
+      padding: 151px 36px 105px;
+      box-sizing: border-box;
+    }
+    .background-frame {
+      padding-bottom: 98px;
+      box-sizing: border-box;
+    }
+    .apply-button-frame {
+      gap: 76px 0;
+    }
+    .main-group-frame {
+      padding-bottom: 33px;
+      box-sizing: border-box;
+    }
+    .rectangle-group {
+      gap: 424px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .frontend-developer,
+    .recruit {
+      font-size: 24px;
+    }
+    .manchester-uk {
+      font-size: 22px;
+    }
+    .apply-button-frame {
+      gap: 76px 0;
+    }
+    .company-2022,
+    .devsinc {
+      font-size: 16px;
+    }  
+}

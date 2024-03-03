@@ -1,0 +1,419 @@
+.rectangle-div {
+    width: 491px;
+    height: 681px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .location,
+  .manchester-uk1 {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  .location {
+    margin: 0;
+    height: 35px;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .manchester-uk1 {
+    height: 30px;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    white-space: nowrap;
+  }
+  .frame-wrapper,
+  .location-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .location-parent {
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  .frame-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+  }
+  .line-div,
+  .line-wrapper {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .line-div {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #d2d2d2;
+    z-index: 1;
+  }
+  .line-wrapper {
+    align-self: stretch;
+    height: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 12px;
+  }
+  .per-annum,
+  .salary {
+    position: relative;
+    z-index: 1;
+  }
+  .salary {
+    margin: 0;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .per-annum {
+    width: 374px;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    display: inline-block;
+  }
+  .salary-range-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 17px;
+    gap: 15px 0;
+  }
+  .frame-child1,
+  .line-container {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .frame-child1 {
+    height: 1px;
+    flex: 1;
+    position: relative;
+    border-top: 1px solid #d2d2d2;
+    z-index: 1;
+  }
+  .line-container {
+    align-self: stretch;
+    height: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 17px;
+  }
+  .job-type {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+    z-index: 1;
+  }
+  .hybrid-permanent {
+    position: relative;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    z-index: 1;
+  }
+  .frame-container,
+  .job-type-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .job-type-parent {
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  .frame-container {
+    align-self: stretch;
+    flex-direction: row;
+  }
+  .frame-child2,
+  .rectangle-container {
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 78px 58px 75px 57px;
+    gap: 53px;
+  }
+  .frame-child2 {
+    width: 491px;
+    height: 212px;
+    position: relative;
+    display: none;
+  }
+  .fdman2038-234,
+  .reference {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  .reference {
+    margin: 0;
+    height: 35px;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .fdman2038-234 {
+    height: 33px;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+  }
+  .group-div {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 66px 58px 62px;
+    gap: 16px;
+    max-width: 100%;
+  }
+  .job-details-child {
+    width: 245px;
+    height: 70px;
+    position: relative;
+    object-fit: contain;
+  }
+  .job-details {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 18px;
+    box-sizing: border-box;
+    gap: 42px 0;
+    max-width: 100%;
+  }
+  .apply-for-this {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .frame-container1,
+  .frame-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .frame-container1 {
+    flex-direction: row;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+  .frame-parent {
+    width: 491px;
+    flex-direction: column;
+    gap: 51px 0;
+    min-width: 491px;
+  }
+  .description {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .front-end-developer,
+  .uk-leading-ecommerce {
+    position: relative;
+    letter-spacing: 0.05em;
+  }
+  .job-location-manchester,
+  .tech-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .job-location-manchester {
+    gap: 25px 0;
+    font-size: 20px;
+    color: #000;
+    font-family: Manrope;
+  }
+  .tech-stack {
+    gap: 40px 0;
+    max-width: 100%;
+  }
+  .blank-line,
+  .blank-line1,
+  .blank-line2,
+  .my-client-is,
+  .our-client-is,
+  .our-client-is1,
+  .tech-stack-front {
+    margin: 0;
+  }
+  .tech-stack-front-container {
+    width: 859px;
+    height: 495px;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    font-family: Manrope;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .frontend-developer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 53px 0;
+    max-width: 100%;
+    flex-shrink: 0;
+  }
+  .line-separator {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid #cecece;
+    box-sizing: border-box;
+  }
+  .description-frame,
+  .job-posting {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .job-posting {
+    flex: 1;
+    flex-direction: column;
+    gap: 69px 0;
+    min-width: 558px;
+  }
+  .description-frame {
+    width: 1447px;
+    flex-direction: row;
+    gap: 0 97px;
+    text-align: left;
+    font-size: 32px;
+    color: #132745;
+    font-family: "Archivo Black";
+  }
+  @media screen and (max-width: 1200px) {
+    .frame-parent {
+      flex: 1;
+    }
+    .description-frame {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .apply-for-this,
+    .description,
+    .job-type,
+    .location,
+    .reference,
+    .salary {
+      font-size: 26px;
+    }
+    .job-posting {
+      gap: 69px 0;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .rectangle-container {
+      gap: 53px;
+      padding: 51px 29px 49px 28px;
+      box-sizing: border-box;
+    }
+    .job-details {
+      gap: 42px 0;
+    }
+    .frame-parent {
+      gap: 51px 0;
+      min-width: 100%;
+    }
+    .tech-stack {
+      gap: 40px 0;
+    }
+    .job-posting {
+      min-width: 100%;
+    }
+    .description-frame {
+      gap: 0 97px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .location {
+      font-size: 19px;
+    }
+    .manchester-uk1 {
+      font-size: 18px;
+    }
+    .salary {
+      font-size: 19px;
+    }
+    .per-annum {
+      font-size: 18px;
+    }
+    .job-type {
+      font-size: 19px;
+    }
+    .hybrid-permanent {
+      font-size: 18px;
+    }
+    .fdman2038-234,
+    .reference {
+      font-size: 19px;
+    }
+    .group-div {
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+    .apply-for-this,
+    .description {
+      font-size: 19px;
+    }
+    .front-end-developer,
+    .uk-leading-ecommerce {
+      font-size: 16px;
+    }
+    .frontend-developer-details {
+      gap: 53px 0;
+    }
+    .job-posting {
+      gap: 69px 0;
+    }
+}

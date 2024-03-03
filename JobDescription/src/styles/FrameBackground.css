@@ -1,0 +1,253 @@
+.full-name,
+.rectangle-input-name {
+  align-self: stretch;
+  position: relative;
+}
+.full-name {
+  letter-spacing: 0.05em;
+}
+.rectangle-input-name {
+  height: 81px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+}
+.frame-job-info,
+.frame-location-job {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-location-job {
+  flex: 1;
+  flex-direction: column;
+  gap: 12px 0;
+}
+.frame-job-info {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 4px;
+  box-sizing: border-box;
+}
+.frame-email-address,
+.phone-number {
+  align-self: stretch;
+  position: relative;
+}
+.phone-number {
+  letter-spacing: 0.05em;
+}
+.frame-email-address {
+  height: 81px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.frame-phone-number {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 28px;
+  gap: 12px 0;
+}
+.cover-letter {
+  width: 570.7px;
+  position: relative;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  max-width: 100%;
+}
+.phone-number-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 41px 0;
+  min-width: 458px;
+  max-width: 100%;
+}
+.email,
+.frame-salary-info {
+  align-self: stretch;
+  position: relative;
+}
+.email {
+  letter-spacing: 0.05em;
+}
+.frame-salary-info {
+  height: 81px;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+}
+.text-job-title {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px 0;
+}
+.upload-your-resume {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.frame-child3 {
+  height: 70px;
+  width: 320px;
+  position: relative;
+  background-color: #7cd3d2;
+  display: none;
+}
+.choose-file {
+  height: 27px;
+  position: relative;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  z-index: 1;
+}
+.rectangle-parent1 {
+  width: 320px;
+  background-color: #7cd3d2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 20px 21px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  color: #fff;
+}
+.group-references {
+  width: 688px;
+  flex-direction: column;
+  gap: 23px 0;
+}
+.frame-choose-file,
+.group-references,
+.name-field {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-choose-file {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 1px 0 0;
+  box-sizing: border-box;
+  gap: 41px 0;
+  min-width: 456px;
+}
+.name-field {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 80px;
+}
+.rectangle-footer-background {
+  align-self: stretch;
+  height: 328px;
+  position: relative;
+  border-radius: 11px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+}
+.application-form {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px 0;
+  max-width: 100%;
+}
+.frame-child4 {
+  height: 70px;
+  width: 320px;
+  position: relative;
+  background-color: #7cd3d2;
+  display: none;
+}
+.send-application {
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  font-family: Manrope;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+}
+.material-symbolsarrow-forward-icon1 {
+  height: 31px;
+  width: 31px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.group-button {
+  cursor: pointer;
+  border: 0;
+  padding: 19px 25px 20px 41px;
+  background-color: #7cd3d2;
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  white-space: nowrap;
+  gap: 20px;
+}
+.group-button:hover {
+  background-color: #4aa19e;
+}
+.frame-background {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 69px 0;
+  max-width: 100%;
+  text-align: left;
+  font-size: 20px;
+  color: #000;
+  font-family: Manrope;
+}
+@media screen and (max-width: 750px) {
+  .frame-choose-file,
+  .phone-number-field {
+    gap: 41px 0;
+    min-width: 100%;
+  }
+  .name-field {
+    gap: 0 80px;
+  }
+  .frame-background {
+    gap: 69px 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cover-letter,
+  .email,
+  .full-name,
+  .phone-number,
+  .upload-your-resume {
+    font-size: 16px;
+  }
+  .name-field {
+    gap: 0 80px;
+  }
+}
