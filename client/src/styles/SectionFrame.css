@@ -162,11 +162,11 @@
   
   @media screen and (max-width: 800px) {
     .about-us2 {
-      font-size: 49px;
+      font-size: 48px;
       line-height: 51px;
     }
     .devsinc-providing-the-container {
-      font-size: 30px;
+      font-size: 29px;
       line-height: 46px;
     }
     .frame-home-about-career-page-c,
@@ -180,7 +180,7 @@
   
   @media screen and (max-width: 450px) {
     .about-us2 {
-      font-size: 35px;
+      font-size: 34px;
       line-height: 38px;
     }
   }

@@ -2,11 +2,11 @@ body {
   margin: 0;
 }
 
-.logo-img {
+.logo-img-real {
   height: 100px;
 }
 
-.header2 {
+.header2-real {
   background-color: #7cd3d2;
   width: 100%;
   margin: 0;
@@ -16,7 +16,7 @@ body {
   align-items: center;
 }
 
-.navbar1 {
+.navbar1-real {
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 2fr 2fr 2fr;
   justify-self: end;
@@ -27,13 +27,13 @@ body {
   color: #333;
 }
 
-.sign-in2 {
+.sign-in2-real {
   font-size: 17px;
   font-family: Actor;
   color: #333;
 }
 
-.frame-b2 {
+.frame-b2-real {
   cursor: pointer;
   border: 2px solid #ffc1dc;
   padding: 10px 24px 10px 28px;
@@ -42,7 +42,7 @@ body {
   border-radius: 100px;
 }
 
-.frame-b2:hover {
+.frame-b2-real:hover {
   background-color: rgba(230, 168, 194, 0.09);
   border: 2px solid #e6a8c2;
   box-sizing: border-box;

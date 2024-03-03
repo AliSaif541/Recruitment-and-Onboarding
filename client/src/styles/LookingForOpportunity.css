@@ -1,4 +1,4 @@
-.contact {
+.contact-careers {
     margin: 0;
     position: relative;
     font-size: inherit;
@@ -8,8 +8,8 @@
     font-family: inherit;
   }
   
-  .looking-for-a,
-  .lorem-ipsum-dolor1 {
+  .looking-for-a-careers,
+  .lorem-ipsum-dolor1-careers {
     margin: 0;
     width: 563px;
     position: relative;
@@ -18,14 +18,14 @@
     flex-shrink: 0;
   }
   
-  .looking-for-a {
+  .looking-for-a-careers {
     height: 90px;
     font-size: inherit;
     text-transform: capitalize;
     font-family: inherit;
   }
   
-  .lorem-ipsum-dolor1 {
+  .lorem-ipsum-dolor1-careers {
     height: 100px;
     font-size: 17px;
     letter-spacing: 0.05em;
@@ -33,28 +33,28 @@
     color: #000;
   }
   
-  .contact-parent,
-  .looking-for-a-new-opportunity-parent {
+  .contact-parent-careers,
+  .looking-for-a-new-opportunity-parent-careers {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
   }
   
-  .looking-for-a-new-opportunity-parent {
+  .looking-for-a-new-opportunity-parent-careers {
     gap: 35px 0;
     font-size: 42px;
     color: #132745;
     font-family: "Archivo Black";
   }
   
-  .contact-parent {
+  .contact-parent-careers {
     gap: 41px 0;
     min-width: 563px;
     max-width: 100%;
   }
   
-  .full-name {
+  .full-name-careers {
     margin: 0;
     width: 192px;
     position: relative;
@@ -67,7 +67,7 @@
     display: inline-block;
   }
   
-  .text {
+  .text-careers {
     border: 1px solid #dcdcdc;
     outline: 0;
     background-color: #fff;
@@ -80,27 +80,27 @@
     max-width: 500px;
   }
   
-  .materialsymbolsarrowforward,
-  .submit {
+  .materialsymbolsarrowforward-careers,
+  .submit-careers {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     max-width: 100%;
   }
   
-  .materialsymbolsarrowforward {
+  .materialsymbolsarrowforward-careers {
     flex: 1;
     flex-direction: column;
     gap: 12px 0;
   }
   
-  .submit {
+  .submit-careers {
     align-self: stretch;
     flex-direction: row;
     box-sizing: border-box;
   }
   
-  .contact-number {
+  .contact-number-careers {
     margin: 0;
     width: 308px;
     position: relative;
@@ -113,7 +113,7 @@
     display: inline-block;
   }
   
-  .text1 {
+  .text1-careers {
     border: 1px solid #dcdcdc;
     outline: 0;
     background-color: #fff;
@@ -126,7 +126,7 @@
     max-width: 500px;
   }
   
-  .contact-number-parent {
+  .contact-number-parent-careers {
     align-self: stretch;
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@
     gap: 12px 0;
   }
   
-  .frame-item {
+  .frame-item-careers {
     height: 70px;
     width: 208px;
     position: relative;
@@ -143,9 +143,10 @@
     display: none;
   }
   
-  .submit1 {
+  .submit12-careers {
     position: relative;
     font-size: 17px;
+    justify-self: center;
     letter-spacing: 0.05em;
     font-family: Manrope;
     color: #fff;
@@ -153,7 +154,7 @@
     z-index: 1;
   }
   
-  .material-symbolsarrow-forward-icon {
+  .material-symbolsarrow-forward-icon-careers {
     height: 31px;
     width: 31px;
     position: relative;
@@ -162,27 +163,29 @@
     z-index: 1;
   }
   
-  .rectangle-group {
+  .rectangle-group-careers {
     cursor: pointer;
     border: 0;
-    padding: 10px 23px 10px 41px;
+    /* padding: 10px 23px 20px 51px; */
     background-color: #7cd3d2;
-    width: 175px;
-    display: flex;
-    flex-direction: row;
+    width: 125px;
+    height: 40px;
+    display: grid;
+    /* flex-direction: row; */
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    /* justify-content: space-between; */
     box-sizing: border-box;
     gap: 20px;
   }
   
-  .rectangle-group:hover {
+  .rectangle-group-careers:hover {
     background-color: #4aa19e;
   }
   
-  .group,
-  .group1,
-  .looking-for-opportunity1 {
+  .group-careers,
+  .group1-careers,
+  .looking-for-opportunity1-careers {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -190,7 +193,7 @@
     margin-left: 1.25%;
   }
   
-  .group1 {
+  .group1-careers {
     margin: 0;
     flex: 1;
     flex-direction: column;
@@ -198,17 +201,17 @@
     min-width: 421px;
   }
   
-  .group,
-  .looking-for-opportunity1 {
+  .group-careers,
+  .looking-for-opportunity1-careers {
     flex-direction: row;
   }
   
-  .group {
+  .group-careers {
     flex: 1;
     gap: 0 67px;
   }
   
-  .looking-for-opportunity1 {
+  .looking-for-opportunity1-careers {
     align-self: stretch;
     /* padding: 0 40px 39px 9px; */
     box-sizing: border-box;
@@ -219,16 +222,16 @@
   }
   
   @media screen and (max-width: 1200px) {
-    .contact-parent {
+    .contact-parent-careers {
       flex: 1;
     }
-    .group {
+    .group-careers {
       flex-wrap: wrap;
     }
   }
   
   @media screen and (max-width: 1050px) {
-    .contact {
+    .contact-careers {
       font-size: 21px;
     }
   }

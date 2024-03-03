@@ -8,14 +8,16 @@ import Footer from "../components/Footer";
 
 const Aboutus = () => {
   return (
-    <div>
-      <Header />
-      <section className="rectangle-frame">
-        <SectionFrame />
-        <TextSectionImg />
-        <BenefitSection />
-        <Footer />
-      </section>
+    <div className="frame-container">
+      <main className="about-us">
+        <Header />
+        <section className="rectangle-frame">
+          <SectionFrame />
+          <TextSectionImg />
+          <BenefitSection />
+          <Footer />
+        </section>
+      </main>
     </div>
   );
 };

@@ -1,21 +1,80 @@
-.rectangle-frame {
+.about-us,
+.rectangle-frame,
+.rectangle-group {
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
   max-width: 100%;
+}
+
+.rectangle-group {
+  align-self: stretch;
+  background-color: #7cd3d2;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 38px 66px;
+  gap: 371px; 
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-family: Actor;
+}
+
+.about-us,
+.rectangle-frame {
   flex-direction: column;
   align-items: center;
+}
+
+.rectangle-frame {
   width: 1390px;
   padding: 0 20px;
   gap: 90px 0;
   flex-shrink: 0;
-  margin-top: 50px;
 }
 
+.about-us {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0 37px;
+  gap: 37px 0;
+  text-align: left;
+  font-size: 20px;
+  color: #333;
+  font-family: Actor;
+}
 
-@media screen and (max-width: 800px) { 
+.frame-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 1150px) {
+  .rectangle-group {
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding-left: 33px;
+    padding-right: 33px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rectangle-parent {
+    height: auto;
+    min-height: 100px;
+  }
+  .recruit {
+    font-size: 32px;
+  }
   .rectangle-frame {
     gap: 20px 0;
   }
-  
+  .about-us {
+    gap: 20px 0;
+    margin-top: 20px;
+  }
 }
