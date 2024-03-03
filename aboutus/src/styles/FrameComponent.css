@@ -1,0 +1,105 @@
+.home-frame-child {
+    height: 140px;
+    width: 1440px;
+    position: relative;
+    display: none;
+    max-width: 100%;
+}
+
+.about1,
+.career-page1,
+.contact-us2,
+.home2 {
+    position: relative;
+    z-index: 9;
+}
+
+.sign-in1 {
+    position: relative;
+    font-size: 20px;
+    font-family: Actor;
+    color: #333;
+    text-align: left;
+}
+
+.text3,
+.text3:hover {
+    box-sizing: border-box;
+}
+
+.text3 {
+    cursor: pointer;
+    border: 2px solid #ffc1dc;
+    padding: 10px 24px 10px 28px;
+    background-color: transparent;
+    width: 117px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.text3:hover {
+    background-color: rgba(230, 168, 194, 0.09);
+    border: 2px solid #e6a8c2;
+}
+
+.home-frame,
+.home-frame-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.home-frame {
+    align-self: stretch;
+    background-color: #7cd3d2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 47px 88px 49px 769px;
+    gap: 20px;
+    z-index: 8;
+}
+
+.home-frame-wrapper {
+    width: 1440px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3px 0 0;
+    margin-left: -1728px;
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+    font-family: Actor;
+}
+
+@media screen and (max-width: 1350px) {
+    .home-frame {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .home-frame {
+        padding-left: 384px;
+        padding-right: 44px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about1,
+    .career-page1,
+    .contact-us2,
+    .home2,
+    .sign-in1 {
+        font-size: 16px;
+    }
+    .home-frame {
+        padding-left: 20px;
+    }
+}

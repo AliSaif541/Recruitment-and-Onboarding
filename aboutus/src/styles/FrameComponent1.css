@@ -1,0 +1,124 @@
+/* Styles for .material-symbolsmenu-rounded-icon */
+.material-symbolsmenu-rounded-icon {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0 !important;
+    right: 112px;
+    bottom: 35px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  /* Styles for .frame-inner */
+  .frame-inner {
+    height: 140px;
+    width: 1728px;
+    position: relative;
+    background-color: #7cd3d2;
+    display: none;
+    max-width: 100%;
+  }
+  
+  /* Styles for .career-page and .contact-us1 */
+  .career-page,
+  .contact-us1 {
+    width: 102px;
+    position: relative;
+    display: inline-block;
+    z-index: 6;
+  }
+  
+  /* Styles specific to .contact-us1 */
+  .contact-us1 {
+    height: 24px;
+    width: 95px;
+  }
+  
+  /* Styles for .rectangle-container */
+  .rectangle-container {
+    flex: 1;
+    background-color: #7cd3d2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 58px 53px 58px 1437px;
+    box-sizing: border-box;
+    max-width: 100%;
+    gap: 20px;
+    z-index: 5;
+  }
+  
+  /* Styles for .images-1-icon and .images-1-parent */
+  .images-1-icon,
+  .images-1-parent {
+    height: 155px;
+    width: 193px;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Styles specific to .images-1-icon */
+  .images-1-icon {
+    top: 0;
+    object-fit: cover;
+    mix-blend-mode: color-burn;
+    z-index: 6;
+  }
+  
+  /* Styles for .images-2-icon */
+  .images-2-icon {
+    height: 155px;
+    width: 193px;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    mix-blend-mode: color-burn;
+    z-index: 9;
+  }
+  
+  /* Styles for .images-1-parent */
+  .images-1-parent {
+    margin: 0 !important;
+    top: -15px;
+  }
+  
+  /* Styles for .material-symbolsmenu-rounded-parent */
+  .material-symbolsmenu-rounded-parent {
+    width: 1728px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    max-width: 100%;
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+    font-family: Actor;
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 1350px) {
+    .rectangle-container {
+      padding-left: 718px;
+      padding-right: 26px;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .rectangle-container {
+      padding-left: 359px;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .career-page,
+    .contact-us1 {
+      font-size: 16px;
+    }
+  }
+  

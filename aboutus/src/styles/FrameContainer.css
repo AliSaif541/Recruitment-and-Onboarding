@@ -1,0 +1,424 @@
+.about-us-child {
+    align-self: stretch;
+    height: 900px;
+    position: relative;
+    display: none;
+  }
+  
+  .frame-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  
+  .image-2-icon {
+    height: 72px;
+    width: 79.8px;
+    position: relative;
+    object-fit: cover;
+  }
+  
+  .label {
+    width: 36px;
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+    display: none;
+  }
+  
+  .search-icon {
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 0;
+  }
+  
+  .search-icon,
+  .text,
+  .text1 {
+    position: relative;
+  }
+  
+  .text {
+    flex: 1;
+    line-height: 24px;
+    z-index: 1;
+  }
+  
+  .text1 {
+    line-height: 20px;
+    font-weight: 600;
+  }
+  
+  .chevron-down-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  
+  .button-base {
+    border-radius: 8px;
+    background-color: #f2fffb;
+    overflow: hidden;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 0 8px;
+  }
+  
+  .button,
+  .button-base,
+  .content,
+  .input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .button {
+    margin: 0 !important;
+    position: absolute;
+    top: calc(50% - 18px);
+    left: 238px;
+    border-radius: 8px;
+    justify-content: flex-end;
+    z-index: 2;
+    font-size: 14px;
+    color: #20b486;
+  }
+  
+  .content,
+  .input {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .content {
+    flex: 1;
+    position: relative;
+    gap: 0 8px;
+  }
+  
+  .input {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+    border: 1px solid #d0d5dd;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px 15px 10px 13px;
+    font-size: 16px;
+    color: #667085;
+  }
+  
+  .input-with-label {
+    align-self: stretch;
+    gap: 6px 0;
+  }
+  
+  .image-2-parent,
+  .input-field,
+  .input-field-base,
+  .input-with-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .input-field-base {
+    align-self: stretch;
+  }
+  
+  .image-2-parent,
+  .input-field {
+    flex: 1;
+    min-width: 239px;
+  }
+  
+  .image-2-parent {
+    flex-direction: row;
+    align-items: center;
+    gap: 0 55px;
+    min-width: 326px;
+  }
+  
+  .about-us1,
+  .home {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  
+  .about-us1 {
+    font-weight: 600;
+    color: #1a906b;
+  }
+  
+  .contact-us,
+  .courses,
+  .faqs {
+    position: relative;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  
+  .frame-parent,
+  .home-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .home-parent {
+    padding: 20px 0;
+    box-sizing: border-box;
+    gap: 0 20px;
+    font-size: 16px;
+    color: #101828;
+  }
+  
+  .frame-parent {
+    position: absolute;
+    top: 28px;
+    left: 120px;
+    flex-wrap: wrap;
+    gap: 0 30px;
+  }
+  
+  .sign-in {
+    position: absolute;
+    top: 52px;
+    left: 1087.8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #101828;
+  }
+  
+  .text2 {
+    position: relative;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  
+  .button-base1,
+  .button1 {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button-base1 {
+    background-color: #20b486;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 0 0 4px #f4ebff;
+    border: 1px solid #20b486;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    white-space: nowrap;
+  }
+  
+  .button1 {
+    position: absolute;
+    top: 44px;
+    left: 1159.8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #fff;
+  }
+  
+  .rectangle-parent {
+    align-self: stretch;
+    height: 100px;
+    position: relative;
+    display: none;
+    max-width: 100%;
+    font-size: 14px;
+    color: #344154;
+    font-family: Inter;
+  }
+  
+  .recruit {
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Manrope;
+    color: #fff;
+  }
+  
+  .about,
+  .about-us-item,
+  .home1,
+  .recruit {
+    position: relative;
+    display: none;
+  }
+  
+  .about-us-item {
+    align-self: stretch;
+    height: 140px;
+    background-color: #7cd3d2;
+  }
+  
+  .career-page-frame {
+    margin-top: -3px;
+    margin-left: 288px;
+    width: 1728px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 120%;
+    flex-shrink: 0;
+  }
+  
+  .frame-item {
+    height: 100px;
+    width: 1350px;
+    position: relative;
+    background-color: #7cd3d2;
+    display: none;
+    max-width: 100%;
+  }
+  
+  .company-2022,
+  .devsinc {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .company-2022 {
+    width: 340.1px;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+
+  /* Common styles for .about-us, .rectangle-frame, .rectangle-group */
+.about-us,
+.rectangle-frame,
+.rectangle-group {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Styles specific to .rectangle-group */
+.rectangle-group {
+  align-self: stretch;
+  background-color: #7cd3d2;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 38px 66px;
+  gap: 371px; /* Consider changing this gap value as it might be too large */
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-family: Actor;
+}
+
+/* Styles for .about-us and .rectangle-frame */
+.about-us,
+.rectangle-frame {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles specific to .rectangle-frame */
+.rectangle-frame {
+  width: 1390px;
+  padding: 0 20px;
+  gap: 90px 0;
+  flex-shrink: 0;
+}
+
+/* Styles specific to .about-us */
+.about-us {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0 37px;
+  gap: 37px 0;
+  text-align: left;
+  font-size: 20px;
+  color: #333;
+  font-family: Actor;
+}
+
+/* Styles for .frame-container */
+.frame-container {
+  width: 100%;
+  height: 2602px;
+  position: relative;
+  letter-spacing: normal;
+}
+
+/* Media queries */
+@media screen and (max-width: 1150px) {
+  .rectangle-group {
+    flex-wrap: wrap;
+    gap: 20px; /* Adjusted gap value */
+    padding-left: 33px;
+    padding-right: 33px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rectangle-parent {
+    height: auto;
+    min-height: 100px; /* Adjusted value */
+  }
+  .recruit {
+    font-size: 32px;
+  }
+  .rectangle-frame {
+    gap: 20px 0; /* Adjusted gap value */
+  }
+  .about-us {
+    gap: 20px 0; /* Adjusted gap value */
+  }
+  .frame-container {
+    height: auto;
+    min-height: 2602px; /* Adjusted value */
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home-parent,
+  .image-2-parent {
+    flex-wrap: wrap;
+  }
+  .recruit {
+    font-size: 24px;
+  }
+  .about,
+  .company-2022,
+  .devsinc,
+  .home1 {
+    font-size: 16px;
+  }
+  .rectangle-group {
+    gap: 20px; /* Adjusted gap value */
+  }
+}
+
+  
