@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/SectionFrame.css';
+import '../styles/AboutUSHead.css';
 
-const SectionFrame = () => {
+const AboutUSHead = () => {
   return (
     <div className="section-frame">
       <div className="text4">
@@ -56,4 +56,4 @@ const SectionFrame = () => {
   );
 };
 
-export default SectionFrame;
+export default AboutUSHead;

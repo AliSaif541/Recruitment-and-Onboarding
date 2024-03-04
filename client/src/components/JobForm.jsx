@@ -57,13 +57,13 @@ const JobForm = ({ currentJob }) => {
       <h2 className='Apply'>Apply for this role</h2>
       <form  onSubmit={handleSubmit}>
         <div className='Apply-Form'>
-          <input className="user-inp" type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
-          <input className="user-inp" type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
-          <input className="user-inp" type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
-          <input type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
+          <input className="jd-user-inp" type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
+          <input className="jd-user-inp" type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
+          <input className="jd-user-inp" type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
+          <input className="jd-user-inp" type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
         </div>
         <div className='Apply-Form-2'>
-          <input className="user-inp" type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
+          <input className="jd-user-inp-2" type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
           <button className='Submit-JD-Btn' type="submit">Send Application</button>
         </div>
       </form>

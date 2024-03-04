@@ -1,0 +1,459 @@
+.rectangle-div {
+    align-self: stretch;
+    height: 703.4px;
+    position: relative;
+    background-color: var(--color-aliceblue-100);
+    display: none;
+  }
+  .career-info-frame,
+  .learn-more-button {
+    position: absolute;
+    top: 144.66px;
+    left: 282.6px;
+    border-radius: 50%;
+    background-color: var(--color-lavender);
+    width: 200px;
+    height: 200px;
+    transform: rotate(136.41deg);
+    transform-origin: 0 0;
+    z-index: 1;
+  }
+  .learn-more-button {
+    top: 234.41px;
+    left: 268.1px;
+    background-color: var(--color-royalblue-400);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+  }
+  .career-info-frame-parent {
+    height: 283px;
+    width: 283px;
+    position: relative;
+    min-width: 283px;
+  }
+  .contact-us1 {
+    margin: 0;
+    position: relative;
+    font-size: xx-large;
+    font-weight: 400;
+    font-family: inherit;
+    color: blue;
+    z-index: 1;
+  }
+  .contact-us-text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-6xl) 0 0;
+  }
+  .frame-child3 {
+    height: 50px;
+    width: 600px;
+    position: relative;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gainsboro);
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .full-name {
+    width: 85px;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-actor);
+    font-size: var(--font-size-xl);
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+  }
+  .frame-child4,
+  .rectangle-container {
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gainsboro);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-lgi) var(--padding-xs);
+    z-index: 1;
+  }
+  .rectangle-group {
+    /* background-image: url('/public/tif_blue.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust as needed for your layout */
+    align-items: flex-start; /* Aligns children at the top */
+  }
+  .frame-child4 {
+    height: 50px;
+    width: 600px;
+    position: relative;
+    display: none;
+  }
+  .email-address {
+    width: 119px;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-actor);
+    font-size: var(--font-size-xl);
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+  }
+  .frame-child5,
+  .group-div {
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gainsboro);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .group-div {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-lgi) var(--padding-xs);
+    z-index: 1;
+  }
+  .frame-child5 {
+    height: 50px;
+    width: 600px;
+    position: relative;
+    display: none;
+  }
+  .phone-number {
+    width: 128px;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-actor);
+    font-size: var(--font-size-xl);
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    z-index: 1;
+  }
+  .company-logo-frame,
+  .job-frame,
+  .rectangle-parent1 {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    flex: 1;
+    padding-right: 20px;
+  }
+  .rectangle-parent1 {
+    border-radius: var(--br-8xs);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gainsboro);
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--padding-sm) var(--padding-lgi) var(--padding-xs);
+    z-index: 1;
+  }
+  .company-logo-frame,
+  .job-frame {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px 0;
+  }
+  .job-frame {
+    align-items: center;
+    gap: 80px 0;
+  }
+  .contact-us-frame,
+  .frame-parent1,
+  .job-posting-frame {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .job-posting-frame {
+    flex: 1;
+    flex-direction: column;
+    padding: var(--padding-mid) 0 0;
+    box-sizing: border-box;
+    min-width: 390px;
+  }
+  .contact-us-frame,
+  .frame-parent1 {
+    flex-direction: row;
+  }
+  .frame-parent1 {
+    width: 924px;
+    gap: 0 41px;
+  }
+  .contact-us-frame {
+    align-self: stretch;
+    padding: 0 var(--padding-sm);
+    box-sizing: border-box;
+  }
+  .feedback-frame-child,
+  .send {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-actor);
+    background-color: blue;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+  }
+  .feedback-frame-child {
+    border: 1px solid var(--color-gainsboro);
+    background-color: var(--color-white);
+    height: 200px;
+    width: auto;
+    outline: 0;
+    align-self: stretch;
+    border-radius: var(--br-8xs);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-right: 100px;
+    color: var(--color-silver);
+    z-index: 1;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: white;
+    padding-right: 20px;
+  }
+  .send {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-family: var(--font-actor);
+    font-weight: 600;
+    background-color: blue;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  .reserved-frame {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-3xs);
+    background-color: var(--color-mediumblue);
+    flex: 1;
+    border-radius: var(--br-8xs);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .reserved-frame:hover {
+    background-color: var(--color-royalblue-100);
+  }
+  .feedback-frame,
+  .group-frame {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .group-frame {
+    width: 246px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 var(--padding-10xs) 0 0;
+    box-sizing: border-box;
+  }
+  .feedback-frame {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    min-width: 390px;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+  .full-name-group-child,
+  .have-anything-to-say {
+    position: absolute;
+    top: 135.37px;
+    left: 7.4px;
+    border-radius: 50%;
+    background-color: var(--color-royalblue-300);
+    width: 200px;
+    height: 200px;
+    transform: rotate(-42.56deg);
+    transform-origin: 0 0;
+    z-index: 1;
+  }
+  .full-name-group-child {
+    top: 37.92px;
+    left: 0.4px;
+    background-color: var(--color-royalblue-400);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+  }
+  .full-name-group {
+    align-self: stretch;
+    height: 283px;
+    position: relative;
+  }
+  .contact-us-group,
+  .phone-number-input {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .contact-us-group {
+    width: 290px;
+    flex-direction: column;
+    padding: var(--padding-13xl) 0 0;
+    box-sizing: border-box;
+    min-width: 290px;
+  }
+  .phone-number-input {
+    width: 939px;
+    flex-direction: row;
+    gap: 0 49px;
+    max-width: 100%;
+  }
+  .job-postings-list,
+  .rectangle-group {
+    display: flex;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-group {
+    flex: 1;
+    background-color: var(--color-aliceblue-100);
+    flex-direction: column;
+    align-items: flex-end;
+    padding: var(--padding-3xl) 0 var(--padding-8xl);
+    gap: var(--gap-mini);
+  }
+  .job-postings-list {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 0 var(--padding-xl);
+    text-align: left;
+    font-size: var(--font-size-21xl);
+    color: var(--color-mediumblue);
+    font-family: var(--font-actor);
+  }
+  @media screen and (max-width: 1050px) {
+    .career-info-frame-parent {
+      flex: 1;
+    }
+    .contact-us1 {
+      font-size: var(--font-size-13xl);
+    }
+    .frame-parent1 {
+      flex-wrap: wrap;
+    }
+    .contact-us-group {
+      flex: 1;
+    }
+    .phone-number-input {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .job-frame {
+      gap: 80px 0;
+    }
+    .feedback-frame,
+    .job-posting-frame {
+      min-width: 100%;
+    }
+    .phone-number-input {
+      gap: 0 49px;
+    }
+    .rectangle-group {
+      padding-top: var(--padding-xl);
+      padding-bottom: var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .contact-us1 {
+      font-size: var(--font-size-5xl);
+    }
+    .email-address,
+    .full-name,
+    .phone-number {
+      font-size: var(--font-size-base);
+    }
+    .job-frame {
+      gap: 80px 0;
+    }
+    .frame-parent1 {
+      gap: 0 41px;
+    }
+    .send {
+      font-size: var(--font-size-base);
+    }
+  }
+
+/* .full-name, */
+/* .email-address, */
+/* .phone-number { */
+  /* background-color: #FFFFFF; White background */
+  /* border: 1px solid #D1D1D1; Light grey border */
+  /* border-radius: 4px; Slightly rounded corners */
+  /* padding: 10px 15px; Some padding inside the input */
+  /* width: 100%; Full width of the container */
+  /* box-sizing: border-box; Include padding and border in the input's width */
+  /* margin-bottom: 10px; Space between each input field */
+/* } */
+
+/* Placeholder styling */
+/* .full-name::placeholder,
+.email-address::placeholder,
+.phone-number::placeholder {
+  color: #A8A8A8;
+} */
+
+/* Input focus styling */
+/* .full-name:focus,
+.email-address:focus,
+.phone-number:focus {
+  border-color: #007BFF;
+  outline: none;
+} */

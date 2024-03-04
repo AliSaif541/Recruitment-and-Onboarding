@@ -6,6 +6,11 @@ body {
   height: 100px;
 }
 
+.Link {
+  text-decoration: none;
+  color: #333;
+}
+
 .header2-real {
   background-color: #7cd3d2;
   width: 100%;

@@ -9,11 +9,23 @@
     margin-top: 20px;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
-.user-inp {
-    justify-self: start;
+.jd-user-inp {
+    justify-self: center;
+    width: 250px;
+    height: 30px;
+    border: solid #DCDCDC 1px;
+    border-radius: 5px;
+}
+
+.jd-user-inp-2 {
+    justify-self: center;
+    width: 600px;
+    height: 60px;
+    border: solid #DCDCDC 1px;
+    border-radius: 5px;
 }
 
 .Apply {
@@ -35,6 +47,7 @@
     background-color: #7cd3d2;
     color: white;
     border: none;
+    margin-top: 25px;
 
     font-family: Manrope;
 }

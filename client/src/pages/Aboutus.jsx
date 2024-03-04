@@ -1,5 +1,5 @@
 import React from "react";
-import SectionFrame from "../components/SectionFrame";
+import AboutUSHead from "../components/AboutUSHead";
 import TextSectionImg from "../components/TextSectionImg";
 import BenefitSection from "../components/BenefitSection";
 import "../styles/Aboutus.css";
@@ -12,7 +12,7 @@ const Aboutus = () => {
       <main className="about-us">
         <Header />
         <section className="rectangle-frame">
-          <SectionFrame />
+          <AboutUSHead />
           <TextSectionImg />
           <BenefitSection />
           <Footer />

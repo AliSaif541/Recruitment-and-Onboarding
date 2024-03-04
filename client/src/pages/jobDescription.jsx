@@ -15,7 +15,7 @@ function JobDescription({ currentJob }) {
                 <h1 className="Heading-Name">Frontend developer</h1>
                 <h3 className="Heading-Location">Manchester, UK</h3>
             </div>
-            <DescriptionFrame />
+            <DescriptionFrame currentJob={currentJob} />
             <JobForm currentJob={currentJob} />
             <Footer />
         </div>

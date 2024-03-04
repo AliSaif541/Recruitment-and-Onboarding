@@ -1,10 +1,10 @@
-.devsinc1,
-.join-our-team {
+.devsinc1-1,
+.join-our-team-1 {
   margin: 0;
 }
 
-.join-our-team-container,
-.lorem-ipsum-dolor {
+.join-our-team-container-1,
+.lorem-ipsum-dolor-1 {
   margin: 0;
   position: relative;
   font-weight: 400;
@@ -13,7 +13,7 @@
   flex-shrink: 0;
 }
 
-.join-our-team-container {
+.join-our-team-container-1 {
   height: 101px;
   font-size: inherit;
   line-height: 56px;
@@ -22,7 +22,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.lorem-ipsum-dolor {
+.lorem-ipsum-dolor-1 {
   width: 583.9px;
   height: 134.1px;
   font-size: 17px;
@@ -30,7 +30,7 @@
   max-width: 100%;
 }
 
-.setup-label {
+.setup-label-1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -39,7 +39,7 @@
   max-width: 100%;
 }
 
-.learn-more {
+.learn-more-1 {
   position: relative;
   font-size: 17px;
   font-family: Actor;
@@ -47,13 +47,13 @@
   text-align: left;
 }
 
-.hago-label-child {
+.hago-label-child-1 {
   height: 14.7px;
   width: 20px;
   position: relative;
 }
 
-.hago-label {
+.hago-label-1 {
   cursor: pointer;
   border: 0;
   padding: 10px 31px 10px 30px;
@@ -68,8 +68,8 @@
   white-space: nowrap;
 }
 
-.country-marker-icon,
-.location-label {
+.country-marker-icon-1,
+.location-label-1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -77,17 +77,17 @@
   max-width: 100%;
 }
 
-.country-marker-icon {
+.country-marker-icon-1 {
   gap: 55px 0;
 }
 
-.location-label {
+.location-label-1 {
   padding: 8px 0 0;
   box-sizing: border-box;
   min-width: 596px;
 }
 
-.legend-box {
+.legend-box-1 {
   position: absolute;
   top: 185.52px;
   left: -2px;
@@ -103,7 +103,7 @@
   transform-origin: 0 0;
 }
 
-.business-analyticsbro-icon {
+.business-analyticsbro-icon-1 {
   position: absolute;
   top: 0;
   left: 207.3px;
@@ -112,7 +112,7 @@
   z-index: 1;
 }
 
-.contact-center-agent-text {
+.contact-center-agent-text-1 {
   height: 462px;
   flex: 1;
   position: relative;
@@ -120,7 +120,7 @@
   max-width: 100%;
 }
 
-.full-time-label {
+.full-time-label-1 {
   margin-top: 65px;
   align-self: stretch;
   display: flex;
@@ -138,40 +138,40 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .location-label {
+  .location-label-1 {
     flex: 1;
   }
-  .full-time-label {
+  .full-time-label-1 {
     flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 1050px) {
-  .join-our-team-container {
+  .join-our-team-container-1 {
     font-size: 37px;
     line-height: 45px;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .setup-label {
+  .setup-label-1 {
     gap: 50px 0;
   }
-  .country-marker-icon {
+  .country-marker-icon-1 {
     gap: 55px 0;
   }
-  .contact-center-agent-text,
-  .location-label {
+  .contact-center-agent-text-1,
+  .location-label-1 {
     min-width: 100%;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .join-our-team-container {
+  .join-our-team-container-1 {
     font-size: 23px;
     line-height: 34px;
   }
-  .lorem-ipsum-dolor {
+  .lorem-ipsum-dolor-1 {
     /* Add any additional styles here */
   }
 }
