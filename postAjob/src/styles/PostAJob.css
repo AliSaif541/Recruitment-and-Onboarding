@@ -1,0 +1,529 @@
+.f452489720-icon,
+.f452489720-icon1 {
+  width: 114.1px;
+  height: 40px;
+  position: relative;
+  object-fit: cover;
+  display: none;
+}
+.f452489720-icon2,
+.f452489720-icon3 {
+  height: 42.1px;
+  width: 120px;
+  position: relative;
+  object-fit: cover;
+}
+.f452489720-icon2 {
+  display: none;
+}
+.f452489720-icon3 {
+  z-index: 6;
+}
+.f452489720-parent {
+  width: 120px;
+  height: 42px;
+  margin: 0 !important;
+  position: absolute;
+  top: 13px;
+  left: 59px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /*background-image: url(/public/frame-2@3x.png);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 4;
+}
+.navigationsidebarexpanded-parent {
+  /* height: 1073px; */
+  width: 242px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 64px 0 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.line-icon {
+  margin-bottom: -1px;
+  height: 2px;
+  width: 1197px;
+  position: relative;
+  z-index: 2;
+  margin-left: -1197px;
+}
+.navigation-top-header {
+  height: 64px;
+  width: 1197px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+}
+.line-icon1 {
+  margin-bottom: -1px;
+  height: 2px;
+  width: 1197px;
+  position: relative;
+  z-index: 2;
+  margin-left: -1197px;
+}
+.navigation-top-header-parent,
+.navigation-top-header1 {
+  width: 1197px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.navigation-top-header1 {
+  align-items: flex-end;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-left: -1197px;
+}
+.navigation-top-header-parent {
+  align-items: flex-start;
+}
+.post-job {
+  margin: 0;
+  width: 217px;
+  position: relative;
+  font-size: 40px;
+  line-height: 125%;
+  font-weight: 700;
+  font-family: Urbanist;
+  color: #0148ff;
+  text-align: left;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.post-job-frame {
+  width: 1142px;
+  height: 97px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 0 23px;
+  box-sizing: border-box;
+  gap: 0 909px;
+}
+.frame-parent3,
+.text-inputs-parent {
+  width: 545px;
+  height: 237px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.frame-parent3 {
+  height: 393px;
+  padding: 0 0 24px;
+  box-sizing: border-box;
+  gap: 24px 0;
+}
+.go {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Noto Sans";
+  color: #fff;
+  text-align: center;
+}
+.buttons,
+.text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text {
+  flex: 1;
+  justify-content: space-between;
+}
+.buttons {
+  cursor: pointer;
+  border: 0;
+  padding: 16px;
+  background-color: #7a5cfa;
+  width: 172px;
+  border-radius: 8px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
+.icon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.input-field,
+.text1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text1 {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 0 8px;
+}
+.input-field {
+  width: 547px;
+  border-radius: 8px 8px 0 0;
+  background-color: #fff;
+  border: 2px solid #7a5cfa;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 16px 18px 16px 14px;
+  min-height: 58px;
+}
+.icon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.option,
+.text2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text2 {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 0 8px;
+}
+.option {
+  width: 546px;
+  background-color: #7a5cfa;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 16px 17px 16px 15px;
+}
+
+.icon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.option-1,
+.text3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text3 {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 0 8px;
+}
+.option-1 {
+  width: 546px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 16px 17px 16px 15px;
+}
+
+.icon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text4 {
+  align-self: stretch;
+  flex-direction: row;
+  gap: 0 8px;
+}
+
+.option-2 {
+  width: 546px;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 16px 17px 16px 15px;
+}
+
+.text-inputs-group {
+  height: 382px;
+  gap: 24px 0;
+}
+.buttons-parent,
+.frame-wrapper,
+.post-job-frame-parent,
+.text-inputs-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.buttons-parent {
+  width: 545px;
+  height: 486px;
+  flex-direction: column;
+  gap: 48px 0;
+}
+.frame-wrapper,
+.post-job-frame-parent {
+  height: auto;
+}
+.post-job-frame-parent {
+  width: 1142px;
+  flex-direction: column;
+  gap: 25px 0;
+}
+.frame-wrapper {
+  width: 1151px;
+  flex-direction: row;
+  padding: 0 0 0 9px;
+  box-sizing: border-box;
+}
+.frame-parent1,
+.frame-parent2 {
+  /* height: 1121px; */
+  width: 1197px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 31px 0;
+}
+.frame-parent1 {
+  width: 1440px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0 1px;
+}
+.input-text-label {
+  height: 18px;
+  width: 545px;
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: "Noto Sans";
+  color: #666;
+  text-align: left;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.frame-div,
+.input-text-label-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.input-text-label-wrapper {
+  width: 829px;
+  height: 18px;
+  flex-direction: row;
+  padding: 0 0 0 284px;
+  box-sizing: border-box;
+}
+.frame-div {
+  width: 1440px;
+  /* height: 1166px; */
+  flex-direction: column;
+  gap: 27px 0;
+}
+.radio {
+  cursor: pointer;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+.radio-selection {
+  flex: 1;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Noto Sans";
+  color: #666;
+  text-align: left;
+}
+.radio-button {
+  width: 368px;
+  flex-direction: row;
+  gap: 0 16px;
+}
+.frame-container,
+.radio-button,
+.radio-button-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.radio-button-wrapper {
+  width: 652px;
+  height: 24px;
+  flex-direction: row;
+  padding: 0 0 0 284px;
+  box-sizing: border-box;
+}
+.frame-container {
+  width: 1440px;
+  /* height: 1205px; */
+  flex-direction: column;
+  gap: 15px 0;
+}
+.radio1 {
+  border-color: #7a5cfa;
+  accent-color: #7a5cfa;
+  cursor: pointer;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+
+.radio-button1 {
+  width: 368px;
+  flex-direction: row;
+  gap: 0 16px;
+}
+.frame-group,
+.radio-button-container,
+.radio-button1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.radio-button-container {
+  width: 652px;
+  height: 24px;
+  flex-direction: row;
+  padding: 0 0 0 284px;
+  box-sizing: border-box;
+}
+.frame-group {
+  width: 1440px;
+  flex-direction: column;
+  gap: 32px 0;
+}
+.radio2 {
+  cursor: pointer;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  position: relative;
+}
+
+.radio-button2 {
+  width: 368px;
+  flex-direction: row;
+  gap: 0 16px;
+}
+.frame-parent,
+.radio-button-frame,
+.radio-button2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.radio-button-frame {
+  width: 652px;
+  height: 24px;
+  flex-direction: row;
+  padding: 0 0 0 284px;
+  box-sizing: border-box;
+}
+.frame-parent {
+  width: 1440px;
+  flex-direction: column;
+  gap: 32px 0;
+}
+.image-1-icon {
+  width: 170px;
+  position: relative;
+  height: 52px;
+  object-fit: cover;
+  display: none;
+}
+.footer,
+.image-1-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.image-1-parent {
+  height: 20px;
+  width: 299px;
+  justify-content: center;
+  z-index: 1;
+}
+.footer {
+  height: 72px;
+  width: 1198px;
+  justify-content: flex-end;
+  padding: 27px 356px 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+.f452489720-icon4 {
+  height: 42.1px;
+  width: 120px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: 12.9px;
+  left: 412px;
+  object-fit: cover;
+  z-index: 2;
+}
+.footer-parent {
+  margin-top: auto;
+  width: 1198px;
+  height: 72px;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.submit-job-button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  padding: 20px 0; /* Add some space above and below the button */
+}
+
+.submit-job-button {
+  padding: 10px 20px; /* Adjust the padding to your needs */
+  font-size: 16px; /* Adjust the font size to your needs */
+  border: none;
+  border-radius: 5px;
+  background-color: #7a5cfa; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-job-button:hover {
+  background-color: #6658d3; /* Darken the button on hover */
+}
+.post-a-job {
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}

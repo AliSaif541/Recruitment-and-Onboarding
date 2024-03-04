@@ -1,0 +1,16 @@
+.custom-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Change the color as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add space above the button, adjust as needed */
+    margin-bottom: 20px; /* Add space below the button, adjust as needed */
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3; /* Darker shade on hover, adjust as needed */
+  }
+  

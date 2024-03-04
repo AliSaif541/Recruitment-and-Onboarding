@@ -1,0 +1,60 @@
+.input-text-label1 {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+  }
+  .icon4,
+  .typing {
+    height: 24px;
+    position: relative;
+  }
+  .typing {
+    width: 304px;
+    border: 0;
+    outline: 0;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    background-color: transparent;
+    line-height: 24px;
+    color: #333;
+    text-align: left;
+    display: inline-block;
+  }
+  .icon4 {
+    width: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .input-field1,
+  .text5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .input-field1 {
+    height: 58px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 2px solid #7a5cfa;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px 18px 16px 14px;
+  }
+  .assistive-text {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+  }
+  .text-inputs {
+    width: 545px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px 0;
+    text-align: left;
+  }
