@@ -28,8 +28,8 @@ Follow these steps to set up and run the RideSharing Management System on your l
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/alisaif541/ridesharing-management-system.git
-   cd ridesharing-management-system
+   git clone https://github.com/AliSaif541/Recruitment-and-Onboarding.git
+   cd Recruitment-and-Onboarding
 2. **Install Dependencies:**
    ```bash
    cd client
