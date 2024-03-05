@@ -6,11 +6,12 @@ import { jwtDecode } from "jwt-decode";
 import JobDescription from './pages/jobDescription';
 import Home from './pages/Home';
 import CareersPage from './pages/Careerspage';
-import PostAJob from './pages/postAJob';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import HRDashboard from './pages/HRDashboard'
 import Aboutus from './pages/Aboutus';
+import ContactUs from './pages/ContactUs';
+import PostJob from './pages/postJob';
 
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
@@ -37,16 +38,19 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {!user && <Route path="/postajob" element={<Login />} />}
+        {!user && <Route path="/postjob" element={<Login />} />}
+        {!user && <Route path="/hr" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
         <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
-        <Route path='postajob' element={<PostAJob />} />
+        {/* <Route path='postajob' element={<PostAJob />} /> */}
+        <Route path='postjob' element={<PostJob />} />
+        <Route path="/hr" element={<HRDashboard />} />
         <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/hr" element={<HRDashboard />} />
-        <Route path="/postajob" element={<Navigate replace to="/login" />} />
+        <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
 		  </Routes>
     </BrowserRouter>

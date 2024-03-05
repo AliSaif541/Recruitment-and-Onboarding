@@ -8,10 +8,10 @@ import Footer from "../components/Footer";
 
 const Aboutus = () => {
   return (
-    <div className="frame-container">
-      <main className="about-us">
+    <div className="frame-container-ab">
+      <main className="about-us-ab">
         <Header />
-        <section className="rectangle-frame">
+        <section className="rectangle-frame-ab">
           <AboutUSHead />
           <TextSectionImg />
           <BenefitSection />

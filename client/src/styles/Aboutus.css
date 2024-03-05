@@ -1,13 +1,13 @@
-.about-us,
-.rectangle-frame,
-.rectangle-group {
+.about-us-ab,
+.rectangle-frame-ab,
+.rectangle-group-ab {
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;
   max-width: 100%;
 }
 
-.rectangle-group {
+.rectangle-group-ab {
   align-self: stretch;
   background-color: #7cd3d2;
   flex-direction: row;
@@ -20,20 +20,20 @@
   font-family: Actor;
 }
 
-.about-us,
-.rectangle-frame {
+.about-us-ab,
+.rectangle-frame-ab {
   flex-direction: column;
   align-items: center;
 }
 
-.rectangle-frame {
+.rectangle-frame-ab {
   width: 1390px;
   padding: 0 20px;
   gap: 90px 0;
   flex-shrink: 0;
 }
 
-.about-us {
+.about-us-ab {
   width: 100%;
   background-color: #fff;
   overflow: hidden;
@@ -45,7 +45,7 @@
   font-family: Actor;
 }
 
-.frame-container {
+.frame-container-ab {
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .rectangle-group {
+  .rectangle-group-ab {
     flex-wrap: wrap;
     gap: 20px; 
     padding-left: 33px;
@@ -63,17 +63,17 @@
 }
 
 @media screen and (max-width: 800px) {
-  .rectangle-parent {
+  .rectangle-parent-ab {
     height: auto;
     min-height: 100px;
   }
-  .recruit {
+  .recruit-ab {
     font-size: 32px;
   }
-  .rectangle-frame {
+  .rectangle-frame-ab {
     gap: 20px 0;
   }
-  .about-us {
+  .about-us-ab {
     gap: 20px 0;
     margin-top: 20px;
   }

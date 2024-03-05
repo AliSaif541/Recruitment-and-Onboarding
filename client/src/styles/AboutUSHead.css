@@ -1,4 +1,4 @@
-.about-us2 {
+.about-us2-ab {
     margin: 0;
     position: relative;
     font-size: inherit;
@@ -10,11 +10,12 @@
     z-index: 3;
   }
   
-  .providing-the-best {
+  .providing-the-best-ab {
     color: #141414;
+    /* line-height: 45px; */
   }
   
-  .devsinc-providing-the-container {
+  .devsinc-providing-the-container-ab {
     margin: 0;
     width: 572px;
     position: relative;
@@ -27,11 +28,11 @@
     z-index: 3;
   }
   
-  .is-a-uiux {
+  .is-a-uiux-ab {
     color: #1e1e1e;
   }
   
-  .devsinc-is-a-container {
+  .devsinc-is-a-container-ab {
     width: 572px;
     position: relative;
     font-size: 14px;
@@ -40,7 +41,7 @@
     z-index: 3;
   }
   
-  .contact-us3 {
+  .contact-us3-ab {
     position: relative;
     font-size: 14px;
     font-weight: 500;
@@ -49,7 +50,7 @@
     text-align: center;
   }
   
-  .material-symbolsarrow-forward-icon {
+  .material-symbolsarrow-forward-icon-ab {
     height: 20px;
     width: 20px;
     position: relative;
@@ -58,15 +59,15 @@
     min-height: 20px;
   }
   
-  .benefit-cards-frame,
-  .button2,
-  .text4 {
+  .benefit-cards-frame-ab,
+  .button2-ab,
+  .text4-ab {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
   }
   
-  .button2 {
+  .button2-ab {
     cursor: pointer;
     border: 0;
     padding: 16px 20px;
@@ -78,27 +79,27 @@
     z-index: 3;
   }
   
-  .button2:hover {
+  .button2-ab:hover {
     background-color: #08996e;
   }
   
-  .benefit-cards-frame,
-  .text4 {
+  .benefit-cards-frame-ab,
+  .text4-ab {
     flex-direction: column;
   }
   
-  .benefit-cards-frame {
+  .benefit-cards-frame-ab {
     gap: 20px 0;
   }
   
-  .text4 {
+  .text4-ab {
     padding: 20px 0 0;
     box-sizing: border-box;
     min-width: 572px;
     max-width: 100%;
   }
   
-  .frame-features {
+  .frame-features-ab {
     position: absolute;
     top: 20px;
     left: 40px;
@@ -109,8 +110,8 @@
     z-index: 3;
   }
   
-  .rectangle-image-b-g,
-  .rectangle-image-b-g1 {
+  .rectangle-image-b-g-ab,
+  .rectangle-image-b-g1-ab {
     position: absolute;
     top: 268px;
     left: 0;
@@ -121,12 +122,12 @@
     z-index: 4;
   }
   
-  .rectangle-image-b-g1 {
+  .rectangle-image-b-g1-ab {
     top: 0;
     left: 178px;
   }
   
-  .frame-home-about-career-page-c {
+  .frame-home-about-career-page-c-ab {
     height: 514px;
     width: 554px;
     position: relative;
@@ -134,7 +135,7 @@
     max-width: 100%;
   }
   
-  .section-frame {
+  .section-frame-ab {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -150,36 +151,36 @@
   }
   
   @media screen and (max-width: 1350px) {
-    .frame-home-about-career-page-c,
-    .text4 {
+    .frame-home-about-career-page-c-ab,
+    .text4-ab {
       flex: 1;
     }
-    .section-frame {
+    .section-frame-ab {
       flex-wrap: wrap;
       gap: 0 74px;
     }
   }
   
   @media screen and (max-width: 800px) {
-    .about-us2 {
+    .about-us2-ab {
       font-size: 48px;
       line-height: 51px;
     }
-    .devsinc-providing-the-container {
+    .devsinc-providing-the-container-ab {
       font-size: 29px;
       line-height: 46px;
     }
-    .frame-home-about-career-page-c,
-    .text4 {
+    .frame-home-about-career-page-c-ab,
+    .text4-ab {
       min-width: 100%;
     }
-    .section-frame {
+    .section-frame-ab {
       gap: 0 74px;
     }
   }
   
   @media screen and (max-width: 450px) {
-    .about-us2 {
+    .about-us2-ab {
       font-size: 34px;
       line-height: 38px;
     }

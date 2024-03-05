@@ -47,4 +47,13 @@ router.post('/', upload.single('resume'), async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    try {
+      const applicants = await jobApplicant.find({});
+      res.json(applicants);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching Applicants' });
+    }
+  });
+
 module.exports = router;

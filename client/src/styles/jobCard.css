@@ -1,0 +1,93 @@
+.buttonsjb {
+    display: grid;
+    justify-content: center;
+    margin-top: 2px;
+}
+  
+.details-buttonjb {
+    margin-left: 40px;
+    margin-right: 50px;
+    padding: 10px 30px;
+    /* border: 1px solid #000; */
+    background-color: #f1f1f1;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.apply-buttonjb {
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    background-color: #7CD3D2;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+  
+.box-jp {
+    width: 365px;
+    height: 250px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    border: 1.5px solid #5E6368;
+    display: grid;    
+    margin-bottom: 25px;
+}
+  
+.title-jp {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 30px;
+    font-size: 18px;
+    margin-bottom: 1px; 
+    margin-top: 15px;
+}
+  
+.subtext-jp {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 1px;
+    margin-bottom: 10px; 
+}
+  
+.subtext-jp .span-jp {
+    font-size: 12px; 
+}
+  
+.content-jp {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 1px;
+    width: 320px;
+    /* text-align: center; */
+    word-wrap: break-word;
+    margin-bottom: 2px;
+}
+  
+.additional-info-jp {
+    text-align: left;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+  
+.salary-jp {
+    font-size: 14px;
+    margin-right: 190px;
+}
+  
+.salary-jp .span-jp {
+    font-weight: bold;
+    font-size: 22px;
+}
+  
+.posted-time-jp {
+    font-size: 14px;
+}
+  

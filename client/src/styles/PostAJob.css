@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.Post-a-Job {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  height: 100vh;
+  gap: 25px;
+}
+
+.Post-a-Job-h1 {
+  margin-top: 50px;
+  text-align: start;
+  font-size: 40px;
+  margin-bottom: 25px;
+  font-family: Actor;
+  /* color: #333; */
+  font-weight: 500;
+  color: #16BBB2
+}
+
+.Post-a-Job-Container {
+  display: grid;
+  /* grid-template-rows: 1fr 2fr 0.5fr 6fr;
+  align-items: center;
+  justify-items: start; */
+  height: 100vh;
+}
+
+.Post-a-Job-Form {
+  /* align-self: start; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  min-width: 100%;
+}
+
+.job-type-radio {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  margin-left: 25px;
+  gap: 25px;
+}
+
+.radio-h1 {
+  margin-top: 120px;
+  margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-family: Actor;
+  /* color: #333; */
+  font-weight: 500;
+}
+
+.particles-checkbox-container {
+  display: inline-block;
+}
+
+.Post-a-Job-input-div {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+  min-width: 100%;
+}
+
+.paj-user-inp, .paj-user-inp-cv {
+  width: 85%;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  height: 42px;
+  border-radius: 5px;
+}
+
+.paj-user-inp-cv {
+  height: 100px;
+}
+
+.Form-Div {
+  display: grid;
+}
+
+.login-btn-1 {
+  width: 175px;
+  height: 30px;
+  justify-self: start;
+}
+
+.custom-error {
+  justify-self: center;
+}
+
+.login-btn-1 {
+  background-color: #3751FE;
+  color: white;
+  border: white;
+}
+
+.login-btn-1:hover {
+  cursor: pointer;
+  background-color: #0020ee;
+}

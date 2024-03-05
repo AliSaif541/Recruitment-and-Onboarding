@@ -4,7 +4,6 @@ import pic from "../images/clip-message.png"
 import "../styles/Login.css"
 import { Link } from "react-router-dom";
 
-
 function Login() {
     const [data, setData] = useState({ 
         email: "", 
