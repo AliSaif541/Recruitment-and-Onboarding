@@ -3,7 +3,7 @@ import logo from '../images/actual-logo.png'
 import "../styles/NavigationSidebarExpanded.css";
 import { Link } from "react-router-dom";
 
-const NavigationSidebarExpanded = () => {
+const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="logo"><img src={logo} /></div>
@@ -12,7 +12,7 @@ const NavigationSidebarExpanded = () => {
         <i className="fas fa-chart-bar"></i>
       </div>
       <div className="menu-item">
-        <Link className="Link" to="/postajob"> <span>Post a Job</span></Link>
+        <Link className="Link" to="/postjob"> <span>Post a Job</span></Link>
         <i className="fas fa-edit"></i>
       </div>
       <div className="menu-item">
@@ -23,4 +23,4 @@ const NavigationSidebarExpanded = () => {
   );
 };
 
-export default NavigationSidebarExpanded;
+export default Sidebar;

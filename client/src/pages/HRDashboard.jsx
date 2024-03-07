@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import JobHRComponent from '../components/jobHRComponent'
-import ApplicantHRComponent from '../components/ApplicantHRComponent';
+import Sidebar from '../components/Sidebar';
+import '../styles/HRDashboard.css'
+import ApplicantsTable from '../components/ApplicantsTable';
+import JobBlocks from '../components/JobBlocks';
 
-const HRDashboard = (prop) => {
+const HRDashboard = () => {
     const [jobs, setJobs] = useState([]);
-    const [applicants, setApplicants] = useState([]);
 
     useEffect(() => {
         getJobs();
-        getApplicants();
     }, []);
 
     const getJobs = async (e) => {
@@ -19,28 +19,21 @@ const HRDashboard = (prop) => {
         console.log(response.data);
     }
 
-    const getApplicants = async (e) => {
-        const url = "http://localhost:9000/api/jobApplicant";
-        const response = await axios.get(url);
-        setApplicants(response.data);
-        console.log(response.data);
-    }
-
     return (        
-        <div>
-           <h2>Current Job Openings:</h2>
-           <div>{jobs.map((job, index) => (
-                <JobHRComponent key={index} {...job} />
-            ))}
-            </div>
-            <h2>Applicants:</h2>
-            <div>{applicants.map((applicant, index) => (
-                <ApplicantHRComponent key={index} {...applicant} />
-                ))}
+        <div className='HR-Dashboard'>
+            <Sidebar />
+            <div className='HR-Dashboard-Container'>
+                <h2 className='current-openings-h2'>Current Openings</h2>
+                <div className="hr-contact-frame">
+                    <div className="hr-time-legend">
+                    {jobs.map((job, index) => (
+                        <JobBlocks key={index} {...job} index={index} />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
-
 }
 
 export default HRDashboard

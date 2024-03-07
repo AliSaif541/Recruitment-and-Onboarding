@@ -1,0 +1,92 @@
+/* .job-blocks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
+.job-blocks-box {
+    width: 320px;
+    height: 210px;
+    background-color: #f1f1f1;
+    border-radius: 15px; /* Curved edges */
+    margin: 10px;
+}
+
+.job-blocks-header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.job-blocks-header img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.job-blocks-title {
+    color: #293E72;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.job-blocks-title span {
+    color: black;
+    font-size: 20px; 
+    margin-left: 100px;
+}
+
+.job-blocks-subtext {
+    font-size: 16px;
+    margin-left: 60px;
+    margin-top: -10px;
+    margin-bottom: 10px; 
+}
+
+.job-blocks-content {
+    text-align: center;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.job-blocks-c1 {
+    font-size: 16px;
+}
+  
+.job-blocks-c2 {
+    margin-left: 30px;
+    font-size: 16px;
+}
+  
+.job-blocks-additional-info {
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+  
+.job-blocks-applications {
+    font-size: 16px;
+    margin-right: 70px;
+}
+  
+.job-blocks-applications span {
+    font-weight: bold;
+    font-size: 28px;
+    color: #7CD3D2;
+}
+  
+.job-blocks-in-lastweek {
+    margin-top: 28px;
+    font-size: 16px;
+    color: #7CD3D2;
+}
+  

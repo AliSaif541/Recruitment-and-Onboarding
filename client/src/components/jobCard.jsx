@@ -27,9 +27,6 @@ function JobCard({ _id, name, company, salary, location, job_type, description, 
           <p className="posted-time-jp">5hr ago</p>
         </div>
         <div className="buttonsjb">
-          {/* <Link to={`/job/${index}`}  >
-            <button onClick={handleClick} className="details-buttonjb">View Details</button>   
-          </Link> */}
           <Link to={`/job/${index}`}  >
             <button onClick={handleClick} className="apply-buttonjb">Apply Now</button>
           </Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationSidebarExpanded from "../components/NavigationSidebarExpanded";
+import Sidebar from "../components/Sidebar";
 import "../styles/PostAJob.css";
 import { useState } from 'react';
 import axios from 'axios';
@@ -34,7 +34,7 @@ const PostAJob = () => {
 
   return (
     <div className="Post-a-Job">
-      <NavigationSidebarExpanded /> 
+      <Sidebar /> 
       <div className="Post-a-Job-Container">
         <form className="Post-a-Job-Form" onSubmit={handleSubmit}>
           <div>

@@ -12,6 +12,7 @@ import HRDashboard from './pages/HRDashboard'
 import Aboutus from './pages/Aboutus';
 import ContactUs from './pages/ContactUs';
 import PostJob from './pages/postJob';
+import ApplicantsList from './pages/ApplicantsList';
 
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
@@ -39,11 +40,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         {!user && <Route path="/postjob" element={<Login />} />}
+        {!user && <Route path="/hrjob/:id" element={<Login />} />}
         {!user && <Route path="/hr" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
         <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
-        {/* <Route path='postajob' element={<PostAJob />} /> */}
+        <Route path='/hrjob/:id' element={<ApplicantsList />} />
         <Route path='postjob' element={<PostJob />} />
         <Route path="/hr" element={<HRDashboard />} />
         <Route path="/aboutus" element={<Aboutus />} />
@@ -52,6 +54,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
+        <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
 		  </Routes>
     </BrowserRouter>
   );
