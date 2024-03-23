@@ -1,6 +1,6 @@
 import React from 'react';
-import homeLogo from '../images/home-logo.png'
-import "../styles/FullTimeLabel.css";
+import homeLogo from '../../images/home-logo.png'
+import "../../styles/FullTimeLabel.css";
 
 const FullTimeLabel = () => {
   return (

@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
-import FullTimeLabel from "../components/FullTimeLabel";
+import FullTimeLabel from "../components/CareersPage/FullTimeLabel";
 
 function Home() {
 

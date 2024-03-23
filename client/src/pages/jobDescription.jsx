@@ -9,7 +9,6 @@ import DescriptionFrame from '../components/DescriptionFrame';
 function JobDescription({ currentJob }) {
     return (
         <div className="job">
-      
             <Header />
             <div className='JobDesHeading'>
                 <h1 className="Heading-Name">Frontend developer</h1>

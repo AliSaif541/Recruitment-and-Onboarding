@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/LookingForOpportunity.css";
+import "../../styles/LookingForOpportunity.css";
 
 const LookingForOpportunity = () => {
   return (

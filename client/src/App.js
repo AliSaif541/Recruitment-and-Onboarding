@@ -13,6 +13,7 @@ import Aboutus from './pages/Aboutus';
 import ContactUs from './pages/ContactUs';
 import PostJob from './pages/postJob';
 import ApplicantsList from './pages/ApplicantsList';
+import UserProfile from './pages/UserProfile';
 
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/testing" element={<UserProfile />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/BenefitSection.css';
+import '../../styles/Aboutus/BenefitSection.css';
 
 const BenefitSection = () => {
   return (

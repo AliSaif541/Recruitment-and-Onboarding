@@ -1,7 +1,7 @@
 import React from "react";
-import FullTimeLabel from "../components/FullTimeLabel";
-import HeaderDetailsFrame from "../components/HeaderDetailsFrame";
-import LookingForOpportunity from "../components/LookingForOpportunity";
+import FullTimeLabel from "../components/CareersPage/FullTimeLabel";
+import HeaderDetailsFrame from "../components/CareersPage/HeaderDetailsFrame";
+import LookingForOpportunity from "../components/CareersPage/LookingForOpportunity";
 import "../styles/CareersPage.css"
 import Header from "../components/Header";
 import Footer from "../components/Footer";

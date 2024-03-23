@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/AboutUSHead.css';
+import '../../styles/Aboutus/AboutUSHead.css';
 
 const AboutUSHead = () => {
   return (

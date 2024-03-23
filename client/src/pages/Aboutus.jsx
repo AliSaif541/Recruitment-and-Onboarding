@@ -1,8 +1,8 @@
 import React from "react";
-import AboutUSHead from "../components/AboutUSHead";
-import TextSectionImg from "../components/TextSectionImg";
-import BenefitSection from "../components/BenefitSection";
-import "../styles/Aboutus.css";
+import AboutUSHead from "../components/Aboutus/AboutUSHead";
+import TextSectionImg from "../components/Aboutus/TextSectionImg";
+import BenefitSection from "../components/Aboutus/BenefitSection";
+import "../styles/Aboutus/Aboutus.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

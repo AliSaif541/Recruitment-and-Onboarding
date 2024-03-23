@@ -16,10 +16,11 @@ const upload = multer({ storage: storage });
 
 router.post('/', upload.single('resume'), async (req, res) => {
     try {
-        const { error } = jobApplicantValidate(req.body);
-        if (error) {
-            return res.status(400).send({ message: error.details[0].message });
-        }
+        console.log(req.body);
+        // const { error } = jobApplicantValidate(req.body);
+        // if (error) {
+        //     return res.status(400).send({ message: error.details[0].message });
+        // }
 
         const applicant = await jobApplicant.findOne({ email: req.body.email, jobID: req.body.jobID });
         if (applicant) {
@@ -32,8 +33,9 @@ router.post('/', upload.single('resume'), async (req, res) => {
             contact_number: req.body.contact_number,
             cover_letter: req.body.cover_letter,
             years_of_exp: req.body.years_of_exp,
-            education: req.body.education,
-            experience: req.body.experience,
+            skills: req.body.skills,
+            education: JSON.parse(req.body.education), 
+            experience: JSON.parse(req.body.experience),
             resume: req.file.buffer.toString('base64'),
             jobID: req.body.jobID
         });

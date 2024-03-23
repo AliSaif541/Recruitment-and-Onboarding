@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/TextSectionImg.css';
+import '../../styles/Aboutus/TextSectionImg.css';
 
 const TextSectionImg = () => {
   return (

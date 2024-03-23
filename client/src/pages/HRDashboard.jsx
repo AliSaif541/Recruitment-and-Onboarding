@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../components/Sidebar';
 import '../styles/HRDashboard.css'
-import ApplicantsTable from '../components/ApplicantsTable';
 import JobBlocks from '../components/JobBlocks';
 
 const HRDashboard = () => {

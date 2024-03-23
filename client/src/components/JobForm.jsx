@@ -1,73 +1,166 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import "../styles/jobForm.css"
 
 const JobForm = ({ currentJob }) => {
-  const [jobApplicant, setJobApplicant] = useState({ 
-    name: '', 
+  const [jobApplicant, setJobApplicant] = useState({
+    name: '',
     email: '',
-    contact_number: 0, 
-    years_of_exp: -1, 
-    cover_letter: '' ,
-    education: ' ',
-    experience: ' ',
+    contact_number: '',
+    gender: '',
+    city: '',
+    GitHub: '',
+    LinkedIn: '',
+    years_of_exp: '',
+    cover_letter: '',
+    education: [
+      { institution: '', degree: '', location: '', graduationYear: '', gpa: '' }
+    ],
+    experience: [
+      { title: '', company: '', from: '', to: '', rolesResponsibilities: '' }
+    ],
+    skills: [],
     resume: null,
+    rating: '0',
+    stage: 'applicant',
     jobID: currentJob._id,
   });
 
   const handleInputChange = (e) => {
-      setJobApplicant({ ...jobApplicant, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setJobApplicant({ ...jobApplicant, [name]: value });
+  };
+
+  const handleEducationChange = (e, index) => {
+    const { name, value } = e.target;
+    const updatedEducation = [...jobApplicant.education];
+    updatedEducation[index][name] = value;
+    setJobApplicant({ ...jobApplicant, education: updatedEducation });
+  };
+
+  const handleExperienceChange = (e, index) => {
+    const { name, value } = e.target;
+    const updatedExperience = [...jobApplicant.experience];
+    updatedExperience[index][name] = value;
+    setJobApplicant({ ...jobApplicant, experience: updatedExperience });
   };
 
   const handleFileChange = (e) => {
-      setJobApplicant({ ...jobApplicant, resume: e.target.files[0] });
+    setJobApplicant({ ...jobApplicant, resume: e.target.files[0] });
+  };
+
+  const handleAddEducation = () => {
+    setJobApplicant({
+      ...jobApplicant,
+      education: [
+        ...jobApplicant.education,
+        { institution: '', degree: '', location: '', graduationYear: '', gpa: '' }
+      ]
+    });
+  };
+
+  const handleAddExperience = () => {
+    setJobApplicant({
+      ...jobApplicant,
+      experience: [
+        ...jobApplicant.experience,
+        { title: '', company: '', from: '', to: '', rolesResponsibilities: '' }
+      ]
+    });
+  };
+
+  const handleSkillChange = (e, index) => {
+    const newSkills = [...jobApplicant.skills];
+    newSkills[index] = e.target.value;
+    setJobApplicant({ ...jobApplicant, skills: newSkills });
+  };
+
+  const handleAddSkill = () => {
+    setJobApplicant({
+      ...jobApplicant,
+      skills: [...jobApplicant.skills, '']
+    });
   };
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-
-      console.log(jobApplicant);
-
-      const formData = new FormData();
-      formData.append('name', jobApplicant.name);
-      formData.append('email', jobApplicant.email);
-      formData.append('contact_number', jobApplicant.contact_number);
-      formData.append('years_of_exp', jobApplicant.years_of_exp);
-      formData.append('cover_letter', jobApplicant.cover_letter);
-      formData.append('education', jobApplicant.education);
-      formData.append('experience', jobApplicant.experience);
-      formData.append('resume', jobApplicant.resume);
-      formData.append('jobID', jobApplicant.jobID);
-          
-      try {
-          await axios.post('http://localhost:9000/api/jobApplicant', formData, {
-              headers: {
-                  'Content-Type': 'multipart/form-data',
-              },
-          });
-        console.log('Application Submitted successfully');
-      } catch (error) {
-        console.error('Error uploading data:', error);
+    e.preventDefault();
+    
+    const formData = new FormData();
+    Object.entries(jobApplicant).forEach(([key, value]) => {
+      if (key === 'education' || key === 'experience') {
+        formData.append(key, JSON.stringify(value));
+      } else if (key === 'skills') {
+        value.forEach((skill) => {
+          formData.append('skills', skill);
+        });
+      } else {
+        formData.append(key, value);
       }
+    });
+
+
+    try {
+      await axios.post('http://localhost:9000/api/jobApplicant', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log('Application Submitted successfully');
+    } catch (error) {
+      console.error('Error uploading data:', error);
+    }
   };
 
   return (
-    <div className='Form-Container-Apply'>
-      <h2 className='Apply'>Apply for this role</h2>
-      <form  onSubmit={handleSubmit}>
-        <div className='Apply-Form'>
-          <input className="jd-user-inp" type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
-          <input className="jd-user-inp" type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
-          <input className="jd-user-inp" type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
-          <input className="jd-user-inp" type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
-        </div>
-        <div className='Apply-Form-2'>
-          <input className="jd-user-inp-2" type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
-          <button className='Submit-JD-Btn' type="submit">Send Application</button>
-        </div>
+    <div>
+      <h2>Apply for this role</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
+        <input type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
+        <input type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
+        <input type="text" placeholder="Gender" name='gender' onChange={handleInputChange} />
+        <input type="text" placeholder="City" name='city' onChange={handleInputChange} />
+        <input type="text" placeholder="GitHub" name='GitHub' onChange={handleInputChange} />
+        <input type="text" placeholder="LinkedIn" name='LinkedIn' onChange={handleInputChange} />
+        <input type="number" placeholder="Years of Experience" name='years_of_exp' onChange={handleInputChange} required />
+        <input type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
+        <input type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
+
+        {jobApplicant.education.map((edu, index) => (
+          <div key={index}>
+            <input type="text" placeholder="Institution" name="institution" value={edu.institution} onChange={(e) => handleEducationChange(e, index)} required />
+            <input type="text" placeholder="Degree" name="degree" value={edu.degree} onChange={(e) => handleEducationChange(e, index)} required />
+            <input type="text" placeholder="Location" name="location" value={edu.location} onChange={(e) => handleEducationChange(e, index)} required />
+            <input type="text" placeholder="Graduation Year" name="graduationYear" value={edu.graduationYear} onChange={(e) => handleEducationChange(e, index)} required />
+            <input type="text" placeholder="GPA" name="gpa" value={edu.gpa} onChange={(e) => handleEducationChange(e, index)} required />
+          </div>
+        ))}
+        <button type="button" onClick={handleAddEducation}>Add Education</button>
+
+        {jobApplicant.experience.map((exp, index) => (
+          <div key={index}>
+            <input type="text" placeholder="Title" name="title" value={exp.title} onChange={(e) => handleExperienceChange(e, index)} required />
+            <input type="text" placeholder="Company" name="company" value={exp.company} onChange={(e) => handleExperienceChange(e, index)} required />
+            <input type="date" placeholder="From" name="from" value={exp.from} onChange={(e) => handleExperienceChange(e, index)} required />
+            <input type="date" placeholder="To" name="to" value={exp.to} onChange={(e) => handleExperienceChange(e, index)} required />
+            <input type="text" placeholder="Roles and Responsibilities" name="rolesResponsibilities" value={exp.rolesResponsibilities} onChange={(e) => handleExperienceChange(e, index)} required />
+          </div>
+        ))}
+        <button type="button" onClick={handleAddExperience}>Add Experience</button>
+        {jobApplicant.skills.map((skill, index) => (
+          <div key={index}>
+            <input
+              type="text"
+              placeholder="Skill"
+              value={skill}
+              onChange={(e) => handleSkillChange(e, index)}
+              required
+            />
+          </div>
+        ))}
+        <button type="button" onClick={handleAddSkill}>Add Skill</button>
+        <button type="submit">Send Application</button>
       </form>
-  </div>
+    </div>
   );
 };
 

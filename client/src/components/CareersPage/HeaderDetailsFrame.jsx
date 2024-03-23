@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import "../styles/HeaderDetailsFrame.css";
+import "../../styles/HeaderDetailsFrame.css";
 import JobCard from "./jobCard";
 
 const HeaderDetailsFrame = ({ setCurrentJob }) => {
