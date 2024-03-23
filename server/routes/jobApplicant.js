@@ -31,12 +31,18 @@ router.post('/', upload.single('resume'), async (req, res) => {
             name: req.body.name,
             email: req.body.email,
             contact_number: req.body.contact_number,
+            gender: req.body.gender,
+            city: req.body.city,
+            GitHub: req.body.GitHub,
+            LinkedIn: req.body.LinkedIn,
             cover_letter: req.body.cover_letter,
             years_of_exp: req.body.years_of_exp,
             skills: req.body.skills,
             education: JSON.parse(req.body.education), 
             experience: JSON.parse(req.body.experience),
             resume: req.file.buffer.toString('base64'),
+            rating: req.body.rating,
+            stage: req.body.stage,
             jobID: req.body.jobID
         });
 

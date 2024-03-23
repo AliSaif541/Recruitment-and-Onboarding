@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import '../../styles/jobCard.css'
+import '../../styles/CareersPage/jobCard.css'
 
 function JobCard({ _id, name, company, salary, location, job_type, description, index, setCurrentJob }) {
   const handleClick = () => {

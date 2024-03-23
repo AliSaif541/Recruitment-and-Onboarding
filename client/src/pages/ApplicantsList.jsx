@@ -1,11 +1,13 @@
 import React from "react";
-import "../styles/ApplicantsList.css";
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import Sidebar from '../components/Sidebar';
-import ApplicantsTable from "../components/ApplicantsTable";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import JobDetails from '../components/JobDetails';
+import '../styles/HRDashboard/ApplicantsList.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import CandidateList from '../components/CandidateList';
 
-const ApplicantsList = ({_id}) => {
+const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     const [applicants, setApplicants] = useState([]);
 
     useEffect(() => {
@@ -15,22 +17,28 @@ const ApplicantsList = ({_id}) => {
     const getApplicants = async (e) => {
         const url = "http://localhost:9000/api/jobApplicant";
         const response = await axios.get(url);
-        setApplicants(response.data);
-        console.log(response.data);
+        const filteredArray = response.data.filter(item => item.jobID === currentJobPosting._id);
+        setApplicants(filteredArray);
+        console.log("filtered: ", filteredArray);
     }
 
+    
     return (
-      <div className="applicants-list-container">
-        <Sidebar />
-        <div className="current-applicants-div">
-            <h2 className='current-applicants-h2'>Applicants:</h2>
-            <ApplicantsTable applicants={applicants} />
+        <div className='applicant-list-container'>
+            <Header />
+            <div className='job-details-container'>
+            <JobDetails currentJobPosting={currentJobPosting} />
+            </div>
+            <div className='candidates-container'>
+            <div className='cadidate-heading'>
+                <div className='candidate-p'>Applied Candidates</div>
+                <div className='candidate-p'>Shortlisted Candidates</div>
+                <div className='candidate-p'>Interviews</div>
+            </div>
+            <CandidateList applicants={applicants} setCurrentApplicant={setCurrentApplicant} />
+            </div>
+            <Footer />
         </div>
-        {/* <div>{applicants.map((applicant, index) => (
-            <ApplicantsTable key={index} {...applicant} />
-            ))}
-        </div> */}
-      </div>
     );
 };
 

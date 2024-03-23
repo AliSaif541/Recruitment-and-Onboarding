@@ -1,15 +1,15 @@
 import React from 'react';
-import '../styles/UserProfile.css';
+import '../styles/HRDashboard/UserProfile.css';
 import Header from '../components/Header';
-import UserBody from '../components/UserBody';
+import UserBody from '../components/hrDashboard/UserBody';
 import Footer from '../components/Footer';
 
-function UserProfile() {
+function UserProfile({ currentApplicant }) {
   return (
     <div className='userprofile-container'>
       <Header />
       <div className='user-body-container'>
-        <UserBody />
+        <UserBody currentApplicant={currentApplicant} />
       </div>
     <Footer />
     </div>

@@ -7,6 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const columns = [
   { id: 'name', label: 'Name', width: 150 },
@@ -16,10 +18,9 @@ const columns = [
   { id: 'gpa', label: 'GPA', width: 100 },
 ];
 
-const ApplicantsTable = ({ applicants }) => {
-  console.log("applicants", applicants);
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+const ApplicantsTable = ({ applicants, setCurrentApplicant }) => {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -28,6 +29,28 @@ const ApplicantsTable = ({ applicants }) => {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
+  };
+
+  const handleClick = (applicant) => {
+    setCurrentApplicant({
+      _id: applicant._id,
+      name: applicant.name,
+      email: applicant.email,
+      contact_number: applicant.contact_number,
+      gender: applicant.gender,
+      city: applicant.city,
+      GitHub: applicant.GitHub,
+      LinkedIn: applicant.LinkedIn,
+      years_of_exp: applicant.years_of_exp,
+      cover_letter: applicant.cover_letter,
+      education: applicant.education,
+      experience: applicant.experience,
+      skills: applicant.skills,
+      resume: applicant.resume,
+      rating: applicant.rating,
+      stage: applicant.stage,
+      jobID: applicant.jobID,
+    });
   };
 
   return (
@@ -47,25 +70,28 @@ const ApplicantsTable = ({ applicants }) => {
               ))}
             </TableRow>
           </TableHead>
-          <TableBody>
-            {applicants
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((applicant) => (
-                <TableRow
-                  hover
-                  role="checkbox"
-                  tabIndex={-1}
-                  key={applicant.email}
-                >
-                  {columns.map((column) => {
-                    const value = applicant[column.id];
-                    return (
-                      <TableCell key={column.id} align="center">
-                        {value}
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
+            <TableBody>
+              {applicants
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((applicant, index) => (
+                  <Link className="Link" to={`/user/${index}`}> 
+                    <TableRow
+                      hover
+                      role="checkbox"
+                      tabIndex={-1}
+                      key={applicant.email}
+                      onClick={() => handleClick(applicant)}
+                    >
+                      {columns.map((column) => {
+                        const value = applicant[column.id];
+                        return (
+                          <TableCell key={column.id} align="center">
+                            {value}
+                          </TableCell>
+                        );
+                      })}
+                    </TableRow>
+                  </Link>
               ))}
           </TableBody>
         </Table>
