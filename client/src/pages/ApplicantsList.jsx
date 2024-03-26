@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import JobDetails from '../components/JobDetails';
+import JobDetails from '../components/hrDashboard/JobDetails';
 import '../styles/HRDashboard/ApplicantsList.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CandidateList from '../components/CandidateList';
+import CandidateList from '../components/hrDashboard/CandidateList';
 
 const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     const [applicants, setApplicants] = useState([]);
@@ -31,9 +31,9 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
             </div>
             <div className='candidates-container'>
             <div className='cadidate-heading'>
-                <div className='candidate-p'>Applied Candidates</div>
-                <div className='candidate-p'>Shortlisted Candidates</div>
-                <div className='candidate-p'>Interviews</div>
+                <div className='candidate-p'>Applied Candidates (Not Shortlisted)</div>
+                <div className='candidate-p'>Shortlisted Candidates (In order of Rating)</div>
+                <div className='candidate-p'>Rejected Candidates</div>
             </div>
             <CandidateList applicants={applicants} setCurrentApplicant={setCurrentApplicant} />
             </div>

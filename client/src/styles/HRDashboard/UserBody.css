@@ -123,20 +123,38 @@
   gap: 80px;
 }
 
+.resume-container {
+  margin-top: 15px;
+}
+
+.resume-div {
+  display: grid;
+  text-align: center;
+}
+
 .see-resume {
   color: #16BBB2;
   text-decoration: underline;
-  margin-right: 20px;
+  margin-bottom: 30px;
   align-self: center;
+  text-align: center;
+  justify-self: center;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .schedule-interview {
   display: inline-block;
   padding: 15px 90px;
-  background-color: #16BBB2;
+  background-color: #7cd3d2;
   color: #ffffff;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
+  border: none;
+}
+
+.schedule-interview:hover {
+  cursor: pointer;
+  background-color: #339392;;
 }

@@ -21,15 +21,15 @@
   }
   
   .interview-input-boxes {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     margin-top: 20px;
   }
   
   .interview-box {
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 20px;
     border: 1px solid #ccc;
     display: flex;
     justify-content: flex-start; /* Align text to the top left */
@@ -39,30 +39,15 @@
     margin-right: 10px; /* Add spacing between boxes */
     padding: 5px; /* Add padding for text */
   }
-  
-  .interview-time-box {
-    position: relative;
-    width: 285px;
-    height: 50px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: flex-start; /* Align text to the top left */
-    align-items: flex-start; /* Align text to the top left */
-    cursor: pointer;
-    border-radius: 5px; /* Add curved edges */
-    margin-right: 10px; /* Add spacing between boxes */
-    padding: 5px; /* Add padding for text */
+
+  .setError-div {
+    display: grid;
+    text-align: center;
   }
   
   .interview-box-text {
     font-size: 12px;
     color: #1A4F6E;
-  }
-  
-  .interview-emoji {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
   }
   
   .interview-additional-info {
@@ -98,10 +83,15 @@
   .confirm-interview {
     display: inline-block;
     padding: 15px 90px;
-    background-color: #16BBB2; 
+    background-color: #7cd3d2; 
     color: #ffffff; 
     /* justify-self: flex-end; */
     border-radius: 5px; 
     font-weight: bold;
+    border: none;
     text-decoration: none; 
+  }
+  .confirm-interview:hover {
+    cursor: pointer;
+    background-color: #339392;;
   }

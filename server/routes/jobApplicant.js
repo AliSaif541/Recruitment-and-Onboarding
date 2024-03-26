@@ -2,7 +2,19 @@ const router = require('express').Router();
 const multer = require('multer');
 const mongoose = require('mongoose');
 const gridfs = require('gridfs-stream');
+const nodemailer = require('nodemailer');
 const { jobApplicant, jobApplicantValidate } = require('../models/jobApplicant');
+
+const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+        user: 'recruitment.onboarding541@gmail.com',
+        pass: 'ksoa xcxe ohss aiaf',
+    }
+  });
+
 
 const conn = mongoose.connection;
 let gfs;
@@ -62,6 +74,52 @@ router.get('/', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: 'Error fetching Applicants' });
     }
-  });
+});
+
+router.post('/reject', async (req, res) => {
+    try {
+        console.log(req.body);
+        const applicant = await jobApplicant.findOne({ email: req.body.email, jobID: req.body.jobID});
+        if (!applicant) {
+            return res.status(404).send({ message: "Applicant not found" });
+        }
+
+        applicant.stage = req.body.stage;
+
+        await applicant.save();
+        res.send({ message: "Applicant status changes successfully", applicant });
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching Applicants' });
+    }
+});
+
+router.post('/Interview', async (req, res) => {
+    const { recipient, jobID, date, time, note } = req.body;
+
+    try {
+        const applicant = await jobApplicant.findOne({ email: recipient, jobID: jobID});
+        if (!applicant) {
+            return res.status(404).send({ message: "Applicant not found" });
+        }
+
+        applicant.stage = "interview";
+
+        await applicant.save();
+        
+        const mailOptions = {
+        from: 'your_email_address',
+        to: recipient,
+        subject: 'Interview Scheduled',
+        text: `Your interview has been scheduled for ${date} at ${time} at Devsinc Head office in Lahore. ${note}`
+        };
+
+        await transporter.sendMail(mailOptions);
+
+        res.status(200).send('Interview email sent successfully');
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).send('Error sending email');
+    }
+});
 
 module.exports = router;

@@ -1,7 +1,35 @@
 import React from 'react';
 import '../../styles/HRDashboard/UserBody.css';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 function UserBody({ currentApplicant }) {
+    const viewResume = () => {
+        const binaryData = atob(currentApplicant.resume);
+        const arrayBuffer = new ArrayBuffer(binaryData.length);
+        const byteArray = new Uint8Array(arrayBuffer);
+        for (let i = 0; i < binaryData.length; i++) {
+            byteArray[i] = binaryData.charCodeAt(i);
+        }
+        const blob = new Blob([arrayBuffer], { type: 'application/pdf' });
+
+        const url = URL.createObjectURL(blob);
+
+        window.open(url, '_blank');
+    };
+
+    const handleRejection = async () => {
+        const url = "http://localhost:9000/api/jobApplicant/reject";
+
+        const postData = {
+            email: currentApplicant.email,
+            stage: "Rejected",
+            jobID: currentApplicant.jobID
+        }
+        const { data: res } = await axios.post(url, postData);
+    };
+
     return (
         <div className="box">
             <div className="profile-info">
@@ -55,9 +83,15 @@ function UserBody({ currentApplicant }) {
                 <h3 className="text-box-header">Cover Letter</h3>
                 <p>{currentApplicant.cover_letter}</p>
             </div>
+            <div className='resume-container'>
+                <h3 className="text-box-header">Resume</h3>
+                <div className='resume-div'>
+                    <p onClick={viewResume} className="see-resume">See Resume</p>
+                </div>
+            </div>
             <div className="actions">
-                <a href="/resume" className="see-resume">See Resume</a>
-                <a href="/schedule-interview" className="schedule-interview">Schedule Interview</a>
+                <button onClick={handleRejection} className="schedule-interview">Reject Candidate</button>
+                <Link className="Link" to={`/interview`}><button className="schedule-interview">Schedule Interview</button></Link>
             </div>
         </div>
     );

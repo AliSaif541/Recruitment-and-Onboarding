@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/JobDetails.css';
+import '../../styles/HRDashboard/JobDetails.css';
 
 function JobDetails({ currentJobPosting }) {
     console.log("currentJobPosting: ", currentJobPosting);

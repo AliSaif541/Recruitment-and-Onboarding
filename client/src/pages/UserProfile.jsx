@@ -5,6 +5,7 @@ import UserBody from '../components/hrDashboard/UserBody';
 import Footer from '../components/Footer';
 
 function UserProfile({ currentApplicant }) {
+  console.log("currentApplicant: ", currentApplicant);
   return (
     <div className='userprofile-container'>
       <Header />

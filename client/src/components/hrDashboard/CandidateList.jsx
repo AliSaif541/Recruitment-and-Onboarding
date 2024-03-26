@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import '../styles/CandidateList.css';
+import '../../styles/HRDashboard/CandidateList.css';
+import { Link } from 'react-router-dom';
 
 function CandidateList({ applicants, setCurrentApplicant }) {
   const [showMore, setShowMore] = useState(false);
-  console.log("applicants: ", applicants);
+  
 
   const toggleDescription = () => {
     setShowMore(!showMore);
   };
 
   const handleClick = (applicant) => {
+    console.log("applicant: ", applicant);
     setCurrentApplicant({
       _id: applicant._id,
       name: applicant.name,
@@ -35,9 +37,8 @@ function CandidateList({ applicants, setCurrentApplicant }) {
     <div className="candidates-list">
       {applicants.map((applicant, index) => (
         <div key={index} className="candidates-list-box">
-          {/* <img src={applicant.image} alt={`Candidate ${index + 1}`} className="candidate-image" /> */}
           <div className="candidate-info">
-            <h3 className="candidate-name">{applicant.name}</h3>
+            <Link className="Link" to={`/user/${index}`}> <h3 onClick={() => handleClick(applicant)} className="candidate-name">{applicant.name}</h3> </Link>
             <p className="candidate-description">
               {showMore
                 ? applicant.cover_letter
@@ -49,8 +50,8 @@ function CandidateList({ applicants, setCurrentApplicant }) {
             <p className="candidate-location">
               <span className="location-label">Location - </span>
               <span className="location-value">{applicant.city}</span>
-              <span className="type-label"> Email - </span>
-              <span className="type-value">{applicant.email}</span>
+              <span className="type-label"> Rating - </span>
+              <span className="type-value">{` `}{applicant.rating}</span>
             </p>
             <hr className="divider" />
             <div className="skills-candidate">

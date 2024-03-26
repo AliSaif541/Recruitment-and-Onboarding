@@ -59,22 +59,27 @@ function App() {
       <Routes>
         {!user && <Route path="/postjob" element={<Login />} />}
         {!user && <Route path="/hrjob/:id" element={<Login />} />}
+        {!user && <Route path="/user/:id" element={<Login />} />}
         {!user && <Route path="/hr" element={<Login />} />}
+        {!user && <Route path="/interview" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
         <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
         <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
         <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} />} />
+        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
         <Route path='postjob' element={<PostJob />} />
         <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<Testing />} />
+        {/* <Route path="/testing" element={<Testing />} /> */}
+        <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
+        <Route path="/user/:id" element={<Navigate replace to="/login" />} />
 		  </Routes>
     </BrowserRouter>
   );

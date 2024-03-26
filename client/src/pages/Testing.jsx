@@ -1,9 +1,9 @@
 import React from 'react';
-import JobDetails from '../components/JobDetails';
+import JobDetails from '../components/hrDashboard/JobDetails';
 import '../styles/Testing.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CandidateList from '../components/CandidateList';
+import CandidateList from '../components/hrDashboard/CandidateList';
 
 function Testing() {
   return (
