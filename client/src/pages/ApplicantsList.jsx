@@ -6,6 +6,7 @@ import '../styles/HRDashboard/ApplicantsList.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CandidateList from '../components/hrDashboard/CandidateList';
+import HRHeader from "../components/HRHeader";
 
 const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     const [applicants, setApplicants] = useState([]);
@@ -25,13 +26,13 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     
     return (
         <div className='applicant-list-container'>
-            <Header />
+            <HRHeader />
             <div className='job-details-container'>
             <JobDetails currentJobPosting={currentJobPosting} />
             </div>
             <div className='candidates-container'>
             <div className='cadidate-heading'>
-                <div className='candidate-p'>Applied Candidates (Not Shortlisted)</div>
+                <div className='candidate-p'>Applied Candidates (Not called for Interview)</div>
                 <div className='candidate-p'>Shortlisted Candidates (In order of Rating)</div>
                 <div className='candidate-p'>Rejected Candidates</div>
             </div>

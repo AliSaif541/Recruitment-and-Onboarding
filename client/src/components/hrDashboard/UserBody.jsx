@@ -41,8 +41,8 @@ function UserBody({ currentApplicant }) {
                     <span>{currentApplicant.gender}</span>
                 </div>
                 <div className="location-item">
-                    <span>City</span>
-                    <span>{currentApplicant.city}</span>
+                    <span>Email</span>
+                    <span>{currentApplicant.email}</span>
                 </div>
                 <div className="location-item">
                     <span>Number</span>

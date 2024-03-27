@@ -1,20 +1,19 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt'); // Added bcrypt
 const { HR, hrValidate } = require('../models/HR');
-
 
 router.post('/', async (req, res) => {
   try {
-    console.log("hello");
-    console.log(req.body);
-
     let user = await HR.findOne({ email: req.body.email });
 
     if (!user) {
       return res.status(401).send({ message: `User does not exist` });
     }
 
-    if (req.body.password !== user.password) {
+    const validPassword = await bcrypt.compare(req.body.password, user.password);
+
+    if (!validPassword) {
       return res.status(401).send({ message: 'Invalid password' });
     }
     
@@ -38,11 +37,14 @@ router.post('/signup', async (req, res) => {
         return res.status(400).send({ message: error.details[0].message });
     }
 
+    const hashedPassword = await bcrypt.hash(req.body.password, 10); // Hash the password
+
     const hr = await HR.findOne({ email: req.body.email });
     if (hr) {
         return res.status(409).send({ message: 'User already exists!' });
     }
 
+    req.body.password = hashedPassword; // Set hashed password
     await new HR(req.body).save();
     res.status(201).send({ message: "User created successfully!" });
 

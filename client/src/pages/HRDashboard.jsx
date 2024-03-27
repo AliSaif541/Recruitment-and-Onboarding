@@ -5,6 +5,7 @@ import '../styles/HRDashboard/HRDashboard.css'
 import JobBlocks from '../components/hrDashboard/JobBlocks';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import HRHeader from '../components/HRHeader';
 
 const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
     const [jobs, setJobs] = useState([]);
@@ -22,8 +23,7 @@ const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
 
     return (        
         <div className='HR-Dashboard'>
-            {/* <Sidebar /> */}
-            <Header />
+            <HRHeader />
             <div className='HR-Dashboard-Container'>
                 <h2 className='current-openings-h2'>Current Openings</h2>
                 <div className="hr-contact-frame">

@@ -3,6 +3,7 @@ import '../styles/HRDashboard/Interview.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import HRHeader from '../components/HRHeader';
 
 
 function Interview({ currentApplicant, currentJobPosting }) {
@@ -35,7 +36,7 @@ function Interview({ currentApplicant, currentJobPosting }) {
 
   return (
     <div className='interview-container'>
-      <Header />
+      <HRHeader />
       <div className='interview-body-container'>
         <div className="interview-body">
           <h1 className="schedule-heading">Schedule Meeting with {currentApplicant.name}</h1>
@@ -60,7 +61,7 @@ function Interview({ currentApplicant, currentJobPosting }) {
               />
             </div>
             <div className="interview-additional-info">
-              <p>Enter any additional stuff that u want to convey to the candidate: </p>
+              <p>Enter any additional stuff that u want to convey to the candidate about the nature of the interview: </p>
               <textarea
                 className="interview-additional-textarea"
                 placeholder="Interview Additional Note..."

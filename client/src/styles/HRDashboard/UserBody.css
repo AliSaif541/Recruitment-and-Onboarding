@@ -31,7 +31,8 @@
 }
 
 .location-item {
-  display: flex;
+  display: grid;
+  justify-items: center;
   flex-direction: column;
 }
 

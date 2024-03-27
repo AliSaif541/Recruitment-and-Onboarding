@@ -5,6 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import HRHeader from "../components/HRHeader";
 
 const PostAJob = () => {
   const [jobPosting, setJobPosting] = useState({ 
@@ -80,8 +81,7 @@ const PostAJob = () => {
 
   return (
     <div className="Post-a-Job">
-      {/* <Sidebar />  */}
-      <Header />
+      <HRHeader />
       <div className="Post-a-Job-Container">
         <form className="Post-a-Job-Form" onSubmit={handleSubmit}>
         <div>
