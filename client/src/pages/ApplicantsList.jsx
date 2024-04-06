@@ -25,7 +25,7 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
 
     
     return (
-        <div className='applicant-list-container'>
+        <div className='applicant-list-container-x'>
             <HRHeader />
             <div className='job-details-container'>
             <JobDetails currentJobPosting={currentJobPosting} />

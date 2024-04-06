@@ -5,6 +5,7 @@ const gridfs = require('gridfs-stream');
 const nodemailer = require('nodemailer');
 const { jobApplicant, jobApplicantValidate } = require('../models/jobApplicant');
 const { Job, jobValidate } = require('../models/job');
+// const {jobRecruiter} = require('../ML-Algo/ML-Rating')
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
