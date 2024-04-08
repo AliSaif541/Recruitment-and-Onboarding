@@ -1,0 +1,85 @@
+.JobDetails-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+  
+  .demand-box {
+    width: 700px;
+    height: 200px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .Job-heading {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1A4F6E;
+    margin-top: 0;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+  
+  .Job-description {
+    font-size: 14px;
+    color: #333; 
+    margin-top: -10px; 
+  }
+  
+  
+  .Job-requirements {
+    font-weight: bold; /* Make the requirements heading bold */
+    margin-top: 10px; /* Add margin top to create space between description and requirements */
+  }
+  
+  .Job-requirements ul {
+    list-style-type: disc;
+    margin-left: 0; /* Remove default margin */
+    padding-left: 20px; /* Add padding for bullet points */
+    margin-top: 5px; /* Adjust margin top of the list */
+  }
+  
+  .Job-requirements ul li {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  
+  .Job-skills {
+    display: flex; /* Change display to flex */
+    align-items: center; /* Align items vertically centered */
+    margin-top: -15px;
+  }
+  
+  .Job-skills h3 {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #16BBB2;
+  }
+  
+  .Job-skill-item {
+    padding: 10px 20px;
+    background-color: #16BBB2;
+    border-radius: 50px;
+    border: 1px solid #E8E8E8;
+    margin-right: 10px;
+    color: #fff;
+  }
+  
+  .Job-additional-info {
+    margin-top: -5px;
+  }
+  
+  .Job-info-text {
+    display: flex;
+    color: #16BBB2;
+  }
+  
+  .Job-segment {
+    margin-right: 90px; /* Adjust the spacing between segments */
+  }
+  
+  .Job-salary {
+    margin-left: auto; /* Push the salary segment to the right */
+  }

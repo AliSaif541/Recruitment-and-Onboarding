@@ -1,0 +1,40 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  height: 120px;
+}
+
+span {
+  line-height: 20px;
+    font-family: Montserrat;
+    color: #303c6c;
+    text-align: left;
+    display: inline-block;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-item span {
+  margin-top: 5px;
+}

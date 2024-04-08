@@ -1,0 +1,45 @@
+.DescriptionFrame {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin-top: 75px;
+}
+
+.SideBar-JD {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.SideBar-Block {
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: inherit;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  font-family: Manrope;
+  display: inline-block;
+}
+
+.Main-JD-Heading, .Main-Name, .Main-Location-Type, .Main-Description {
+  font-size: 22px;
+  font-family: Manrope;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.Main-Name, .Main-Location-Type {
+  font-size: 18.5px;
+  margin-bottom: 10px;
+}
+
+.Main-Description {
+  font-size: 16px;
+}

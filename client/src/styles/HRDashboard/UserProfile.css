@@ -1,0 +1,20 @@
+.userprofile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the page takes up at least the full viewport height */
+}
+  
+.user-body-container {
+    margin-top: 20px; /* Adjust the margin top as needed */
+    margin-bottom: 20px; /* Adjust the margin bottom as needed */
+}
+  
+.footer-container {
+    margin-top: -15px; /* Adjust the margin top as needed
+}
+
+.header {
+    margin-right: 180px; /* Adjust this value as needed */
+}

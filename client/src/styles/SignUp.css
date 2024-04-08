@@ -64,7 +64,12 @@ img {
     box-sizing: border-box;
     height: 42px;
     border-radius: 5px;
+    color: grey;
 }
+
+/* .user-inp-drop {
+    color: grey;
+} */
 
 .Form-Div {
     display: grid;

@@ -1,0 +1,31 @@
+.applicant-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+  
+.job-details-container {
+    margin-top: 20px;
+    /* flex-grow: 1; */
+}
+
+  
+/* .candidates-container {
+    margin-top: -500px;
+} */
+
+.cadidate-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    /* justify-content: space-between; 
+    border-bottom: 2px solid transparent; */
+}
+
+.candidate-p {
+    font-weight: bold;
+    /* margin-left: 150px;
+    margin-right: 250px; */
+}

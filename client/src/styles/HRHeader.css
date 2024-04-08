@@ -21,9 +21,9 @@ body {
   align-items: center;
 }
 
-.navbar1-real {
+.navbar1-real-hr {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1.5fr 2.2fr 2fr;
   justify-self: end;
   align-items: center;
   margin-right: 25px;

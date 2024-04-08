@@ -1,0 +1,209 @@
+.image-bg {
+    position: absolute;
+    top: 0;
+    left: -0.5px;
+    border-radius: 10px 10px 0 0;
+    background-color: #f2f2f2;
+    width: 474px;
+    height: 474px;
+  }
+  
+  .section-img-icon {
+    position: absolute;
+    top: 40px;
+    left: 19.5px;
+    border-radius: 10px;
+    width: 450px;
+    height: 420px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .ellipse-frame-standardization {
+    height: 511px;
+    width: 474px;
+    position: relative;
+    min-width: 474px;
+    max-width: 100%;
+  }
+  
+  .features,
+  .we-are-always {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 100%;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  
+  .we-are-always {
+    width: 572px;
+    font-size: 44px;
+    line-height: 58px;
+    font-weight: 500;
+    color: #141414;
+    display: inline-block;
+  }
+  
+  .devsinc1 {
+    color: #22b286;
+  }
+  
+  .at-devsinc-the-container {
+    width: 572px;
+    position: relative;
+    font-size: 14px;
+    line-height: 26px;
+    display: inline-block;
+    color: #1e1e1e;
+  }
+  
+  .learner-retention-custom-e-lea {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px 0;
+  }
+  
+  .you-will-find {
+    margin: 0;
+  }
+  
+  .you-will-find-container {
+    width: 572px;
+    height: 104px;
+    position: relative;
+    line-height: 26px;
+    display: inline-block;
+  }
+  
+  .contact-us4 {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Inter;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .material-symbolsarrow-forward-icon1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 20px;
+  }
+  
+  .arrow-forward-rounded-frame,
+  .button3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .button3 {
+    cursor: pointer;
+    border: 0;
+    padding: 16px 21px 16px 20px;
+    background-color: #22b286;
+    border-radius: 100px;
+    flex-direction: row;
+    gap: 0 4px;
+    white-space: nowrap;
+  }
+  
+  .button3:hover {
+    background-color: #08996e;
+  }
+  
+  .arrow-forward-rounded-frame {
+    align-self: stretch;
+    flex-direction: column;
+    gap: 20px 0;
+    font-size: 14px;
+    color: #1e1e1e;
+  }
+  
+  .card-benefit,
+  .global-workplace-reproduction,
+  .text-section-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .global-workplace-reproduction {
+    flex: 1;
+    flex-direction: column;
+    gap: 72px 0;
+    min-width: 372px;
+  }
+  
+  .card-benefit,
+  .text-section-img {
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  
+  .card-benefit {
+    flex: 1;
+    padding: 0 1px 0 0;
+    gap: 0 113px;
+  }
+  
+  .text-section-img {
+    width: 1164px;
+    padding: 0 4px 0 0;
+    text-align: left;
+    font-size: 20px;
+    color: #22b286;
+    font-family: Inter;
+  }
+  
+  @media screen and (max-width: 1350px) {
+    .card-benefit {
+      gap: 0 113px;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .ellipse-frame-standardization {
+      flex: 1;
+    }
+    .card-benefit {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .ellipse-frame-standardization {
+      min-width: 100%;
+    }
+    .we-are-always {
+      font-size: 35px;
+      line-height: 46px;
+    }
+    .global-workplace-reproduction {
+      gap: 72px 0;
+    }
+    .card-benefit {
+      gap: 0 113px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .features {
+      font-size: 17px;
+      line-height: 19px;
+    }
+    .we-are-always {
+      font-size: 26px;
+      line-height: 35px;
+    }
+  }
+  

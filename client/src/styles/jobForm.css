@@ -1,0 +1,53 @@
+.Apply-Form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    gap: 20px;
+}
+
+.Apply-Form-2 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* gap: 20px; */
+}
+
+.jd-user-inp {
+    justify-self: center;
+    width: 250px;
+    height: 30px;
+    border: solid #DCDCDC 1px;
+    border-radius: 5px;
+}
+
+.jd-user-inp-2 {
+    justify-self: center;
+    width: 600px;
+    height: 60px;
+    border: solid #DCDCDC 1px;
+    border-radius: 5px;
+}
+
+.Apply {
+    margin-top: 50px;
+    margin-left: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: Manrope;
+    display: inline-block;
+}
+
+.Submit-JD-Btn {
+    justify-self: center;
+    /* padding: 0 40px 39px 9px; */
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 25px;
+    background-color: #7cd3d2;
+    color: white;
+    border: none;
+    margin-top: 25px;
+
+    font-family: Manrope;
+}

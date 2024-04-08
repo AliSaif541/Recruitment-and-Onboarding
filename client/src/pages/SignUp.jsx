@@ -9,7 +9,7 @@ function SignUp() {
     const [data, setData] = useState({
 		name: "",
         contact_number: "",
-		role: "",
+		role: "", // Changed to string for dropdown menu
 		email: "",
 		password: "",
 	});
@@ -45,23 +45,27 @@ function SignUp() {
             <div className="SignUp-Form">
                 <form onSubmit={handleSubmit}>
                     <div className="signup-input-div">
-                    <input className="user-inp" type='text' placeholder='Name' name='name' value={data.name} onChange={handleChange} required />
+                        <input className="user-inp" type='text' placeholder='Name' name='name' value={data.name} onChange={handleChange} required />
                         <input className="user-inp" type='email' placeholder='Email' name='email' value={data.email} onChange={handleChange} required />
-                        <input className="user-inp" type='text' placeholder='Role' name='role' value={data.role} onChange={handleChange} required />
+                        <select className="user-inp" name="role" value={data.role} onChange={handleChange} required>
+                            <option className="user-inp" value="">Select Role</option>
+                            <option className="user-inp" value="HR">HR</option>
+                            <option className="user-inp" value="New Employee">New Employee</option>
+                        </select>
                         <input className="user-inp" type='text' placeholder='Contact Number' name='contact_number' value={data.contact_number} onChange={handleChange} required />
                         <input className="user-inp" type='password' placeholder='Password' name='password' value={data.password} onChange={handleChange} required />
                         {error && <div className="custom-error">{error}</div>}
                         <button className='login-btn' type="submit">Sign Up</button>
                     </div>
                 </form>
-                    <Link className="Link" to="/login"> <button className='signup-btn'>Log in</button></Link>
+                <Link className="Link" to="/login"><button className='signup-btn'>Log in</button></Link>
             </div>
         </div>
         <div className='Img-Part'>
-            <img src={pic} />
+            <img src={pic} alt="Clip Message" />
         </div>
       </div>
     );
 }
   
-  export default SignUp;
+export default SignUp;
