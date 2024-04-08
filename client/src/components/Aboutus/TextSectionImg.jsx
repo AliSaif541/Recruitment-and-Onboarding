@@ -37,14 +37,6 @@ const TextSectionImg = () => {
                 You will find every little thing on the internet with just a click of your hand, but here we believe that without knowledge and practice, the internet may even fail you in your life.
               </p>
             </div>
-            <button className="button3">
-              <div className="contact-us4">Learn More</div>
-              <img
-                className="material-symbolsarrow-forward-icon1"
-                alt=""
-                src={arrow}
-              />
-            </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import homeLogo from '../../images/home-logo.png'
 import "../../styles/CareersPage/FullTimeLabel.css";
+import presentingchart from "../../images/Presentingchart.png"
+import arrow from "../../images/arrow.png"
 
 const FullTimeLabel = () => {
   return (
@@ -16,17 +18,17 @@ const FullTimeLabel = () => {
           </div>
           <button className="hago-label-1">
             <div className="learn-more-1">Learn More</div>
-            <img className="hago-label-child-1" alt="" src="/arrow-1.svg" />
+            <img className="hago-label-child-1" alt="" src={arrow}/>
           </button>
         </div>
       </div>
       <div className="contact-center-agent-text-1">
         <div className="legend-box-1"></div>
         <img
-          className={homeLogo}
+          className="home-logo-image"
           loading="lazy"
           alt=""
-          src="/businessanalyticsbro.svg"
+          src={presentingchart}
         />
       </div>
     </section>

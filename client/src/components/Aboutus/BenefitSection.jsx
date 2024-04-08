@@ -36,8 +36,7 @@ const BenefitSection = () => {
                 <h3 className="standardization">Standardization</h3>
               </div>
               <div className="when-working-in-container">
-                <span>{`When working in a global workplace, it’s often difficult to gauge learners’ training experiences, which are ... `}</span>
-                <span className="read-more">Read More</span>
+                <span>{`When working in a global workplace, it’s often difficult to gauge learners’ training experiences, which are critical to understand the problem at hand.`}</span>
               </div>
             </div>
             <div className="benefit-card1">
@@ -53,8 +52,7 @@ const BenefitSection = () => {
                 <h3 className="reduced-costs">Reduced Costs</h3>
               </div>
               <div className="with-weekend-ux-container">
-                <span>{`With Weekend UX, there’s no cost to reproduce materials and, thanks to mobile learning and microlearning ... `}</span>
-                <span className="read-more1">Read More</span>
+                <span>{`With Weekend UX, there’s no cost to reproduce materials and, thanks to mobile learning and microlearning.`}</span>
               </div>
             </div>
             <div className="benefit-card2">
@@ -70,8 +68,7 @@ const BenefitSection = () => {
                 <h3 className="more-customization1">More Customization</h3>
               </div>
               <div className="ust-like-learners-container">
-                <span>{`Just like learners aren’t one-size-fits-all, learning is not a one-size-fits-all experience. By using different ... `}</span>
-                <span className="read-more2">Read More</span>
+                <span>{`Just like learners aren’t one-size-fits-all, learning is not a one-size-fits-all experience. By using different tool, we cater to different audiences. `}</span>
               </div>
             </div>
           </div>
@@ -92,9 +89,8 @@ const BenefitSection = () => {
                 <span>
                   {`With `}
                   <span className="weekend">Weekend</span>
-                  {` UX, there’s no cost to reproduce materials and, thanks to mobile learning and microlearning ... `}
+                  {` UX, there’s no cost to reproduce materials. `}
                 </span>
-                <span className="read-more3">Read More</span>
               </div>
             </div>
             <div className="benefit-card4">
@@ -110,8 +106,7 @@ const BenefitSection = () => {
                 <h3 className="learner-satisfaction">Learner Satisfaction</h3>
               </div>
               <div className="if-you-really-container">
-                <span>{`If you really want students to retain what they learn, you’ll need to aim for high satisfaction rates. Bad ... `}</span>
-                <span className="read-more4">Read More</span>
+                <span>{`If you really want students to retain what they learn, you’ll need to aim for high satisfaction rates. This is ensured in our work.`}</span>
               </div>
             </div>
             <div className="benefit-card5">
@@ -127,8 +122,7 @@ const BenefitSection = () => {
                 <h3 className="multimedia-materials">Multimedia Materials</h3>
               </div>
               <div className="one-of-the-container">
-                <span>{`One of the main reasons why custom eLearning is effective is that it’s the perfect delivery method for ... `}</span>
-                <span className="read-more5">Read More</span>
+                <span>{`One of the main reasons why custom eLearning is effective is that it’s the perfect delivery method for students and has multimedia support. `}</span>
               </div>
             </div>
           </div>
