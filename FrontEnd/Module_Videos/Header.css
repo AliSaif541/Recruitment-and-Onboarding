@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  max-width: 900px; /* Increase max-width value as needed */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard-text {
+  font-weight: bold;
+  color: #16BBB2;
+  margin: 0;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon,
+.profile-icon {
+  width: 30px; /* Adjust icon size as needed */
+  height: 30px;
+  margin-left: 10px; /* Add spacing between icons */
+}

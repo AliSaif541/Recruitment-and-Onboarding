@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.footer-logo {
+  width: 50px; /* Adjust logo size as needed */
+  height: auto;
+}
+
+.footer-text {
+  font-size: 12px; /* Adjust text size as needed */
+  margin: 0;
+}
