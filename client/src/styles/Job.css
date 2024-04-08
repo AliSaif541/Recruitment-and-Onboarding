@@ -10,7 +10,7 @@ body, html {
   width: 100%;
   height: 350px;
   margin-top: -10px;
-  background-image: url('C:\Users\alish\OneDrive\Documents\VsCode\SE\recruitment-and-onboarding-project\client\src\images\Heading-pic.jpg');
+  /* background-image: url('C:\Users\alish\OneDrive\Documents\VsCode\SE\recruitment-and-onboarding-project\client\src\images\Heading-pic.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

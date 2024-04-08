@@ -40,7 +40,7 @@ function App() {
   if (token) {
     user = jwtDecode(token);
   }
-  
+
   useEffect(() => {
     sessionStorage.setItem('currentJob', JSON.stringify(currentJob));
   }, [currentJob]);

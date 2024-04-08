@@ -1,5 +1,8 @@
 import React from 'react';
 import '../../styles/Aboutus/AboutUSHead.css';
+import hallwayImage from '../../images/hallway.jpg'
+import laptopwork from "../../images/laptopwork.jpg"
+import arrow from "../../images/arrow.png"
 
 const AboutUSHead = () => {
   return (
@@ -8,16 +11,14 @@ const AboutUSHead = () => {
         <div className="benefit-cards-frame-ab">
           <h1 className="about-us2-ab">About Us</h1>
           <h1 className="devsinc-providing-the-container-ab">
-            <span>DEVSINC</span>
             <span className="providing-the-best-ab">
               {" "}
-              providing the best opportunities to the students around the globe.
+              <span className="omar-text">DEVSINC</span> providing the best opportunities to students around the globe.
             </span>
           </h1>
           <div className="devsinc-is-a-container-ab">
-            <span>DevSinc</span>
             <span className="is-a-uiux-ab">
-              , is a UI/UX Design Academy in Delhi involved in User Experience
+              <span className="omar-text">DevSinc</span> is a UI/UX Design Academy in Delhi involved in User Experience
               and User Interface Training and Consulting. It was started in 2023
               and passionate towards User Interface Design/ User Experience
               Design, Human Computer Interaction Design. Humanoid is gushing
@@ -32,7 +33,7 @@ const AboutUSHead = () => {
             <img
               className="material-symbolsarrow-forward-icon-ab"
               alt=""
-              src="/materialsymbolsarrowforwardrounded.svg"
+              src={arrow}
             />
           </button>
         </div>
@@ -43,13 +44,13 @@ const AboutUSHead = () => {
           className="rectangle-image-b-g-ab"
           loading="lazy"
           alt=""
-          src="/rectangle-13@2x.png"
+          src={laptopwork}
         />
         <img
           className="rectangle-image-b-g1-ab"
           loading="lazy"
           alt=""
-          src="/rectangle-14@2x.png"
+          src={hallwayImage}
         />
       </div>
     </div>

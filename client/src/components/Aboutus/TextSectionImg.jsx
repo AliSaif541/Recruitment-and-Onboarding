@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../styles/Aboutus/TextSectionImg.css';
+import arrow from "../../images/arrow.png"
+import coloredbulb from "../../images/colored bulb.png"
 
 const TextSectionImg = () => {
   return (
@@ -11,7 +13,7 @@ const TextSectionImg = () => {
             className="section-img-icon"
             loading="lazy"
             alt=""
-            src="/section-img@2x.png"
+            src={coloredbulb}
           />
         </div>
         <div className="global-workplace-reproduction">
@@ -21,10 +23,8 @@ const TextSectionImg = () => {
               We are always working to provide you the best features in all aspects.
             </h1>
             <div className="at-devsinc-the-container">
-              <span>{`At `}</span>
-              <span className="devsinc1">DevSinc</span>
               <span>
-                , the chief determination is to clear the minds of our students
+                At <span className="omar-text">DevSinc</span>, the chief determination is to clear the minds of our students
                 about their goals, while making them consistent in their
                 ambitions and pushing them to be confident for their journey
                 towards the course of time.
@@ -42,7 +42,7 @@ const TextSectionImg = () => {
               <img
                 className="material-symbolsarrow-forward-icon1"
                 alt=""
-                src="/materialsymbolsarrowforwardrounded-1.svg"
+                src={arrow}
               />
             </button>
           </div>

@@ -11,29 +11,38 @@
   }
   
   .providing-the-best-ab {
+    white-space: normal;
     color: #141414;
-    /* line-height: 45px; */
+    line-height: 45px;
+    display: inline-block;
+  }
+
+  .omar-text {
+    color: green; 
   }
   
   .devsinc-providing-the-container-ab {
+    align-items: baseline;
     margin: 0;
-    width: 572px;
     position: relative;
+    width:600px;
     font-size: 36px;
     line-height: 58px;
     text-transform: capitalize;
     font-weight: 600;
     font-family: inherit;
-    display: inline-block;
     z-index: 3;
   }
+
+  
   
   .is-a-uiux-ab {
     color: #1e1e1e;
   }
   
   .devsinc-is-a-container-ab {
-    width: 572px;
+    color:green;
+    width: 600px;
     position: relative;
     font-size: 14px;
     line-height: 26px;
