@@ -5,14 +5,16 @@ import { Link } from 'react-router-dom';
 function CandidateList({ applicants, setCurrentApplicant }) {
   const [expandedCandidates, setExpandedCandidates] = useState([]);
 
-  const toggleDescription = (category, index) => {
-    const candidateIndex = `${category}-${index}`;
-    if (expandedCandidates.includes(candidateIndex)) {
-      setExpandedCandidates(expandedCandidates.filter(item => item !== candidateIndex));
-    } else {
-      setExpandedCandidates([...expandedCandidates, candidateIndex]);
-    }
-  };
+  // const toggleDescription = (category, index) => {
+  //   const candidateIndex = `${category}-${index}`;
+  //   if (expandedCandidates.includes(candidateIndex)) {
+  //     setExpandedCandidates(expandedCandidates.filter(item => item !== candidateIndex));
+  //   } else {
+  //     // Navigate to user profile when expanding
+  //     setCurrentApplicant(applicantsByStatus[category][index]);
+  //     setExpandedCandidates([...expandedCandidates, candidateIndex]);
+  //   }
+  // };
 
   const handleClick = (applicant) => {
     setCurrentApplicant({
@@ -59,10 +61,10 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <h3 onClick={() => handleClick(applicant)} className="candidate-name">{applicant.name}</h3>
               </Link>
               <p className="candidate-description">
-                {expandedCandidates.includes(`${'applicant'}-${index}`) ? applicant.cover_letter : `${applicant.cover_letter.substring(0, 100)}...`}
-                <span onClick={() => toggleDescription('applicant', index)} className="see-more">
-                  {expandedCandidates.includes(`${'applicant'}-${index}`) ? '...See less' : '...See more'}
-                </span>
+                {applicant.cover_letter.length > 100 ? `${applicant.cover_letter.substring(0, 100)}` : applicant.cover_letter}
+                <Link className='Link' to={`/user/${index}`}>
+                  <span onClick={() => handleClick(applicant)}>...See more</span>
+                </Link>
               </p>
               <p className="candidate-location">
                 <span className="location-label">Location - </span>
@@ -89,10 +91,10 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <h3 onClick={() => handleClick(applicant)} className="candidate-name">{applicant.name}</h3>
               </Link>
               <p className="candidate-description">
-                {expandedCandidates.includes(`${'interview'}-${index}`) ? applicant.cover_letter : `${applicant.cover_letter.substring(0, 100)}...`}
-                <span onClick={() => toggleDescription('interview', index)} className="see-more">
-                  {expandedCandidates.includes(`${'interview'}-${index}`) ? '...See less' : '...See more'}
-                </span>
+                {applicant.cover_letter.length > 100 ? `${applicant.cover_letter.substring(0, 100)}` : applicant.cover_letter}
+                <Link className='Link' to={`/user/${index}`}>
+                  <span onClick={() => handleClick(applicant)}>...See more</span>
+                </Link>
               </p>
               <p className="candidate-location">
                 <span className="location-label">Location - </span>
@@ -119,10 +121,10 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <h3 onClick={() => handleClick(applicant)} className="candidate-name">{applicant.name}</h3>
               </Link>
               <p className="candidate-description">
-                {expandedCandidates.includes(`${'rejected'}-${index}`) ? applicant.cover_letter : `${applicant.cover_letter.substring(0, 100)}...`}
-                <span onClick={() => toggleDescription('rejected', index)} className="see-more">
-                  {expandedCandidates.includes(`${'rejected'}-${index}`) ? '...See less' : '...See more'}
-                </span>
+                {applicant.cover_letter.length > 100 ? `${applicant.cover_letter.substring(0, 100)}` : applicant.cover_letter}
+                <Link className='Link' to={`/user/${index}`}>
+                  <span onClick={() => handleClick(applicant)}>...See more</span>
+                </Link>
               </p>
               <p className="candidate-location">
                 <span className="location-label">Location - </span>

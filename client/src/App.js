@@ -1,3 +1,4 @@
+
 import './styles/App.css';
 import { useState, useEffect } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
@@ -16,6 +17,22 @@ import ApplicantsList from './pages/ApplicantsList';
 import UserProfile from './pages/UserProfile';
 import Interview from './pages/Interview';
 import Testing from './pages/Testing';
+import ChatRoom from './pages/Onboarding/ChatRoom';
+import TrainingVideos from './pages/Onboarding/TrainingVideos';
+import UploadVideo from './pages/Onboarding/UploadVideo';
+import firebase from "firebase/compat/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
+  authDomain: "recruitment-and-onboardi-222bb.firebaseapp.com",
+  projectId: "recruitment-and-onboardi-222bb",
+  storageBucket: "recruitment-and-onboardi-222bb.appspot.com",
+  messagingSenderId: "212429357606",
+  appId: "1:212429357606:web:53f75db4597cafeb689ce7",
+  measurementId: "G-1N7VFH9Q6S"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
@@ -39,8 +56,9 @@ function App() {
 
   if (token) {
     user = jwtDecode(token);
+    // console.log("user: ", user);
   }
-
+  
   useEffect(() => {
     sessionStorage.setItem('currentJob', JSON.stringify(currentJob));
   }, [currentJob]);
@@ -74,9 +92,9 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<Testing />} />
+        <Route path="/testing" element={<UploadVideo />} />
         <Route path="/interview" element={<Navigate replace to="/login" />} />
-        <Route path="/postjob" element={<PostJob/>} />
+        <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
         <Route path="/user/:id" element={<Navigate replace to="/login" />} />

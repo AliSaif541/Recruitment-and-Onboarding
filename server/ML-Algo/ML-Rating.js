@@ -1,4 +1,4 @@
-export function jobRecruiter(Skills_Needed, Job_Description, Job_Requirements, Job_Type, Years_of_Experience, Education_Institute, Education_degree, Education_location, GPA, Experience, Skills, Cover_Letter) {
+function jobRecruiter(Skills_Needed, Job_Description, Job_Requirements, Job_Type, Years_of_Experience, Education_Institute, Education_degree, Education_location, GPA, Experience, Skills, Cover_Letter) {
     // This function will take in the job description, job requirements, job type, resume, years of experience, education institute, education degree, education location, GPA, experience, skills, and cover letter of a job applicant and return a score of how well they match the job.
     // The function will return a score from 0 to 100, with 0 being no match and 100 being a perfect match.
     // The function will use natural language processing and machine learning algorithms to analyze the text data and calculate the score.
@@ -145,20 +145,24 @@ function cleanText(inputText) {
         .toLowerCase();
     return resultText;
 }
-// Example job details
-var Skills_Needed = "JavaScript, React, Node.js, SQL";
-var Job_Description = "We are seeking a full-stack developer with a strong background in JavaScript-based technologies. The ideal candidate should be proficient in React for frontend development and Node.js for backend services. Experience with SQL databases is also required.";
-var Job_Requirements = "5 years of experience in software development; Proficient in JavaScript, React, Node.js; Familiarity with SQL databases; Strong problem-solving skills and ability to work in a team";
-var Job_Type = "Full-Time";
-// Example applicant's details
-var Years_of_Experience = 6;
-var Education_Institute = "Tech University";
-var Education_degree = "Bachelor of Science in Computer Science";
-var Education_location = "California, USA";
-var GPA = 3.7;
-var Experience = "Developed and maintained web applications using JavaScript, React, and Node.js. Designed and implemented database schemas with MongoDB and MySQL.";
-var Skills = "JavaScript, React, Node.js, MongoDB, MySQL, REST API";
-var Cover_Letter = "I am passionate about building scalable and efficient web applications. My extensive experience with JavaScript frameworks and database management aligns well with the job requirements. I am excited about the opportunity to contribute to your team.";
-// Calculate the match score
-var matchScore = jobRecruiter(Skills_Needed, Job_Description, Job_Requirements, Job_Type, Years_of_Experience, Education_Institute, Education_degree, Education_location, GPA, Experience, Skills, Cover_Letter);
-console.log("The match score is: ".concat(matchScore.toFixed(2), "%"));
+// // Example job details
+// var Skills_Needed = "JavaScript, React, Node.js, SQL";
+// var Job_Description = "We are seeking a full-stack developer with a strong background in JavaScript-based technologies. The ideal candidate should be proficient in React for frontend development and Node.js for backend services. Experience with SQL databases is also required.";
+// var Job_Requirements = "5 years of experience in software development; Proficient in JavaScript, React, Node.js; Familiarity with SQL databases; Strong problem-solving skills and ability to work in a team";
+// var Job_Type = "Full-Time";
+// // Example applicant's details
+// var Years_of_Experience = 6;
+// var Education_Institute = "Tech University";
+// var Education_degree = "Bachelor of Science in Computer Science";
+// var Education_location = "California, USA";
+// var GPA = 3.7;
+// var Experience = "Developed and maintained web applications using JavaScript, React, and Node.js. Designed and implemented database schemas with MongoDB and MySQL.";
+// var Skills = "JavaScript, React, Node.js, MongoDB, MySQL, REST API";
+// var Cover_Letter = "I am passionate about building scalable and efficient web applications. My extensive experience with JavaScript frameworks and database management aligns well with the job requirements. I am excited about the opportunity to contribute to your team.";
+// // Calculate the match score
+// var matchScore = jobRecruiter(Skills_Needed, Job_Description, Job_Requirements, Job_Type, Years_of_Experience, Education_Institute, Education_degree, Education_location, GPA, Experience, Skills, Cover_Letter);
+// console.log("The match score is: ".concat(matchScore.toFixed(2), "%"));
+
+module.exports = {
+    jobRecruiter
+};

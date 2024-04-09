@@ -9,9 +9,10 @@ function SignUp() {
     const [data, setData] = useState({
 		name: "",
         contact_number: "",
-		role: "", // Changed to string for dropdown menu
+		role: "",
 		email: "",
 		password: "",
+        verified: 0,
 	});
     const [error, setError] = useState("");
     const navigate = useNavigate()
@@ -47,11 +48,7 @@ function SignUp() {
                     <div className="signup-input-div">
                         <input className="user-inp" type='text' placeholder='Name' name='name' value={data.name} onChange={handleChange} required />
                         <input className="user-inp" type='email' placeholder='Email' name='email' value={data.email} onChange={handleChange} required />
-                        <select className="user-inp" name="role" value={data.role} onChange={handleChange} required>
-                            <option className="user-inp" value="">Select Role</option>
-                            <option className="user-inp" value="HR">HR</option>
-                            <option className="user-inp" value="New Employee">New Employee</option>
-                        </select>
+                        <input className="user-inp" type='text' placeholder='Role' name='role' value={data.role} onChange={handleChange} required />
                         <input className="user-inp" type='text' placeholder='Contact Number' name='contact_number' value={data.contact_number} onChange={handleChange} required />
                         <input className="user-inp" type='password' placeholder='Password' name='password' value={data.password} onChange={handleChange} required />
                         {error && <div className="custom-error">{error}</div>}

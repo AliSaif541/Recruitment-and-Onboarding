@@ -5,7 +5,7 @@ const gridfs = require('gridfs-stream');
 const nodemailer = require('nodemailer');
 const { jobApplicant, jobApplicantValidate } = require('../models/jobApplicant');
 const { Job, jobValidate } = require('../models/job');
-// const {jobRecruiter} = require('../ML-Algo/ML-Rating')
+const { jobRecruiter } = require('../ML-Algo/ML-Rating')
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -30,16 +30,30 @@ const upload = multer({ storage: storage });
 
 router.post('/', upload.single('resume'), async (req, res) => {
     try {
+        
         console.log(req.body);
         // const { error } = jobApplicantValidate(req.body);
         // if (error) {
         //     return res.status(400).send({ message: error.details[0].message });
         // }
 
-        const applicant = await jobApplicant.findOne({ email: req.body.email, jobID: req.body.jobID });
-        if (applicant) {
-            return res.status(409).send({ message: 'You have already applied for the job' });
-        }
+        // const rating = jobRecruiter(
+        //     Skills_Needed,
+        //     Job_Description,
+        //     Job_Requirements,
+        //     Job_Type,
+        //     Years_of_Experience,
+        //     Education_Institute,
+        //     Education_degree,
+        //     Education_location,
+        //     GPA,
+        //     Experience,
+        //     Skills,
+        //     Cover_Letter
+        // );
+
+
+        console.log("rating: ", rating);
 
         const newApplicant = new jobApplicant({
             name: req.body.name,
@@ -55,7 +69,7 @@ router.post('/', upload.single('resume'), async (req, res) => {
             education: JSON.parse(req.body.education), 
             experience: JSON.parse(req.body.experience),
             resume: req.file.buffer.toString('base64'),
-            rating: req.body.rating,
+            rating: rating*5,
             stage: req.body.stage,
             jobID: req.body.jobID
         });
@@ -98,7 +112,7 @@ router.post('/reject', async (req, res) => {
         applicant.stage = req.body.stage;
 
         const jobName = await Job.findOne({ _id: req.body.jobID });
-        if (!applicant) {
+        if (!jobName) {
             return res.status(404).send({ message: "Job not found" });
         }
 

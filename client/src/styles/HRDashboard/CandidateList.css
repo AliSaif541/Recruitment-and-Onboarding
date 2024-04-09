@@ -48,6 +48,10 @@
     margin-bottom: 0;
 }
 
+.candidate-description .Link {
+    display: inline;
+}
+
 .see-more {
     cursor: pointer;
 }

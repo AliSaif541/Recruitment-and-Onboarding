@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    verified: {
+        type: Number,
+        required: true,
+    }
 });
 
 const HR = mongoose.model("hr", userSchema);
@@ -33,7 +37,8 @@ const hrValidate = (data) => {
         role: Joi.string().required().label("Role"),
         email: Joi.string().email().required().label("Email"),
         password: passwordComplexity().required().label("Password"),
-        contact_number: Joi.string().required().label("Contact_Number"),  
+        contact_number: Joi.string().required().label("Contact_Number"), 
+        verified: Joi.number().required().label("Verified"),  
     });
 
   return schema.validate(data)
