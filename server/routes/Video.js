@@ -17,6 +17,39 @@ router.post('/', async (req, res) => {
       console.error(err);
       res.status(500).json({ error: 'Internal server error' });
     }
-  });
+});
+
+router.get('/', async (req, res) => {
+    const hardcodedVideoId = req.query.hardcodedVideoId;
+  
+    try {
+      const video = await Video.findOne({ _id: hardcodedVideoId });
+      if (!video) {
+        return res.status(404).json({ error: 'Video not found' });
+      }
+  
+      res.json(video);
+    } catch (error) {
+      console.error('Error fetching video data:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+router.get('/recommended', async (req, res) => {
+    const trainingModule = req.query.trainingModule;
+  
+    try {
+      const videos = await Video.find({ trainingModule: trainingModule });
+      if (!videos) {
+        return res.status(404).json({ error: 'Video not found' });
+      }
+  
+      res.json(videos);
+    } catch (error) {
+      console.error('Error fetching video data:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+});
+  
   
 module.exports = router;

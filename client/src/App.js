@@ -21,6 +21,8 @@ import ChatRoom from './pages/Onboarding/ChatRoom';
 import TrainingVideos from './pages/Onboarding/TrainingVideos';
 import UploadVideo from './pages/Onboarding/UploadVideo';
 import firebase from "firebase/compat/app";
+import PlayVideo from './pages/Onboarding/PlayVideo';
+import TrainingModules from './pages/Onboarding/TrainingModules';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
@@ -39,15 +41,21 @@ function App() {
     const storedJob = sessionStorage.getItem('currentJob');
     return storedJob ? JSON.parse(storedJob) : [];
   });
-
   const [currentJobPosting, setCurrentJobPosting] = useState(() => {
     const storedJobPosting = sessionStorage.getItem('currentJobPosting');
     return storedJobPosting ? JSON.parse(storedJobPosting) : [];
   });
-
   const [currentApplicant, setCurrentApplicant] = useState(() => {
     const storedApplicant = sessionStorage.getItem('currentApplicant');
     return storedApplicant ? JSON.parse(storedApplicant) : [];
+  });
+  const [currentModule, setCurrentModule] = useState(() => {
+    const storedModule = sessionStorage.getItem('currentModule');
+    return storedModule ? storedModule : "";
+  });
+  const [currentVideo, setCurrentVideo]  = useState(() => {
+    const storedVideo = sessionStorage.getItem('currentVideo');
+    return storedVideo ? JSON.parse(storedVideo) : [];
   });
 
   const token = localStorage.getItem("token");
@@ -72,6 +80,16 @@ function App() {
     console.log("current: ", currentApplicant);
   }, [currentApplicant]);
 
+  useEffect(() => {
+    sessionStorage.setItem('currentModule', currentModule);
+    console.log("currentModule: ", currentModule);
+  }, [currentModule]);
+
+  useEffect(() => {
+    sessionStorage.setItem('currentVideo', JSON.stringify(currentVideo));
+    console.log("currentVideo: ", currentVideo);
+  }, [currentVideo]);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -80,6 +98,8 @@ function App() {
         {!user && <Route path="/user/:id" element={<Login />} />}
         {!user && <Route path="/hr" element={<Login />} />}
         {!user && <Route path="/interview" element={<Login />} />}
+        {!user && <Route path="/training-modules" element={<Login />} />}
+        {!user && <Route path="/training/:id" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
         <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
@@ -88,14 +108,18 @@ function App() {
         <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
         <Route path='postjob' element={<PostJob />} />
         <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
+        <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
+        <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<UploadVideo />} />
+        <Route path="/testing" element={<PlayVideo />} />
         <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
+        <Route path="/training-modules" element={<Navigate replace to="/login" />} />
+        <Route path="/training/:id" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
         <Route path="/user/:id" element={<Navigate replace to="/login" />} />
 		  </Routes>

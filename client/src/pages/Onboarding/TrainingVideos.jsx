@@ -3,6 +3,7 @@ import '../../styles/Onboarding/TrainingVideos.css';
 import profilePicture from '../../images/hallway.jpg'; 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 
 function TrainingVideos() {
   // Dummy data for video thumbnails
@@ -22,19 +23,20 @@ function TrainingVideos() {
   return (
     <div className="videos-list-container">
         <Header />
-      <div className="video-grid">
-        {videos.map((video, index) => (
-          <div key={video.id} className="video-box">
-            <img className="video-thumbnail" src={video.thumbnail} alt={`Thumbnail for ${video.title}`} />
-            <div className="video-info">
-              <h2>{video.title}</h2>
-              <p className="description">{video.description.substring(0, 100)}</p>
-              <button>Watch Video</button>
+        <TrainingComponentHead />
+        <div className="video-grid">
+          {videos.map((video, index) => (
+            <div key={video.id} className="video-box">
+              <img className="video-thumbnail" src={video.thumbnail} alt={`Thumbnail for ${video.title}`} />
+              <div className="video-info">
+                <h2>{video.title}</h2>
+                <p className="description">{video.description.substring(0, 100)}</p>
+                <button>Watch Video</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <Footer />
+          ))}
+        </div>
+        <Footer />
     </div>
   );
 }

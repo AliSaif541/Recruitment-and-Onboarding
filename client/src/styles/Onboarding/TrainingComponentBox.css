@@ -1,0 +1,31 @@
+.box {
+    width: 250px;
+    height: 275px;
+    display: grid;
+    margin: 0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .box img {
+    width: 250px;
+    height: 200px;
+    align-self: start;
+    object-fit: cover;
+    margin: 0;
+    padding: 0; 
+  }
+
+  .title {
+    font-size: 18px;
+    justify-self: center;
+  }
+
+  .box-container-h2 {
+    justify-self: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
