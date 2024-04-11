@@ -51,7 +51,7 @@ function App() {
   });
   const [currentModule, setCurrentModule] = useState(() => {
     const storedModule = sessionStorage.getItem('currentModule');
-    return storedModule ? storedModule : "";
+    return storedModule ? JSON.parse(storedModule) : null;
   });
   const [currentVideo, setCurrentVideo]  = useState(() => {
     const storedVideo = sessionStorage.getItem('currentVideo');
@@ -81,9 +81,9 @@ function App() {
   }, [currentApplicant]);
 
   useEffect(() => {
-    sessionStorage.setItem('currentModule', currentModule);
+    sessionStorage.setItem('currentModule', JSON.stringify(currentModule));
     console.log("currentModule: ", currentModule);
-  }, [currentModule]);
+}, [currentModule]);
 
   useEffect(() => {
     sessionStorage.setItem('currentVideo', JSON.stringify(currentVideo));

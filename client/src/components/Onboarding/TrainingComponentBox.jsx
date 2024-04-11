@@ -2,15 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Onboarding/TrainingComponentBox.css'
 
-const TrainingComponentBox = ({ data, setCurrentModule, index }) => {
+const TrainingComponentBox = ({ _id, name, Description, imageURL, setCurrentModule, index }) => {
   const handleClick = () => {
-    setCurrentModule(data.title);
+    setCurrentModule({
+      _id,
+      name,
+      Description,
+      imageURL
+    });
   }
+
+  
+
+  // console.log("imageURL: ", data);
 
   return (
     <div className='box' >
-      <Link className="Link" onClick={handleClick} to={`/training/${index}`}><img src={data.imageUrl} alt={data.title} /></Link>
-      <div className="title">{data.title}</div>
+      <Link className="Link" onClick={handleClick} to={`/training/${index}`}><img src={imageURL} alt={name} /></Link>
+      <div className="title">{name}</div>
     </div>
   );
 };

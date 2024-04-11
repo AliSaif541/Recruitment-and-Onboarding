@@ -1,3 +1,7 @@
+.videos-list-container {
+  display: grid;
+}
+
 .video-grid {
     display: flex;
     justify-content: space-between;
@@ -12,14 +16,17 @@
   .video-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     /* align-items: flex-start; Align items to the left */
     /* padding: 10px; Padding inside each video box */
     width: 300px; /* Set a specific width for the video box */
     height: 330px;
+
     /* border: solid 1px black; */
   }
   
+
+
   .video-thumbnail {
     /* display: flex; */
     width: 100%;

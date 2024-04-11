@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 
-function TrainingVideos() {
+function TrainingVideos({ currentModule, setCurrentVideo }) {
   // Dummy data for video thumbnails
   const videos = [
     { id: 1, title: 'Video 1', description: 'Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1', thumbnail: profilePicture },
@@ -23,7 +23,8 @@ function TrainingVideos() {
   return (
     <div className="videos-list-container">
         <Header />
-        <TrainingComponentHead />
+        <TrainingComponentHead title={currentModule.name} description={currentModule.Description}/>
+        <h2 className="box-container-h2">Explore our diverse range of training videos!</h2>
         <div className="video-grid">
           {videos.map((video, index) => (
             <div key={video.id} className="video-box">

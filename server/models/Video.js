@@ -29,7 +29,7 @@ const videoValidate = (data) => {
     const schema = Joi.object({
         videoUrl: Joi.string().required().label("video_url"),
         imageUrl: Joi.string().required().label("img_url"),
-        title: Joi.number().required().label("title"),
+        title: Joi.string().required().label("title"),
         description: Joi.array().items(Joi.string()).label("description"),
         trainingModule: Joi.string().required().label("tarining_module"),
     });

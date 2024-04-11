@@ -9,6 +9,7 @@ const applicantRoutes = require("./routes/jobApplicant");
 const chatMessageRoutes = require('./routes/ChatMessage');
 const videoRoutes = require('./routes/Video');
 const reviewRoutes = require('./routes/review');
+const trainingRoutes = require('./routes/TrainingModules');
 
 const app = express();
 app.use(express.json());
@@ -33,5 +34,6 @@ app.use("/api/jobApplicant", applicantRoutes);
 app.use("/messages", chatMessageRoutes);
 app.use("/api/video", videoRoutes);
 app.use("/api/review", reviewRoutes);
+app.use("/api/training", trainingRoutes);
 
 module.exports = app;
