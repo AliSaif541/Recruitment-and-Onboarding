@@ -1,0 +1,103 @@
+body, html {
+  margin: 0;
+}
+
+.review-h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Actor;
+  /* color: #333; */
+  font-weight: 500;
+  color: #16BBB2
+}
+
+.review-p {
+  text-align: center;
+  font-family: Actor;
+  font-size: 18px;
+  color:#333;
+  font-weight: 400;
+}
+
+.review-btn {
+  color: white;
+  border: white
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 150px;
+  max-width: 800px;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: auto; /* Remove fixed height */
+  margin-top: 0;
+}
+
+.review-animation-body {
+  background-color: #16BBB2;
+  padding: 30px; /* Reduced padding */
+  border-radius: 8px; /* Reduced border radius */
+  color: white;
+  flex: 1; /* Take up remaining space */
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap */
+  flex: 1; /* Take up remaining space */
+}
+
+.review-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Reduced gap */
+  margin-bottom: 30px; /* Adjusted margin */
+}
+
+.review-form label {
+  font-family: Actor;
+  color: #333;
+  font-weight: 400;
+}
+
+.review-form textarea {
+  border: none; 
+  border-bottom: 1px solid #ccc; 
+  outline: none;
+  padding: 8px; /* Added padding */
+}
+
+.review-form textarea:focus {
+  border-color: white; /* Change border color on focus */
+}
+
+.review-form button {
+  background-color: #16BBB2;
+  color: white; /* Added text color */
+  padding: 10px; /* Default padding */
+  width: fit-content; /* Adjusted width */
+  border: none; /* Removed border */
+  border-radius: 5px; /* Add border radius for curved edges */
+  align-self: right; /* Center button */
+}
+
+.star-rating {
+  font-size: 24px; /* Adjust star size */
+}
+
+.star {
+  color: #ccc; /* Default star color */
+  cursor: pointer;
+}
+
+.star-filled {
+  color: #fdd835; /* Filled star color */
+  cursor: pointer;
+}
