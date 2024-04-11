@@ -1,0 +1,74 @@
+/* Updated ContactUs.css */
+
+body, html {
+  margin: 0;
+}
+
+.content-container {
+  background-color: #7cd3d2;
+  width: 100%;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.info-text {
+  color: #fff;
+  width: calc(50% - 20px);
+}
+
+.info-text h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+  margin-top: -50px;
+}
+
+.animation-container {
+  width: 50%;
+  height: 4 times the height of your header;
+  overflow: hidden;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  max-width: 25%;
+  flex: 0 0 25%;
+  margin: 40px;
+  border: 1px solid #ccc; /* Thin border */
+  text-align: center;
+
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  max-height: 150px; /* Adjust the image height as needed */
+}
+
+.title {
+  margin-top: 10px;
+  font-size: larger;
+  margin-bottom: 30px;
+}
+
+/* Updated style to limit to 5 boxes per row */
+@media (min-width: 768px) {
+  .box-container {
+    max-width: 100%; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+  }
+
+  .box {
+    flex: 0 0 calc(14.285% - 20px); /* Adjust the percentage as needed */
+  }
+}
