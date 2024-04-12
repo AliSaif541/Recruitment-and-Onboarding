@@ -1,9 +1,8 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../../images/animation.json'
 import '../../styles/Onboarding/TrainingComponentHead.css'
 
-const TrainingComponentHead = ({title, description}) => {
+const TrainingComponentHead = ({title, description, animation}) => {
   return (
     <div className="content-container">
         <div className="info-box">
@@ -16,7 +15,7 @@ const TrainingComponentHead = ({title, description}) => {
                 options={{
                     loop: true,
                     autoplay: true,
-                    animationData: animationData,
+                    animationData: animation,
                     rendererSettings: {
                     preserveAspectRatio: 'xMidYMid slice'
                     }

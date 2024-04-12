@@ -24,6 +24,8 @@ import firebase from "firebase/compat/app";
 import PlayVideo from './pages/Onboarding/PlayVideo';
 import TrainingModules from './pages/Onboarding/TrainingModules';
 import LeaveFeedback from './pages/Onboarding/LeaveFeedback';
+import HRApproval from './pages/Onboarding/HRApproval';
+import FeedbackView from './pages/Onboarding/FeedbackView';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
@@ -100,6 +102,9 @@ function App() {
         {!user && <Route path="/hr" element={<Login />} />}
         {!user && <Route path="/interview" element={<Login />} />}
         {!user && <Route path="/training-modules" element={<Login />} />}
+        {!user && <Route path="/approve-candidates" element={<Login />} />}
+        {!user && <Route path="/leave-feedback" element={<Login />} />}
+        {!user && <Route path="/view-feedback" element={<Login />} />}
         {!user && <Route path="/training/:id" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
@@ -111,14 +116,20 @@ function App() {
         <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
         <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
         <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
+        <Route path="/approve-candidates" element={<HRApproval />} />
+        <Route path="/leave-feedback" element={<LeaveFeedback />} />
+        <Route path="/view-feedback" element={<FeedbackView />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<LeaveFeedback />} />
+        {/* <Route path="/testing" element={<FeedbackView />} /> */}
         <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
+        <Route path="/leave-feedback" element={<Navigate replace to="/login" />} />
+        <Route path="/view-feedback" element={<Navigate replace to="/login" />} />
+        <Route path="/approve-candidates" element={<Navigate replace to="/login" />} />
         <Route path="/training-modules" element={<Navigate replace to="/login" />} />
         <Route path="/training/:id" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />

@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+  }
+  
+  .Feedback-content-container {
+    /* max-width: 800px;  Centering the boxes with a max-width */
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f9;  /* Light grayish background */
+    display: grid;
+    justify-items: center;
+  }
+
+  .Feedback-h2 {
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+    /* color: black; */
+    margin: 0;
+    margin-top: 25px;
+    justify-self: center;
+    /* margin-top: -50px; */
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .Feedback-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;  /* Space between boxes */
+  }
+  
+  .feedback-box {
+    width: 300px;
+    min-height: 100px;
+  }
+
+.feedback-box {
+  width: 300px;
+  min-height: 100px;
+  position: relative; 
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.Feedback-date {
+  position: absolute;
+  bottom: 5px; /* Adjust this value to control vertical positioning */
+  right: 5px; /* Adjust this value to control horizontal positioning */
+  margin: 0;
+  margin-top: 5px;
+  font-size: 0.85rem; /* Adjust as needed */
+  /* font-weight: 600; */
+  color: grey; /* Or any color you prefer */
+}
+  
+  .feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  
+  .feedback-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .star-rating {
+    display: flex;
+    margin-bottom: 0;
+  }
+  
+  .star {
+    color: #ccc;  /* Default star color */
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .star-filled {
+    color: #fdd835;  /* Filled star color */
+  }
+
+  .Feedback-role {
+    color: grey;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .feedback-comment {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (min-width: 768px) {
+    .box {
+      flex: 0 0 calc(25% - 20px);  /* Adjusting so 4 boxes fit per row on wider screens */
+    }
+  }
+  

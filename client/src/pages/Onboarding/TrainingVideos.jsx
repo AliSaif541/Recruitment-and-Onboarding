@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import profilePicture from '../../images/hallway.jpg'; 
+import animation from '../../images/animation.json'
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
@@ -39,7 +40,7 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
   return (
     <div className="videos-list-container">
         <Header />
-        <TrainingComponentHead title={currentModule.name} description={currentModule.Description}/>
+        <TrainingComponentHead title={currentModule.name} description={currentModule.Description} animation={animation}/>
         <h2 className="box-container-h2">Explore our diverse range of training videos!</h2>
         <div className="video-grid">
           {videos.map((video, index) => (

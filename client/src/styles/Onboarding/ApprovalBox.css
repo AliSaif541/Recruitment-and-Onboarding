@@ -1,0 +1,95 @@
+.approve-candidate-page {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+}
+
+.page-title-approval-box {
+    justify-self: center;
+    font-size: 30px;
+    color: #7cd3d2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.approval-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    /* width: 100%; */
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  
+  .candidates-list-approval-box {
+    display: flex;
+    flex-direction: column; /* This ensures that child elements stack vertically */
+  }
+  
+  .candidate-info-approval-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .candidate-details-approval-box {
+    flex-grow: 1;
+  }
+  
+  .candidate-name-approval-box {
+    margin: 0;
+    color: #374151;
+    font-size: 1.25rem;
+  }
+  
+  .candidate-role-approval-box,
+  .candidate-location-approval-box{
+    margin: 0.5rem 0;
+    color: #6b7280;
+  }
+
+  .candidate-salary-approval-box {
+    /* Adjust salary position and styling */
+    text-align: right;
+    align-self: flex-end; /* Align to the end of the container */
+    margin-top: 10px; /* Space between buttons and salary */
+    /* ... other styles ... */
+  }
+  
+  .candidate-actions-approval-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .btn-approve-approval-box,
+  .btn-reject-approval-box {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .btn-approve-approval-box {
+    background-color: #7cd3d2;
+  }
+  
+  .btn-reject-approval-box {
+    background-color: #ef4444;
+  }
+  
+  .btn-approve-approval-box:hover {
+    background-color: #378685;
+  }
+  
+  .btn-reject-approval-box:hover {
+    background-color: #dc2626;
+  }
+  

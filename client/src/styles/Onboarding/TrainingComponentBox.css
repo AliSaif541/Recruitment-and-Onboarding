@@ -1,4 +1,4 @@
-.box {
+.box-Training {
     width: 250px;
     height: 275px;
     display: grid;
@@ -8,7 +8,7 @@
     overflow: hidden;
   }
   
-  .box img {
+  .box-Training img {
     width: 250px;
     height: 200px;
     align-self: start;

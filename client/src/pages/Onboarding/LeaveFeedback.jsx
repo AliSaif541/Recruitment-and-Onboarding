@@ -4,7 +4,8 @@ import Footer from '../../components/Footer';
 import Lottie from 'react-lottie';
 import axios from 'axios'; // Import axios for making HTTP requests
 import { jwtDecode } from "jwt-decode";
-import reviewAnimation from '../../images/Animation-Review.json';
+import reviewAnimation from '../../images/Animation-Review-1.json';
+import animation from '../../images/Animation-Review-2.json'
 import '../../styles/Onboarding/LeaveFeedback.css';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 import ReviewHead from '../../components/Onboarding/ReviewHead';
@@ -56,7 +57,7 @@ function LeaveFeedback() {
   return (
     <div>
       <Header />
-      <ReviewHead title={"Leave Feedback"} description={description} />
+      <TrainingComponentHead title={"Leave Feedback"} description={description} animation={animation} />
       <h1 className='review-h1'>Write Review</h1>
       <p className='review-p'>Give us your honest review. Don't hesitate to critique!</p>
       <div className="review-container">

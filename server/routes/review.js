@@ -22,11 +22,11 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        const review = await Review.findOne({ _id: req.body._id });
-        if (!review) {
+        const reviews = await Review.find({});
+        if (!reviews) {
         return res.status(404).json({ error: 'Review not found' });
         }
-        res.status(200).json(review);
+        res.status(200).json(reviews);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Internal server error' });

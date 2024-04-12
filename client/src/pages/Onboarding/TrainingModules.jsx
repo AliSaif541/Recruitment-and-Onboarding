@@ -3,24 +3,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import image from '../../images/hallway.jpg'
+// import image from '../../images/hallway.jpg'
+import animation from '../../images/animation.json'
 import TrainingComponentBox from "../../components/Onboarding/TrainingComponentBox";
 import TrainingComponentHead from "../../components/Onboarding/TrainingComponentHead";
 import '../../styles/Onboarding/TrainingModules.css';
 
 const TrainingModules = ({ setCurrentModule }) => {
     const [moduleData, setModuleData] = useState([]);
-    // [
-    //     { imageUrl: image, title: 'Company Policy' },
-    //     { imageUrl: image, title: 'Software Engineering' },
-    //     { imageUrl: image, title: 'Product Manager' },
-    //     { imageUrl: image, title: 'Web Development' },
-    //     { imageUrl: image, title: 'Marketing' },
-    //     { imageUrl: image, title: 'HR' },
-    //     { imageUrl: image, title: 'Finance' },
-    //     { imageUrl: image, title: 'Sales' },
-    //     // Add more data as needed
-    // ];
 
     useEffect(() => {
         const fetchVideoData = async () => {
@@ -42,11 +32,11 @@ const TrainingModules = ({ setCurrentModule }) => {
     return (
         <div className="Training-Modules-Container">
             <Header />
-            <TrainingComponentHead title={"Training Modules"} description={description}  />
+            <TrainingComponentHead title={"Training Modules"} description={description} animation={animation}  />
             <h2 className="box-container-h2">Explore our diverse range of training modules!</h2>
             <div className="box-container">
                 {moduleData.map((item, index) => (
-                    <div className="box">
+                    <div className="box-Training">
                         <TrainingComponentBox _id={item._id} name={item.name} Description={item.Description} imageURL={item.imageURL} setCurrentModule={setCurrentModule} index={index} />
                     </div>
                 ))}

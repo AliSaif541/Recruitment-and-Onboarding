@@ -73,4 +73,33 @@ router.post('/verify', async (req, res) => {
   }
 });
 
+router.get('/unverified', async (req, res) => {
+  try {
+    console.log("Hello");
+    const unverifiedPeople = await HR.find({ verified: 0 });
+    res.status(200).send({ data: unverifiedPeople });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+});
+
+router.post('/update-verification', async (req, res) => {
+  try {
+    const { _id, verified } = req.body;
+
+    const person = await HR.findById(_id);
+    if (!person) {
+      return res.status(404).send({ message: 'Person not found' });
+    }
+    person.verified = verified;
+
+    await person.save();
+    res.status(200).send({ message: 'Verification status updated successfully' });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+});
+
 module.exports = router;
