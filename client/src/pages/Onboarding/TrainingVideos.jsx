@@ -1,9 +1,11 @@
 import React from 'react';
-import '../../styles/Onboarding/TrainingVideos.css';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import profilePicture from '../../images/hallway.jpg'; 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
+import '../../styles/Onboarding/TrainingVideos.css';
 
 function TrainingVideos({ currentModule, setCurrentVideo }) {
   // Dummy data for video thumbnails
@@ -19,6 +21,20 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
     { id: 9, title: 'Video 9', description: 'Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1.Description for Video 1', thumbnail: profilePicture },
     // Add more video data as needed
   ];
+  const [videosData, setVideosData] = useState([]);
+
+  useEffect(() => {
+    const fetchVideoData = async () => {
+      try {
+        const response = await axios.get('http://localhost:9000/api/video');
+        setVideosData(response.data);
+      } catch (error) {
+        console.error('Error fetching training modules:', error);
+      }
+    };
+    fetchVideoData();
+
+}, []);
 
   return (
     <div className="videos-list-container">

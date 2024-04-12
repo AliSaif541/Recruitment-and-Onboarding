@@ -23,6 +23,7 @@ import UploadVideo from './pages/Onboarding/UploadVideo';
 import firebase from "firebase/compat/app";
 import PlayVideo from './pages/Onboarding/PlayVideo';
 import TrainingModules from './pages/Onboarding/TrainingModules';
+import LeaveFeedback from './pages/Onboarding/LeaveFeedback';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
@@ -114,7 +115,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<PlayVideo />} />
+        <Route path="/testing" element={<LeaveFeedback />} />
         <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />

@@ -51,5 +51,19 @@ router.get('/recommended', async (req, res) => {
     }
 });
   
+router.get('/', async (req, res) => {
+
+  try {
+    const videos = await Video.find({});
+    if (!videos) {
+      return res.status(404).json({ error: 'Videos not found' });
+    }
+
+    res.json(videos);
+  } catch (error) {
+    console.error('Error fetching video data:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
   
 module.exports = router;
