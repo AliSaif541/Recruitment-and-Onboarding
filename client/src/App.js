@@ -40,7 +40,7 @@ firebase.initializeApp(firebaseConfig);
 function App() {
   const [currentJob, setCurrentJob] = useState(() => {
     const storedJob = sessionStorage.getItem('currentJob');
-    return storedJob ? JSON.parse(storedJob) : [];
+    return storedJob ? JSON.parse(storedJob) : []; 
   });
   const [currentJobPosting, setCurrentJobPosting] = useState(() => {
     const storedJobPosting = sessionStorage.getItem('currentJobPosting');
