@@ -1,53 +1,114 @@
-.Apply-Form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: start;
-    gap: 20px;
-}
-
-.Apply-Form-2 {
-    margin-top: 20px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    /* gap: 20px; */
-}
-
-.jd-user-inp {
-    justify-self: center;
-    width: 250px;
-    height: 30px;
-    border: solid #DCDCDC 1px;
-    border-radius: 5px;
-}
-
-.jd-user-inp-2 {
-    justify-self: center;
-    width: 600px;
-    height: 60px;
-    border: solid #DCDCDC 1px;
-    border-radius: 5px;
-}
-
-.Apply {
-    margin-top: 50px;
-    margin-left: 25px;
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 22px;
-    font-family: Manrope;
-    display: inline-block;
-}
-
-.Submit-JD-Btn {
-    justify-self: center;
-    /* padding: 0 40px 39px 9px; */
+.job-form-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .job-form-container .form {
+    display: block;
+  }
+  
+  .job-form-container .apply-role-title {
+    font-family: "Goblin One";
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 50px;
+  
+  }
+  
+  .job-form-container input[type="text"],
+  .job-form-container input[type="number"],
+  .job-form-container input[type="email"],
+  .job-form-container input[type="date"],
+  .job-form-container select,
+  .job-form-container input[type="file"] {
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
-    text-align: left;
-    font-size: 25px;
+  }
+  
+
+  
+  .job-form-container .input-pair-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; 
+    margin-bottom: 10px; 
+  }
+  
+  .job-form-container .section-with-button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    gap: 5px;
+    align-items: start;
+    margin-bottom: 25px;
+  }
+  
+  .job-form-container .button-container {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .job-form-container .add-btn {
     background-color: #7cd3d2;
     color: white;
+    padding: 10px 15px;
+    margin: 10px auto;
+    display: inline-block; 
     border: none;
-    margin-top: 25px;
-
-    font-family: Manrope;
-}
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: fit-content;
+  }
+  
+  .job-form-container button:hover,
+  .job-form-container .add-btn:hover {
+    background-color: #3e9a98;
+  }
+  
+  .job-form-container [type="submit"] {
+    background-color: #7cd3d2; 
+    color: white; 
+    padding: 12px 24px; 
+    border: none; 
+    /* border-radius: 25px;  */
+    font-family: 'Arial', sans-serif; 
+    font-size: 20px; 
+    text-align: center; 
+    display: block; 
+    width: 50%; 
+    /* max-width: 500px; */
+    margin: 20px auto; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s; 
+  }
+  
+  .job-form-container [type="submit"]:hover {
+    background-color: #3f9291; 
+  }
+  
+  .job-form-container input::placeholder {
+    color: #aaa;
+  }
+  
+  @media (max-width: 768px) {
+    .job-form-container .input-pair-section,
+    .job-form-container .section-with-button {
+      grid-template-columns: 1fr; /* Stack the inputs on smaller screens */
+    }
+  
+    .job-form-container .add-btn {
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .job-form-container .button-container {
+      padding: 20px 0;
+    }
+  }

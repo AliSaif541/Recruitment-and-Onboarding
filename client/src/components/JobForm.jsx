@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "../styles/jobForm.css"
 
 const JobForm = ({ currentJob }) => {
   const [jobApplicant, setJobApplicant] = useState({
@@ -111,22 +112,31 @@ const JobForm = ({ currentJob }) => {
   };
 
   return (
-    <div>
-      <h2>Apply for this role</h2>
+    <div className="job-form-container">
+      <h2 className="apply-role-title">Apply for this role</h2>
       <form onSubmit={handleSubmit}>
+      <div className="input-pair-section">
         <input type="text" placeholder="Full Name" name='name' onChange={handleInputChange} required />
-        <input type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
-        <input type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
         <input type="text" placeholder="Gender" name='gender' onChange={handleInputChange} />
+      </div>
+      <div className="input-pair-section">
+        <input type="text" placeholder="Contact Number" name='contact_number' onChange={handleInputChange} required />
+        <input type="text" placeholder="Email" name='email' onChange={handleInputChange} required />
+      </div>
+      <div className="input-pair-section">
         <input type="text" placeholder="City" name='city' onChange={handleInputChange} />
-        <input type="text" placeholder="GitHub" name='GitHub' onChange={handleInputChange} />
-        <input type="text" placeholder="LinkedIn" name='LinkedIn' onChange={handleInputChange} />
         <input type="number" placeholder="Years of Experience" name='years_of_exp' onChange={handleInputChange} required />
+        
+      </div>
+      <div className="input-pair-section">
+        <input type="text" placeholder="LinkedIn" name='LinkedIn' onChange={handleInputChange} />
+        <input type="text" placeholder="GitHub" name='GitHub' onChange={handleInputChange} />
+        </div>
         <input type="text" placeholder="Cover Letter" name='cover_letter' onChange={handleInputChange} required />
         <input type="file" name="resume" accept=".pdf" onChange={handleFileChange} required />
 
         {jobApplicant.education.map((edu, index) => (
-          <div key={index}>
+          <div key={index} className="section-with-button">
             <input type="text" placeholder="Institution" name="institution" value={edu.institution} onChange={(e) => handleEducationChange(e, index)} required />
             <input type="text" placeholder="Degree" name="degree" value={edu.degree} onChange={(e) => handleEducationChange(e, index)} required />
             <input type="text" placeholder="Location" name="location" value={edu.location} onChange={(e) => handleEducationChange(e, index)} required />
@@ -134,20 +144,24 @@ const JobForm = ({ currentJob }) => {
             <input type="text" placeholder="GPA" name="gpa" value={edu.gpa} onChange={(e) => handleEducationChange(e, index)} required />
           </div>
         ))}
-        <button type="button" onClick={handleAddEducation}>Add Education</button>
+        <div className="button-container">
+        <button type="button"  className="add-btn" onClick={handleAddEducation}>Add Education</button>
+        </div>
 
         {jobApplicant.experience.map((exp, index) => (
-          <div key={index}>
+          <div key={index} className="section-with-button">
             <input type="text" placeholder="Title" name="title" value={exp.title} onChange={(e) => handleExperienceChange(e, index)} required />
             <input type="text" placeholder="Company" name="company" value={exp.company} onChange={(e) => handleExperienceChange(e, index)} required />
+            <input type="text" placeholder="Roles and Responsibilities" name="rolesResponsibilities" value={exp.rolesResponsibilities} onChange={(e) => handleExperienceChange(e, index)} required />
             <input type="date" placeholder="From" name="from" value={exp.from} onChange={(e) => handleExperienceChange(e, index)} required />
             <input type="date" placeholder="To" name="to" value={exp.to} onChange={(e) => handleExperienceChange(e, index)} required />
-            <input type="text" placeholder="Roles and Responsibilities" name="rolesResponsibilities" value={exp.rolesResponsibilities} onChange={(e) => handleExperienceChange(e, index)} required />
           </div>
         ))}
-        <button type="button" onClick={handleAddExperience}>Add Experience</button>
+        <div className="button-container">
+        <button type="button"  className="add-btn" onClick={handleAddExperience}>Add Experience</button>
+        </div>
         {jobApplicant.skills.map((skill, index) => (
-          <div key={index}>
+          <div key={index} className="section-with-button">
             <input
               type="text"
               placeholder="Skill"
@@ -157,7 +171,9 @@ const JobForm = ({ currentJob }) => {
             />
           </div>
         ))}
-        <button type="button" onClick={handleAddSkill}>Add Skill</button>
+        <div className="button-container">
+        <button type="button"  className="add-btn" onClick={handleAddSkill}>Add Skill</button>
+        </div>
         <button type="submit">Send Application</button>
       </form>
     </div>

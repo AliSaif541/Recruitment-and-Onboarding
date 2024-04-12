@@ -1,15 +1,9 @@
 html, body {
-  /* height: 100vh; */
   margin: 0;
 }
 
 .Post-a-Job {
   display: grid;
-  /* grid-template-columns: 1fr 4fr; */
-  /* height: 100vh; */
-  /* justify-items: center;
-  text-align: center; */
-  /* gap: 25px; */
 }
 
 .Post-a-Job-h1 {
@@ -18,21 +12,15 @@ html, body {
   font-size: 40px;
   margin-bottom: 25px;
   font-family: Actor;
-  /* color: #333; */
   font-weight: 500;
-  color: #16BBB2
+  color: #7cd3d2;
 }
 
 .Post-a-Job-Container {
   display: grid;
-  /* grid-template-rows: 1fr 2fr 0.5fr 6fr;
-  align-items: center;
-  justify-items: start; */
-  /* height: 100vh; */
 }
 
 .Post-a-Job-Form {
-  /* align-self: start; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -51,9 +39,7 @@ html, body {
   margin-top: 120px;
   margin-bottom: 25px;
   font-size: 18px;
-  margin-bottom: 25px;
   font-family: Actor;
-  /* color: #333; */
   font-weight: 500;
 }
 
@@ -83,24 +69,63 @@ html, body {
   display: grid;
 }
 
-.login-btn-1 {
-  width: 175px;
-  height: 30px;
+.login-btn-1, .add-btn {
+  padding: 10px 20px;
   margin-top: 20px;
-  justify-self: start;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
+.login-btn-1 {
+  width: 225px;
+  height: 42px; /* Adjusted to match input height */
+  justify-self: start;
+  background-color: #7cd3d2;
+  color: white;
+}
+
+.login-btn-1:hover, .add-btn:hover {
+  cursor: pointer;
+  background-color: #4b9f9e;
+}
+
+/* New button styles */
+.add-btn {
+  background-color: #7cd3d2;
+  color: white;
+  width: 175px;
+}
+
+/* Error Message Styles */
 .custom-error {
   justify-self: center;
+  color: #ff3860;
+  margin-top: 10px;
 }
 
-.login-btn-1 {
-  background-color: #3751FE;
-  color: white;
-  border: white;
+/* General Form Styling */
+.Post-a-Job-Form {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  background-color: white;
+  border-radius: 8px;
 }
 
-.login-btn-1:hover {
-  cursor: pointer;
-  background-color: #0020ee;
+/* Layout adjustments */
+.Post-a-Job-Container {
+  padding: 50px;
+  background-color: #f4f7f6;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .Post-a-Job-Form {
+    grid-template-columns: 1fr;
+  }
+
+  .paj-user-inp, .paj-user-inp-cv, .login-btn-1, .add-btn {
+    width: 100%;
+  }
 }
