@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in the width/height calculations */
+}
+
+.content-container {
+  max-width: 960px; /* Centers the content and defines max width */
+  margin: auto;
+  padding: 20px;
+  background-color: #f4f4f9; /* Light background color for the content area */
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will space out the boxes evenly */
+  gap: 10px; /* Gap between boxes */
+}
+
+.box {
+  flex: 0 0 30%; /* Each box takes up 30% of the container's width, allowing for three per row */
+  height: calc((100vw - 60px - 40px) / 3); /* Calculates height to maintain square aspect ratio, considering margins and gaps */
+  border: 1px solid #ccc; /* Light gray border */
+  text-align: center;
+  padding: 10px; /* Padding inside the box */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space evenly inside the box */
+  overflow-wrap: break-word; /* Allows text to wrap within the box */
+}
+
+.box img {
+  max-height: 50%; /* Image can take up to half the box's height */
+  width: auto; /* Maintains image aspect ratio */
+  margin-bottom: 10px; /* Space between the image and text below */
+}
+
+.title {
+  font-size: 16px; /* Legible text size */
+  color: #333; /* Dark text for readability */
+  margin-bottom: 10px; /* Space below the title text */
+}
+
+.feedback-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space inside each feedback box */
+  background-color: #ffffff; /* White background for feedback boxes */
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 15px; /* Padding inside feedback boxes */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback-name {
+  font-weight: bold;
+  font-size: 1.2rem; /* Slightly larger font for names */
+}
+
+.star-rating {
+  display: flex; /* Displays star icons in a row */
+}
+
+.star {
+  color: #ccc; /* Color for unselected stars */
+  cursor: pointer;
+  font-size: 1.5rem; /* Size of star icons */
+}
+
+.star-filled {
+  color: #fdd835; /* Color for selected stars */
+}
+
+.feedback-comment {
+  font-size: 1rem;
+  color: #666; /* Gray text color */
+  margin-top: 5px; /* Space above comment text */
+  overflow-wrap: break-word; /* Wraps text to avoid overflow */
+}
+
+@media (min-width: 960px) {
+  .box {
+    height: calc((960px - 60px - 40px) / 3); /* Adjusts height to maintain square shape based on container width, accounting for padding and gaps */
+  }
+}
