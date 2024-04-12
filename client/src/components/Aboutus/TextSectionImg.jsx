@@ -24,7 +24,7 @@ const TextSectionImg = () => {
             </h1>
             <div className="at-devsinc-the-container">
               <span>
-                At DevSinc, the chief determination is to clear the minds of our students
+                At <span className="omar-text">DevSinc</span>, the chief determination is to clear the minds of our students
                 about their goals, while making them consistent in their
                 ambitions and pushing them to be confident for their journey
                 towards the course of time.
@@ -37,14 +37,6 @@ const TextSectionImg = () => {
                 You will find every little thing on the internet with just a click of your hand, but here we believe that without knowledge and practice, the internet may even fail you in your life.
               </p>
             </div>
-            <button className="button3">
-              <div className="contact-us4">Learn More</div>
-              <img
-                className="material-symbolsarrow-forward-icon1"
-                alt=""
-                src={arrow}
-              />
-            </button>
           </div>
         </div>
       </div>

@@ -1,8 +1,9 @@
-/* Example responsive CSS */
+/* Existing base styles */
 body, html {
   margin: 0;
   width: 100%;
   height: 100%;
+  font-family: 'Arial', sans-serif;
 }
 
 .JobDesHeading {
@@ -10,7 +11,6 @@ body, html {
   width: 100%;
   height: 350px;
   margin-top: -10px;
-  /* background-image: url('C:\Users\alish\OneDrive\Documents\VsCode\SE\recruitment-and-onboarding-project\client\src\images\Heading-pic.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,6 +18,7 @@ body, html {
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: center;
+  background-color: #f0f0f0;
 }
 
 .JobDesHeading::before {
@@ -28,7 +29,7 @@ body, html {
   bottom: 0;
   left: 0;
   background-color: rgba(5, 22, 49, 0.9);
-  z-index: 1; 
+  z-index: 1;
 }
 
 .Heading-Name, .Heading-Location {
@@ -36,17 +37,91 @@ body, html {
   text-transform: uppercase;
   font-family: inherit;
   color: white;
-  position: relative; /* Ensure text appears above the overlay */
-  z-index: 2; /* Set a higher z-index for the text elements */
+  position: relative;
+  z-index: 2;
 }
 
 .Heading-Name {
   align-self: end;
   font-size: 40px;
   font-weight: 400;
-
 }
 
 .Heading-Location {
   align-self: start;
 }
+
+/* Styles for the description container */
+.DescriptionContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column {
+  width: 45%; /* Adjusted width to give more space to the right column */
+}
+
+.right-column {
+  width: 53%; /* Increased width for the description column */
+}
+
+.detail-title {
+  font-family: "Goblin One";
+  font-style: normal;
+  color: #333; 
+  margin-bottom: 10px; 
+  font-size: 22px; 
+  font-weight: 600; 
+  text-transform: none; 
+  position: relative;
+}
+
+
+.detail-text, .detail-list li {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style for the divider */
+.divider {
+  border: none;
+  height: 2px; /* Make it a bit thicker to match the screenshot */
+  background-color: #e0e0e0; /* Use a light gray to match the design */
+  margin: 20px 0; 
+}
+
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0; 
+}
+
+.detail-list li {
+  margin-bottom: 10px; 
+}
+
+@media (max-width: 768px) {
+  .DescriptionContainer {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%; /* Full width for mobile */
+  }
+}
+

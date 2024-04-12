@@ -30,11 +30,6 @@ const LookingForOpportunity = () => {
           </div>
           <button className="rectangle-group-careers">
             <div className="submit12">Submit</div>
-            <img
-              className="material-symbolsarrow-forward-icon"
-              alt=""
-              src="/materialsymbolsarrowforward.svg"
-            />
           </button>
         </form>
       </div>

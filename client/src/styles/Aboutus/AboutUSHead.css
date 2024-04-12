@@ -17,16 +17,15 @@
     display: inline-block;
   }
 
-  .devsinc-text {
+  .omar-text {
     color: green; 
-    white-space: nowrap; 
   }
   
   .devsinc-providing-the-container-ab {
     align-items: baseline;
     margin: 0;
     position: relative;
-    width:700px;
+    width:600px;
     font-size: 36px;
     line-height: 58px;
     text-transform: capitalize;

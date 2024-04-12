@@ -74,9 +74,9 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/testing" element={<Testing />} /> */}
+        <Route path="/testing" element={<Testing />} />
         <Route path="/interview" element={<Navigate replace to="/login" />} />
-        <Route path="/postjob" element={<Navigate replace to="/login" />} />
+        <Route path="/postjob" element={<PostJob/>} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
         <Route path="/user/:id" element={<Navigate replace to="/login" />} />
@@ -86,3 +86,4 @@ function App() {
 }
 
 export default App;
+

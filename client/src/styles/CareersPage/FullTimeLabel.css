@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+.home-logo-image {
+  position: absolute;
+  top: 0; 
+  right: 70px;
+  width: 300x; 
+  height: auto;
+}
+
 .join-our-team-container-1,
 .lorem-ipsum-dolor-1 {
   margin: 0;

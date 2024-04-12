@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import '../../styles/CareersPage/jobCard.css'
 
-function JobCard({ _id, name, company, salary, location, job_type, description, index, setCurrentJob }) {
+function JobCard({ _id, name, company, salary, location, job_type, description, index, skillsNeeded, requirements, benefits
+,  setCurrentJob }) {
   const handleClick = () => {
     setCurrentJob({
       _id,
@@ -12,7 +13,10 @@ function JobCard({ _id, name, company, salary, location, job_type, description, 
       salary,
       location,
       job_type,
-      description
+      description,
+      skillsNeeded,
+      requirements,
+      benefits
     });
   };
   

@@ -1,22 +1,20 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
 import "../styles/PostAJob.css";
 import { useState } from 'react';
 import axios from 'axios';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import HRHeader from "../components/HRHeader";
+import Footer from "../components/Footer";
 
 const PostAJob = () => {
   const [jobPosting, setJobPosting] = useState({ 
     name: '', 
     company: '',
     salary: '', 
-    benefits: [], // New field
+    benefits: [], 
     job_type: '', 
     location: '',
-    skillsNeeded: [], // New field
-    requirements: [], // New field
+    skillsNeeded: [], 
+    requirements: [], 
     description: '',
     active: 'active'
   });
@@ -31,7 +29,7 @@ const PostAJob = () => {
     newBenefits[index] = e.target.value;
     setJobPosting({ ...jobPosting, benefits: newBenefits });
   };
-  
+
   const handleAddBenefit = () => {
     setJobPosting({
       ...jobPosting,
@@ -44,7 +42,7 @@ const PostAJob = () => {
     newRequirements[index] = e.target.value;
     setJobPosting({ ...jobPosting, requirements: newRequirements });
   };
-  
+
   const handleAddRequirement = () => {
     setJobPosting({
       ...jobPosting,
@@ -64,19 +62,17 @@ const PostAJob = () => {
       skillsNeeded: [...jobPosting.skillsNeeded, '']
     });
   };
-  
 
   const handleSubmit = async (e) => {
-      e.preventDefault();
-
-      try {
-          await axios.post('http://localhost:9000/api/job/jobPosting', jobPosting);
-        console.log('Job Posted successfully');
-        setError('Job Posted successfully');
-      } catch (error) {
-        setError(error);
-        console.error('Error uploading data:', error);
-      }
+    e.preventDefault();
+    try {
+        await axios.post('http://localhost:9000/api/job/jobPosting', jobPosting);
+      console.log('Job Posted successfully');
+      setError('Job Posted successfully');
+    } catch (error) {
+      setError(error);
+      console.error('Error uploading data:', error);
+    }
   }
 
   return (
@@ -84,17 +80,18 @@ const PostAJob = () => {
       <HRHeader />
       <div className="Post-a-Job-Container">
         <form className="Post-a-Job-Form" onSubmit={handleSubmit}>
-        <div>
+          <div>
             <div className="Post-a-Job-h1">Post a Job</div>
             <div className="Post-a-Job-input-div">
               <input className="paj-user-inp" type="text" placeholder="Name" name='name' onChange={handleInputChange} required />
               <input className="paj-user-inp" type="text" placeholder="Company" name='company' onChange={handleInputChange} required />
               <input className="paj-user-inp" type="number" placeholder="Salary" name='salary' onChange={handleInputChange} required />
               <input className="paj-user-inp" type="text" placeholder="Location" name='location' onChange={handleInputChange} required />
-              <input className="paj-user-inp-cv" type="text" placeholder="Description" name='description' onChange={handleInputChange} required />
+              <textarea className="paj-user-inp-cv" placeholder="Description" name='description' onChange={handleInputChange} required></textarea>
               {jobPosting.benefits.map((benefit, index) => (
                 <div key={index}>
                   <input
+                    className="paj-user-inp"
                     type="text"
                     placeholder="Benefit"
                     value={benefit}
@@ -103,11 +100,12 @@ const PostAJob = () => {
                   />
                 </div>
               ))}
-              <button type="button" onClick={handleAddBenefit}>Add Benefit</button>
+              <button type="button" className="add-btn" onClick={handleAddBenefit}>Add Benefit</button>
 
               {jobPosting.requirements.map((requirement, index) => (
                 <div key={index}>
                   <input
+                    className="paj-user-inp"
                     type="text"
                     placeholder="Requirement"
                     value={requirement}
@@ -116,11 +114,12 @@ const PostAJob = () => {
                   />
                 </div>
               ))}
-              <button type="button" onClick={handleAddRequirement}>Add Requirement</button>
+              <button type="button" className="add-btn" onClick={handleAddRequirement}>Add Requirement</button>
 
               {jobPosting.skillsNeeded.map((skill, index) => (
                 <div key={index}>
                   <input
+                    className="paj-user-inp"
                     type="text"
                     placeholder="Skill"
                     value={skill}
@@ -129,7 +128,7 @@ const PostAJob = () => {
                   />
                 </div>
               ))}
-              <button type="button" onClick={handleAddSkill}>Add Skill</button>
+              <button type="button" className="add-btn" onClick={handleAddSkill}>Add Skill</button>
               <button className='login-btn-1' type="submit">Send Application</button>
               {error && <div className="custom-error">{error}</div>}
             </div>
