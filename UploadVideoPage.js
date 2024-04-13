@@ -18,11 +18,15 @@ function UploadVideoPage() {
               <textarea id="description" placeholder="Label"></textarea>
             </div>
           </div>
+          <div className="thumbnail-upload-section">
+            <label htmlFor="thumbnail">Thumbnail</label>
+            <input type="file" id="thumbnail" accept="image/*" />
+          </div>
           <div className="file-upload-box">
             <div className="file-upload-content">
               Select a file or drag and drop here
               <br />
-              JPG, PNG, or PDF, file size no more than 10MB
+              MKV, MOV, or AVI, file size no more than 100MB
             </div>
             <button type="button" className="select-file-btn">SELECT FILE</button>
           </div>
