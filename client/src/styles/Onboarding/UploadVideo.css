@@ -1,0 +1,231 @@
+.upload-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: grid;
+  }
+  
+  .upload-container h1, .upload-container h2 {
+    color: #333;
+    text-align: left;
+  }
+  
+  .video-upload-form label {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .video-upload-form input[type="text"],
+  .video-upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .video-upload-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .file-upload-box {
+    margin-top: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .file-upload-content {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .select-file-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .uploaded-videos-placeholder {
+    margin-top: 20px;
+    background-color: #f2f2f2; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 200px; 
+    text-align: center;
+    line-height: 200px;
+    color: #999;
+  }
+  
+  .file-upload-box:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+.left-column label,
+.right-column label {
+  display: block;
+  margin-bottom: 0.5rem; /* Space below each label */
+}
+
+.left-column input,
+.right-column textarea,
+.left-column select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; 
+}
+
+.left-column input {
+  margin-bottom: 1.5rem; /* More space below inputs for the left column */
+}
+
+.right-column textarea {
+  height: 80%; 
+  resize: vertical;
+}
+  
+  .file-upload-box {
+    margin-top: 20px;
+    padding: 30px; /* Increase padding */
+    text-align: center;
+    position: relative;
+  }
+  
+  .file-upload-content {
+    margin-bottom: 20px; /* Add more space before the button */
+  }
+  
+  .select-file-btn {
+    margin-top: 10px; /* Add space on top of the button */
+  }
+  
+
+.thumbnail-upload-section {
+    margin-top: 1rem; /* Vertical space from the last input */
+  }
+  
+  .thumbnail-upload-section label {
+    display: block;
+    margin-bottom: .5rem; /* Space below label */
+  }
+  
+  .thumbnail-upload-section input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* So padding doesn't affect the width */
+    margin-bottom: 1rem; /* Space after the file input */
+  }
+
+  .video-upload-section {
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+
+  .video-upload-section input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  .video-upload-section input[type="file"]::before {
+    content: 'Select Video';
+    display: inline-block;
+    background: #007bff; /* Bootstrap primary blue */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .video-upload-section input[type="file"]:hover::before {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  .video-upload-section input[type="file"] {
+    width: 100%;
+  }
+
+  .video-upload-section input[type="file"]:focus {
+    outline: none;
+  }
+
+  .thumbnail-upload-section input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .thumbnail-upload-section input[type="file"]::before {
+    content: 'Select thumbnail';
+    display: inline-block;
+    background: #007bff; /* Bootstrap primary blue */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    margin-right: 10px; /* Space between the button and text */
+  }
+  
+  .thumbnail-upload-section input[type="file"]:hover::before {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .thumbnail-upload-section input[type="file"]:focus {
+    outline: none;
+  }
+  
+  .UploadVideo-btn {
+    width: 150px;
+    margin-top: 25px;
+    justify-self: end;
+    background: #007bff; /* Bootstrap primary blue */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .file-upload-box {
+      text-align: left;
+    }
+  
+    .select-file-btn {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  
