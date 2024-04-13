@@ -5,8 +5,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../../styles/Onboarding/PlayVideo.css';
 
-function PlayVideo() {
-  const hardcodedVideoId = '66156ab77a709db1da11f004'; // Hardcoded video ID
+function PlayVideo({ currentVideo }) {
+  const hardcodedVideoId = currentVideo._id;
 
   const [videoData, setVideoData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,11 +32,13 @@ function PlayVideo() {
       try {
         const response = await axios.get('http://localhost:9000/api/video/recommended', {
           params: {
-            trainingModule: "Software Engineer"
+            trainingModule: currentVideo.trainingModule
           }
         });
-
-        setRecommendedVideos(response.data);
+    
+        const filteredRecommendedVideos = response.data.filter(video => video._id !== hardcodedVideoId);
+        
+        setRecommendedVideos(filteredRecommendedVideos);
       } catch (error) {
         console.error('Error fetching recommended videos:', error);
       }
@@ -59,9 +61,9 @@ function PlayVideo() {
             <source src={videoData.videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="video-info">
-            <h2 className="video-title">{videoData.title}</h2>
-            <div className="video-description">
+          <div className="play-video-info">
+            <h2 className="play-video-title">{videoData.title}</h2>
+            <div className="play-video-description">
               <p>{videoData.description}</p>
             </div>
           </div>

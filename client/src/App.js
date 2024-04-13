@@ -105,6 +105,7 @@ function App() {
         {!user && <Route path="/approve-candidates" element={<Login />} />}
         {!user && <Route path="/leave-feedback" element={<Login />} />}
         {!user && <Route path="/view-feedback" element={<Login />} />}
+        {!user && <Route path="/video/:id" element={<Login />} />}
         {!user && <Route path="/training/:id" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
@@ -115,6 +116,7 @@ function App() {
         <Route path='postjob' element={<PostJob />} />
         <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
         <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
+        <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
         <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
         <Route path="/approve-candidates" element={<HRApproval />} />
         <Route path="/leave-feedback" element={<LeaveFeedback />} />
@@ -131,6 +133,7 @@ function App() {
         <Route path="/view-feedback" element={<Navigate replace to="/login" />} />
         <Route path="/approve-candidates" element={<Navigate replace to="/login" />} />
         <Route path="/training-modules" element={<Navigate replace to="/login" />} />
+        <Route path="/video/:id" element={<Navigate replace to="/login" />} />
         <Route path="/training/:id" element={<Navigate replace to="/login" />} />
         <Route path="/hrjob/:id" element={<Navigate replace to="/login" />} />
         <Route path="/user/:id" element={<Navigate replace to="/login" />} />

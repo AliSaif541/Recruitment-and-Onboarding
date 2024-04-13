@@ -51,10 +51,10 @@ router.get('/recommended', async (req, res) => {
     }
 });
   
-router.get('/', async (req, res) => {
-
+router.get('/training', async (req, res) => {
+  console.log(req.query);
   try {
-    const videos = await Video.find({});
+    const videos = await Video.find({trainingModule: req.query.trainingModule});
     if (!videos) {
       return res.status(404).json({ error: 'Videos not found' });
     }

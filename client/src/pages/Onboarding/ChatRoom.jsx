@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
-import '../../styles/Onboarding/ChatRoom.css'; // Import CSS for styling
+import '../../styles/Onboarding/ChatRoom.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import animation from '../../images/Animation-ChatRoom.json'
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 
 const ChatRoom = () => {
@@ -58,12 +59,12 @@ const ChatRoom = () => {
     const otherUserMessages = messages.filter((msg) => msg.user !== userName);
     const currentUserMessages = messages.filter((msg) => msg.user === userName);
 
-    const description = "We value your input! Share your thoughts on your onboarding experience here. Your feedback helps us refine our process to ensure a smooth and enriching journey for all newcomers.";
+    const description = "Join our vibrant chatroom where new employees can connect with fellow colleagues and HR professionals. Dive into discussions, share experiences, and build meaningful connections as you navigate your journey with us.";
 
     return (
         <div>
             <Header />
-            <TrainingComponentHead title="Welcome to the Chatroom" description={description} />
+            <TrainingComponentHead title="Welcome to the Chatroom" description={description} animation={animation} />
             <div className="chat-room-container">
 
                 <div className="messages-container">

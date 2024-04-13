@@ -7,7 +7,6 @@
   
   .video-main-content {
     width: 100%;
-    display: grid;
     gap: 20px;
   }
   
@@ -16,12 +15,13 @@
     margin: 0;
     height: 450px;
     margin-left: 5%;
+    margin-bottom: 35px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
     border-radius: 5px; /* Optional: adds rounded corners */
   }
   
-  .video-info {
+  .play-video-info {
     margin-left: 5%;
   }
   
@@ -65,14 +65,14 @@
     margin-top: 10px;
   }
 
-  .video-description {
+  .play-video-description {
     font-size: 14px;
     color: #333;
     line-height: 1.5;
   }
 
-  .video-title {
+  .play-video-title {
     margin: 0;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
   }
