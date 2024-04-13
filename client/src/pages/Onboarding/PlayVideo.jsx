@@ -53,7 +53,7 @@ function PlayVideo() {
   return (
     <div>
       <Header />
-      <div className="video-wrapper">
+      <div className='play-videos-container'>
         <div className="video-main-content">
           <video controls className="video-player">
             <source src={videoData.videoUrl} type="video/mp4" />
@@ -61,7 +61,9 @@ function PlayVideo() {
           </video>
           <div className="video-info">
             <h2 className="video-title">{videoData.title}</h2>
-            <p className="video-description">{videoData.description}</p>
+            <div className="video-description">
+              <p>{videoData.description}</p>
+            </div>
           </div>
         </div>
         <div className="recommended-videos">
@@ -69,7 +71,8 @@ function PlayVideo() {
             <div key={video.id} className="recommended-video">
               <img src={video.imageUrl} alt={video.title} className="recommended-thumbnail" />
               <div className="recommended-info">
-                <h3 className="recommended-title">{video.title}</h3>
+                <p className="recommended-title">{video.title}</p>
+                <p className="recommended-module">{video.trainingModule}</p>
                 {/* <p className="recommended-description">{video.description}</p> */}
               </div>
             </div>
