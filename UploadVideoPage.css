@@ -1,0 +1,146 @@
+.upload-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .upload-container h1, .upload-container h2 {
+    color: #333;
+    text-align: left;
+  }
+  
+  .video-upload-form label {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .video-upload-form input[type="text"],
+  .video-upload-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* So padding doesn't affect the width */
+  }
+  
+  .video-upload-form textarea {
+    height: 100px;
+    resize: none; /* Prevents resizing the textarea */
+  }
+  
+  .file-upload-box {
+    margin-top: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .file-upload-content {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .select-file-btn {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .uploaded-videos-placeholder {
+    margin-top: 20px;
+    background-color: #f2f2f2; /* Light gray background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 200px; /* Arbitrary height, adjust as necessary */
+    text-align: center;
+    line-height: 200px; /* Centers placeholder text vertically */
+    color: #999;
+  }
+  
+  /* Clear floats after the file upload section */
+  .file-upload-box:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  /*... Your existing styles ...*/
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+/*... Your existing styles ...*/
+
+.left-column label,
+.right-column label {
+  display: block;
+  margin-bottom: 0.5rem; /* Space below each label */
+}
+
+.left-column input,
+.right-column textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem; /* Adjust space below each input field */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* So padding doesn't affect the width */
+}
+
+/* Adjustments to the input fields specifically for the left column to have vertical space */
+.left-column input {
+  margin-bottom: 1.5rem; /* More space below inputs for the left column */
+}
+
+/*... Your existing styles ...*/
+
+/* Additional styles to ensure that the right-column textarea aligns well */
+.right-column textarea {
+  height: auto; /* Reset the height to auto */
+  resize: vertical; /* Allow the textarea to be resizable vertically */
+}
+
+  
+  .file-upload-box {
+    margin-top: 20px;
+    padding: 30px; /* Increase padding */
+    text-align: center;
+    position: relative;
+  }
+  
+  .file-upload-content {
+    margin-bottom: 20px; /* Add more space before the button */
+  }
+  
+  .select-file-btn {
+    margin-top: 10px; /* Add space on top of the button */
+  }
+  
+  /*... Your existing styles ...*/
+  
+  
+  @media (min-width: 768px) {
+    .file-upload-box {
+      text-align: left;
+    }
+  
+    .select-file-btn {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  
