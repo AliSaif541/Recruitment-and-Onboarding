@@ -87,7 +87,7 @@ function UploadVideo() {
               
               <label htmlFor="trainingModule">Training Module</label>
               <select value={trainingModule} onChange={(e) => setTrainingModule(e.target.value)}>
-                <option value="Software Engineering">Software Engineeing</option>
+                <option value="Software Engineering">Software Engineering</option>
                 <option value="Product Manager">Product Manager</option>
                 <option value="Company Policy">Company Policy</option>
                 <option value="Marketing">Marketing</option>

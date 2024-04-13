@@ -215,6 +215,10 @@
     font-weight: 700;
     color: white;
   }
+
+  .UploadVideo-btn:hover {
+    background-color: #0056b3;
+  }
   
   @media (min-width: 768px) {
     .file-upload-box {

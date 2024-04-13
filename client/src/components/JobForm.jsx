@@ -25,6 +25,7 @@ const JobForm = ({ currentJob }) => {
     stage: 'applicant',
     jobID: currentJob._id,
   });
+  const [error, setError] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -98,16 +99,16 @@ const JobForm = ({ currentJob }) => {
       }
     });
 
-
     try {
       await axios.post('http://localhost:9000/api/jobApplicant', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log('Application Submitted successfully');
+      setError('Application Submitted successfully');
     } catch (error) {
       console.error('Error uploading data:', error);
+      setError('Error submitting application');
     }
   };
 
@@ -175,6 +176,7 @@ const JobForm = ({ currentJob }) => {
         <button type="button"  className="add-btn" onClick={handleAddSkill}>Add Skill</button>
         </div>
         <button type="submit">Send Application</button>
+        {error && <p className="error">{error}</p>}
       </form>
     </div>
   );

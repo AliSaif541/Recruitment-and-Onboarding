@@ -39,11 +39,13 @@
 
 .candidate-name {
     font-weight: bold;
+    font-size: 17px;
     margin-bottom: 5px;
     color: #16BBB2;
 }
 
 .candidate-description {
+    font-size: 14px;
     margin-top: -5px;
     margin-bottom: 0;
 }
