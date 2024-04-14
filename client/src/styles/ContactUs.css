@@ -6,145 +6,136 @@ body, html {
   text-align: center;
   font-size: 50px;
   font-family: Actor;
-  /* color: #333; */
   font-weight: 500;
-  color: #16BBB2
+  color: #16BBB2;
 }
 
 .contactus-p {
   text-align: center;
   font-family: Actor;
   font-size: 18px;
-  color:#333;
+  color: #333;
   font-weight: 400;
 }
 
 .contactus-btn {
   color: white;
-  border: white
+  border: none;
+  background-color: #16BBB2;
 }
 
 .contact-us-container {
-  
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 30px;
   margin: auto;
-  margin-top: 150px;
   max-width: 800px;
   border: 2px solid black;
   border-radius: 15px;
-  height: 550px;
-  margin-top: 0;
+  height: auto; /* Adjusted for flexibility */
 }
 
 .contact-us-body {
   background-color: #16BBB2;
-  padding: 30px; /* Reduced padding */
-  border-radius: 8px; /* Reduced border radius */
+  padding: 30px;
+  border-radius: 8px;
   color: white;
-  flex: 1; /* Take up remaining space */
+  flex: 1;
 }
 
-
-.contact-us-body h1 {
-  font-size: 22px; /* Reduced font size */
-  margin-bottom: 15px; /* Reduced margin */
-  
-}
-
-.contact-us-body h2 {
-  font-size: 18px; /* Reduced font size */
-  margin-bottom: 70px; /* Reduced margin */
-  font-family: Actor;
-  /* color:#333; */
-  font-weight: 400;
-  color: #ccc;
-}
-
-.contact-us-body h3 {
-  font-size: 14px; /* Reduced font size */
-  margin-bottom: 15px; /* Reduced margin */
-  font-family: Actor;
-  /* color:#333; */
-  font-weight: 400;
-}
-
-.contact-us-body h4 {
-  font-size: 14px; /* Reduced font size */
-  margin-bottom: 225px; /* Reduced margin */
-  font-family: Actor;
-  /* color:#333; */
-  font-weight: 400;
+.contact-us-body h1, .contact-us-body h2, .contact-us-body h3, .contact-us-body h4 {
+  margin-bottom: 15px;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px; /* Reduced gap */
+  gap: 15px;
 }
 
 .social-icons img {
-  width: 20px; /* Reduced icon size */
+  width: 20px;
   height: auto;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Reduced gap */
-  flex: 1; /* Take up remaining space */
-  /* font-family: Actor;
-  color:#333;
-  font-weight: 400; */
+  gap: 15px;
+  flex: 1;
 }
 
 .contact-form .name-inputs {
   display: flex;
-  gap: 90px; /* Reduced gap */
+  gap: 20px; /* Adjusted for smaller screens */
 }
 
 .contact-form .input-group {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Reduced gap */
-  margin-bottom: 45px; /* Reduced margin */
-  /* font-family: Actor;
-  color:#333;
-  font-weight: 400; */
+  gap: 8px;
+  margin-bottom: 15px;
 }
 
 .contact-form label {
-  /* color: #000000;
-  font-weight: bold; */
   font-family: Actor;
-  color:#333;
+  color: #333;
   font-weight: 400;
 }
 
 .contact-form input,
 .contact-form textarea {
-  border: none; 
-  border-bottom: 1px solid #ccc; 
-  outline: none; 
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form input[type="tel"] {
-  width: 100%; /* Slightly increased width */
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: white; /* Change border color on focus */
+.contact-form input[type="tel"],
+.contact-form textarea {
+  width: 100%; /* Full width for mobile */
 }
 
 .contact-form button {
-  background-color: #16BBB2;
-  padding: 10px; /* Default padding */
-  width: 200px; /* Set width */
-  align-self: flex-end; /* Align button to the right */
-  border-radius: 5px; /* Add border radius for curved edges */
+  padding: 10px;
+  width: 200px;
+  align-self: center; /* Centered button */
+  border-radius: 5px;
+}
+
+/* Media Queries for Tablet */
+@media (max-width: 768px) {
+  .contactus-h1 {
+    font-size: 40px; /* Smaller font size for tablet */
+  }
+  
+  .contact-us-container, .contact-form button {
+    width: 90%; /* More screen usage on tablets */
+  }
+  
+  .contact-form .name-inputs {
+    flex-direction: column; /* Stack inputs vertically on tablets */
+    gap: 10px;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+  .contactus-h1 {
+    font-size: 30px; /* Even smaller font size for mobile */
+  }
+  
+  .contact-us-body h1 {
+    font-size: 18px; /* Smaller headings for mobile */
+  }
+  
+  .social-icons img {
+    width: 15px; /* Smaller icons for mobile */
+  }
+  
+  .contact-form {
+    gap: 10px; /* Tighter layout for mobile */
+  }
 }

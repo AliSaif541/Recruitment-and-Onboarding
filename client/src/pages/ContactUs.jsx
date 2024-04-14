@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/ContactUs.css';
-import instaLogo from '../images/instaLogo.png'; // Import the instaLogo image
-import twitterLogo from '../images/twitterLogo.png'; // Import the twitterLogo image
-import discordLogo from '../images/discordLogo.png'; // Import the discordLogo image
+import instaLogo from '../images/instaLogo.png'; 
+import twitterLogo from '../images/twitterLogo.png'; 
+import discordLogo from '../images/discordLogo.png'; 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -29,7 +29,6 @@ function ContactUs() {
             <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
               <img src={discordLogo} alt="Discord" />
             </a>
-
           </div>
         </div>
         <form className="contact-form">
@@ -64,15 +63,15 @@ function ContactUs() {
               </label>
               <label>
                 <input type="radio" name="subject" value="Technical Support" />
-                General Inquiry
+                Technical Support
               </label>
               <label>
                 <input type="radio" name="subject" value="Billing Issue" />
-                General Inquiry
+                Billing Issue
               </label>
               <label>
                 <input type="radio" name="subject" value="Other" />
-                General Inquiry
+                Other
               </label>
             </div>
           </div>
