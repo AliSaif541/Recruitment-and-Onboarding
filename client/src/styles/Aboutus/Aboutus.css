@@ -13,7 +13,7 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 38px 66px;
-  gap: 371px; 
+  gap: 50px;  /* Adjusted gap for better responsiveness */
   text-align: left;
   font-size: 20px;
   color: #fff;
@@ -27,10 +27,10 @@
 }
 
 .rectangle-frame-ab {
-  width: 1390px;
+  width: 90%;  /* Responsive width */
+  max-width: 1390px; /* Maximum width to maintain layout integrity */
   padding: 0 20px;
-  gap: 90px 0;
-  flex-shrink: 0;
+  gap: 50px; /* Adjusted gap for consistent spacing */
 }
 
 .about-us-ab {
@@ -38,11 +38,7 @@
   background-color: #fff;
   overflow: hidden;
   padding: 0 0 37px;
-  gap: 37px 0;
-  text-align: left;
-  font-size: 20px;
-  color: #333;
-  font-family: Actor;
+  gap: 20px; /* Adjusted gap for consistency */
 }
 
 .frame-container-ab {
@@ -54,27 +50,21 @@
 
 @media screen and (max-width: 1150px) {
   .rectangle-group-ab {
-    flex-wrap: wrap;
-    gap: 20px; 
-    padding-left: 33px;
-    padding-right: 33px;
-    box-sizing: border-box;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    padding: 20px; /* Reduced padding */
+    gap: 20px;
+  }
+
+  .rectangle-frame-ab {
+    width: 95%; /* Increase width to use more space on smaller screens */
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .rectangle-parent-ab {
-    height: auto;
-    min-height: 100px;
-  }
-  .recruit-ab {
-    font-size: 32px;
-  }
-  .rectangle-frame-ab {
-    gap: 20px 0;
-  }
+  .rectangle-frame-ab,
   .about-us-ab {
-    gap: 20px 0;
-    margin-top: 20px;
+    padding: 10px; /* Reduced padding */
+    gap: 15px; /* Smaller gap for tight spaces */
   }
 }
