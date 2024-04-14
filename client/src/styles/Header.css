@@ -3,6 +3,7 @@ body {
 }
 
 .logo-img-real {
+  cursor: pointer;
   height: 100px;
 }
 

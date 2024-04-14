@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 import '../../styles/Onboarding/TrainingVideos.css';
 import { Link } from 'react-router-dom';
+import OnboardingHeader from '../../components/OnboardingHeader';
 
 function TrainingVideos({ currentModule, setCurrentVideo }) {
   const [videosData, setVideosData] = useState([]);
@@ -32,7 +33,7 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
 
   return (
     <div className="training-videos-list-container">
-        <Header />
+        <OnboardingHeader />
         <TrainingComponentHead title={currentModule.name} description={currentModule.Description} animation={animation}/>
         <h2 className="box-container-h2">Explore our diverse range of training videos!</h2>
         <div className="training-video-grid">

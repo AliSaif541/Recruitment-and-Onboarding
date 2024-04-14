@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+  }
+  
+  .logo-img-real {
+    cursor: pointer;
+    height: 100px;
+  }
+  
+  .Link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .header2-real {
+    background-color: #7cd3d2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+  }
+  
+  .navbar1-real-onboarding {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2.5fr 2.5fr 2fr;
+    justify-self: end;
+    align-items: center;
+    margin-right: 25px;
+    font-size: 17px;
+    font-family: Actor;
+    color: #333;
+  }
+  
+  .sign-in2-real {
+    font-size: 17px;
+    font-family: Actor;
+    color: #333;
+  }
+  
+  .frame-b2-real {
+    cursor: pointer;
+    border: 2px solid #ffc1dc;
+    padding: 10px 24px 10px 28px;
+    background-color: transparent;
+    width: 117px;
+    border-radius: 100px;
+  }
+  
+  .frame-b2-real:hover {
+    background-color: rgba(230, 168, 194, 0.09);
+    border: 2px solid #e6a8c2;
+    box-sizing: border-box;
+  }

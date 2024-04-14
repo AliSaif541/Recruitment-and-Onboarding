@@ -9,6 +9,7 @@ import animation from '../../images/Animation-Review-2.json'
 import '../../styles/Onboarding/LeaveFeedback.css';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 import ReviewHead from '../../components/Onboarding/ReviewHead';
+import OnboardingHeader from '../../components/OnboardingHeader';
 
 function LeaveFeedback() {
   const [rating, setRating] = useState(0);
@@ -56,7 +57,7 @@ function LeaveFeedback() {
 
   return (
     <div>
-      <Header />
+      <OnboardingHeader />
       <TrainingComponentHead title={"Leave Feedback"} description={description} animation={animation} />
       <h1 className='review-h1'>Write Review</h1>
       <p className='review-p'>Give us your honest review. Don't hesitate to critique!</p>

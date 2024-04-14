@@ -27,6 +27,7 @@ import LeaveFeedback from './pages/Onboarding/LeaveFeedback';
 import HRApproval from './pages/Onboarding/HRApproval';
 import FeedbackView from './pages/Onboarding/FeedbackView';
 import ErrorPage from './components/ErrorPage';
+import HRHeader from './components/HRHeader';
 
 const firebaseConfig = {
   apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
@@ -111,24 +112,25 @@ function App() {
         {!user && <Route path="/training/:id" element={<Login />} />}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
-        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
-        <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
-        <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} />} />
-        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
-        <Route path='postjob' element={<PostJob />} />
-        <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
-        <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
-        <Route path="/upload-video" element={<UploadVideo />} />
-        <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
-        <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
-        <Route path="/approve-candidates" element={<HRApproval />} />
-        <Route path="/leave-feedback" element={<LeaveFeedback />} />
-        <Route path="/view-feedback" element={<FeedbackView />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/testing" element={<ErrorPage />} />
+        {/* Routes for HR Side */}
+        <Route path='postjob' element={<PostJob />} />
+        <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
+        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
+        <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
+        <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} />} />
+        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
+        <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
+        <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
+        <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
+        <Route path="/approve-candidates" element={<HRApproval />} />
+        <Route path="/upload-video" element={<UploadVideo />} />
+        <Route path="/leave-feedback" element={<LeaveFeedback />} />
+        <Route path="/view-feedback" element={<FeedbackView />} />
+        <Route path="/testing" element={<HRHeader />} />
         <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />
         <Route path="/hr" element={<Navigate replace to="/login" />} />

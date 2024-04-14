@@ -21,7 +21,8 @@ body, html {
   
   .review-btn {
     color: white;
-    border: white
+    border: white;
+    cursor: pointer;
   }
   
   .review-container {

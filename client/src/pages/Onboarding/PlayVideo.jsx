@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../../styles/Onboarding/PlayVideo.css';
+import OnboardingHeader from '../../components/OnboardingHeader';
 
 function PlayVideo({ currentVideo }) {
   const hardcodedVideoId = currentVideo._id;
@@ -54,7 +55,7 @@ function PlayVideo({ currentVideo }) {
 
   return (
     <div>
-      <Header />
+      <OnboardingHeader />
       <div className='play-videos-container'>
         <div className="video-main-content">
           <video controls className="video-player">

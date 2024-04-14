@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../../styles/Onboarding/UploadVideo.css'; 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import HRHeader from '../../components/HRHeader';
 
 function UploadVideo() {
   const [videoUrl, setVideoUrl] = useState('');
@@ -75,7 +76,7 @@ function UploadVideo() {
 
   return (
     <div>
-      <Header />
+      <HRHeader />
       <form onSubmit={handleSubmit}>
         
         <div className="upload-container">

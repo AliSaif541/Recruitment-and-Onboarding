@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ApprovalBox from '../../components/Onboarding/ApprovalBox';
 import axios from 'axios'; // Import Axios for making HTTP requests
+import HRHeader from '../../components/HRHeader';
 
 const HRApproval = () => {
   const [candidates, setCandidates] = useState([]);
@@ -40,7 +41,7 @@ const HRApproval = () => {
 
   return (
     <div>
-      <Header />
+      <HRHeader />
       <div className="approve-candidate-page">
         <h1 className="page-title-approval-box">Approve Candidates</h1>
         <div className="candidates-list-approval-box">

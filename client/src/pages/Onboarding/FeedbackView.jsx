@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import animation from '../../images/Animation-Review-2.json'
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
+import HRHeader from '../../components/HRHeader';
 
 function FeedbackView() {
   const [reviews, setReviews] = useState([]);
@@ -37,7 +38,7 @@ function FeedbackView() {
 
   return (
     <div>
-        <Header />
+        <HRHeader />
         <TrainingComponentHead title="View Employees Feedback" description={description} animation={animation}/>
         <div className="Feedback-content-container">
             <h2 className='Feedback-h2'>Customer Feedback ({totalReviews} reviews) - Average: {roundedAverage} Stars</h2>
