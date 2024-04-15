@@ -76,7 +76,7 @@ const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
                         </div>
                         <div className="box">
                             <div className="status-dot red-dot-hr-dashboard"></div>
-                            <div className="status-text-hr-dashboard">Inactive Jobs</div>
+                            <div className="status-text-hr-dashboard">Archived Jobs</div>
                             <div className="nested-boxes-hr-dashboard">
                                 {nonActiveJobs.map((job, index) => (
                                     <JobBlocks key={index} {...job} index={index} setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />

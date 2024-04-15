@@ -1,12 +1,38 @@
 import React from 'react';
+import axios from 'axios';
 import '../../styles/HRDashboard/JobDetails.css';
 
 function JobDetails({ currentJobPosting }) {
-    console.log("currentJobPosting: ", currentJobPosting);
+  console.log("currentJobPosting: ", currentJobPosting);
+
+  const handleCompleteJob = async () => {
+    try {
+      await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'completed' });
+      console.log('Job completed successfully');
+    } catch (error) {
+      console.error('Error completing job:', error);
+    }
+  };
+
+  const handleArchiveJob = async () => {
+    try {
+      await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'in-active' });
+      console.log('Job archived successfully');
+    } catch (error) {
+      console.error('Error archiving job:', error);
+    }
+  };
+
   return (
     <div className="JobDetails-body">
       <div className="demand-box">
-        <h1 className="Job-heading">{currentJobPosting.name}</h1>
+        <div className='Job-Heading-div'>
+          <h1 className="Job-heading">{currentJobPosting.name}</h1>
+          <div className="Job-buttons">
+            <button className="archive-job-btn" onClick={handleArchiveJob}>Archive Job</button>
+            <button className="complete-job-btn" onClick={handleCompleteJob}>Complete Job</button>
+          </div>
+        </div>
         <p className="Job-description">Our company {currentJobPosting.company} is looking for a {currentJobPosting.name} to take over.</p>
         <div className='Job-requirements'>Requirements:
           <ul>
@@ -24,7 +50,7 @@ function JobDetails({ currentJobPosting }) {
         <div className="Job-additional-info">
           <p className="Job-info-text">
             <span className="Job-segment">Location - {currentJobPosting.location}</span>
-            <span className="Job-segment">Type - {currentJobPosting.job_type}</span>
+            <span className="Job-segment-type">Type - {currentJobPosting.job_type}</span>
             <span className="Job-salary">Salary - {currentJobPosting.salary}</span>
           </p>
         </div>

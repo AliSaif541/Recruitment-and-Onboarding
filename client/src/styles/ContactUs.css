@@ -110,9 +110,14 @@ body, html {
   flex-direction: column;
   gap: 8px; /* Reduced gap */
   margin-bottom: 45px; /* Reduced margin */
+  /* color: black; */
   /* font-family: Actor;
   color:#333;
   font-weight: 400; */
+}
+
+.Select-Subject {
+  color: #333;
 }
 
 .contact-form label {
@@ -143,6 +148,7 @@ body, html {
 
 .contact-form button {
   background-color: #16BBB2;
+  cursor: pointer;
   padding: 10px; /* Default padding */
   width: 200px; /* Set width */
   align-self: flex-end; /* Align button to the right */

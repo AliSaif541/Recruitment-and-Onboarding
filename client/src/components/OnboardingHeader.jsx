@@ -28,7 +28,7 @@ const OnboardingHeader = () => {
         </div>
         <div className="navbar1-real-onboarding">
           <Link className="Link" to="/onboarding"><div>Home</div></Link>
-          <Link className="Link" to="/chatrrom"><div>ChatRoom</div></Link>
+          <Link className="Link" to="/chatroom"><div>ChatRoom</div></Link>
           <Link className="Link" to="/training-modules"><div>Training Modules</div></Link>
           <Link className="Link" to="/leave-feedback"><div>Leave Feedback</div></Link>
           <button className="frame-b2-real">

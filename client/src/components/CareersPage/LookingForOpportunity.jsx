@@ -29,7 +29,7 @@ const LookingForOpportunity = () => {
             <input className="text1-careers" type="text" />
           </div>
           <button className="rectangle-group-careers">
-            <div className="submit12">Submit</div>
+            <div className="submit12-careers">Submit</div>
           </button>
         </form>
       </div>

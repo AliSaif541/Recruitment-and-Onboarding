@@ -104,34 +104,57 @@ function App() {
         {!user && <Route path="/user/:id" element={<Login />} />}
         {!user && <Route path="/hr" element={<Login />} />}
         {!user && <Route path="/interview" element={<Login />} />}
-        {!user && <Route path="/training-modules" element={<Login />} />}
         {!user && <Route path="/approve-candidates" element={<Login />} />}
-        {!user && <Route path="/leave-feedback" element={<Login />} />}
         {!user && <Route path="/view-feedback" element={<Login />} />}
         {!user && <Route path="/upload-video" element={<Login />} />}
-        {!user && <Route path="/video/:id" element={<Login />} />}
+        {!user && <Route path="/hr-onboarding" element={<Login />} />}
+
+        {user && user.role != "HR" && <Route path="/postjob" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/hrjob/:id" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/user/:id" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/hr" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/interview" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/approve-candidates" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/view-feedback" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/upload-video" element={<Login />} />}
+        {user && user.role != "HR" && <Route path="/hr-onboarding" element={<Login />} />}
+
+        {!user && <Route path="/chatroom" element={<Login />} />}
+        {!user && <Route path="/training-modules" element={<Login />} />}
         {!user && <Route path="/training/:id" element={<Login />} />}
+        {!user && <Route path="/video/:id" element={<Login />} />}
+        {!user && <Route path="/leave-feedback" element={<Login />} />}
+        {!user && <Route path="/onboarding" element={<Login />} />}
+
+        {/* Routes for Job Applicant Side */}
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
+        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-        {/* Routes for HR Side */}
+
+        {/* Routes for HR Job Side */}
         <Route path='postjob' element={<PostJob />} />
         <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
-        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
-        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
         <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
         <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} />} />
+        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
+        
+        {/* Routes for HR Onboarding Side */}
+        <Route path="/hr-onboarding" element={<HRIntroPage />} />
+        <Route path="/approve-candidates" element={<HRApproval />} />
+        <Route path="/upload-video" element={<UploadVideo />} />
+        <Route path="/view-feedback" element={<FeedbackView />} />
+        <Route path="/chatroom" element={<ChatRoom />} />
+        
+        {/* Routes for Employee Onboarding Side */}
         <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
         <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
         <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
-        <Route path="/approve-candidates" element={<HRApproval />} />
-        <Route path="/upload-video" element={<UploadVideo />} />
         <Route path="/leave-feedback" element={<LeaveFeedback />} />
-        <Route path="/view-feedback" element={<FeedbackView />} />
-        <Route path="/hr-onboarding" element={<HRIntroPage />} />
+        
         {/* <Route path="/testing" element={<HRIntroPage />} /> */}
         <Route path="/interview" element={<Navigate replace to="/login" />} />
         <Route path="/postjob" element={<Navigate replace to="/login" />} />

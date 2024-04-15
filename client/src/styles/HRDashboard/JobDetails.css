@@ -6,10 +6,42 @@
   
   .demand-box {
     width: 700px;
-    height: 200px;
+    height: 220px;
     padding: 20px;
     border-bottom: 1px solid #ccc;
     border-radius: 5px;
+  }
+
+  /* .Job-Heading-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } */
+
+  .Job-Heading-div {
+    display: flex;
+    justify-content: space-between; /* Align items horizontally with space between */
+    align-items: center; /* Align items vertically centered */
+  }
+
+  .complete-job-btn, .archive-job-btn {
+    padding: 10px 20px;
+    position: relative;
+    bottom: 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #7cd3d2;
+  }
+  
+  .Job-buttons {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .Job-buttons button {
+    margin-left: 10px; /* Add some space between the buttons */
   }
   
   .Job-heading {
@@ -55,12 +87,12 @@
   .Job-skills h3 {
     margin-right: 10px;
     font-size: 16px;
-    color: #16BBB2;
+    color: #7cd3d2;
   }
   
   .Job-skill-item {
     padding: 10px 20px;
-    background-color: #16BBB2;
+    background-color: #7cd3d2;
     border-radius: 50px;
     border: 1px solid #E8E8E8;
     margin-right: 10px;
@@ -72,14 +104,24 @@
   }
   
   .Job-info-text {
-    display: flex;
+    /* display: flex; */
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
     color: #16BBB2;
   }
+
+  .Job-info-text button {
+    /* align-self: spa; */
+    /* margin-bottom: 50px; */
+    align-self: center;
+    justify-self: end;
+  }
   
-  .Job-segment {
-    margin-right: 90px; /* Adjust the spacing between segments */
+  .Job-segment-type {
+    justify-self: center;
   }
   
   .Job-salary {
-    margin-left: auto; /* Push the salary segment to the right */
+    justify-self: end;
   }

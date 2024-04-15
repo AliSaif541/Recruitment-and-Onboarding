@@ -24,4 +24,20 @@ router.post('/jobPosting', async (req, res) => {
   }
 });
 
+router.post('/active', async (req, res) => {
+  try {
+      const job = await Job.findOne({ _id: req.body._id});
+      if (!job) {
+          return res.status(404).send({ message: "Job not found" });
+      }
+
+      job.active = req.body.active;
+
+      await job.save();
+      res.send({ message: "Job status changed successfully", job });
+  } catch (error) {
+      res.status(500).json({ message: 'Error changing status of Job' });
+  }
+});
+
 module.exports = router;

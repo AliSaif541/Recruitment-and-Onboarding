@@ -3,19 +3,6 @@ import '../../styles/HRDashboard/CandidateList.css';
 import { Link } from 'react-router-dom';
 
 function CandidateList({ applicants, setCurrentApplicant }) {
-  const [expandedCandidates, setExpandedCandidates] = useState([]);
-
-  // const toggleDescription = (category, index) => {
-  //   const candidateIndex = `${category}-${index}`;
-  //   if (expandedCandidates.includes(candidateIndex)) {
-  //     setExpandedCandidates(expandedCandidates.filter(item => item !== candidateIndex));
-  //   } else {
-  //     // Navigate to user profile when expanding
-  //     setCurrentApplicant(applicantsByStatus[category][index]);
-  //     setExpandedCandidates([...expandedCandidates, candidateIndex]);
-  //   }
-  // };
-
   const handleClick = (applicant) => {
     setCurrentApplicant({
       _id: applicant._id,
@@ -50,7 +37,6 @@ function CandidateList({ applicants, setCurrentApplicant }) {
       .sort((a, b) => b.rating - a.rating),
   };
 
-
   return (
     <div className="candidates-list">
       <div className='applicant-list'>
@@ -70,7 +56,7 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <span className="location-label">Location - </span>
                 <span className="location-value">{applicant.city}</span>
                 <span className="type-label"> Rating - </span>
-                <span className="type-value">{` `}{applicant.rating}</span>
+                <span className="type-value">{` ${applicant.rating.toFixed(2)}`}</span>
               </p>
               <hr className="divider" />
               <div className="skills-candidate">

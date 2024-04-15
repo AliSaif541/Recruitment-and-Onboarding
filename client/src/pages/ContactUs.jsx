@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'; // Import axios for making HTTP requests
 import '../styles/ContactUs.css';
 import instaLogo from '../images/instaLogo.png'; // Import the instaLogo image
 import twitterLogo from '../images/twitterLogo.png'; // Import the twitterLogo image
@@ -7,6 +8,27 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function ContactUs() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:recruitment.onboarding541@gmail.com?subject=${encodeURIComponent(formData.firstName + ' ' + formData.lastName + ' - ' + formData.subject)}&body=${encodeURIComponent(formData.message)}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div>
       <Header />
@@ -16,73 +38,30 @@ function ContactUs() {
         <div className="contact-us-body">
           <h1>Contact Information</h1>
           <h2>Say something to start a live chat!</h2>
-          <h3> 📞 +1012 3456 789</h3>
-          <h3> ✉️ demo@gmail.com</h3>
-          <h4> 📍 132 Dartmouth Street Boston, Massachusetts 02156 United States</h4>
-          <div className="social-icons">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={instaLogo} alt="Instagram" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitterLogo} alt="Twitter" />
-            </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-              <img src={discordLogo} alt="Discord" />
-            </a>
-
-          </div>
+          <h3> 📞 (042) 35740280</h3>
+          <h3> ✉️ recruitment.onboarding541@gmail.com</h3>
+          <h4> 📍 Plot B, 281 Ghazi Rd, Khuda Buksh Colony KB Society, Lahore, Punjab</h4>
         </div>
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="name-inputs">
             <div className="input-group">
               <label htmlFor="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" required />
+              <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required />
             </div>
             <div className="input-group">
               <label htmlFor="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" required />
+              <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required />
             </div>
           </div>
-          <div className="name-inputs">
-            <div className="input-group">
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            
-            <div className="input-group">
-              <label htmlFor="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" required />
-            </div>
-          </div>
-
           <div className="input-group">
-            <span>Select Subject:</span>
-            <div className="radio-buttons">
-              <label>
-                <input type="radio" name="subject" value="General Inquiry" />
-                General Inquiry
-              </label>
-              <label>
-                <input type="radio" name="subject" value="Technical Support" />
-                General Inquiry
-              </label>
-              <label>
-                <input type="radio" name="subject" value="Billing Issue" />
-                General Inquiry
-              </label>
-              <label>
-                <input type="radio" name="subject" value="Other" />
-                General Inquiry
-              </label>
-            </div>
+            <label htmlFor="message">Subject:</label>
+            <textarea id="subject" name="subject" value={formData.subject} onChange={handleChange} required></textarea>
           </div>
-
           <div className="input-group">
             <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
           </div>
-          
-          <button className='contactus-btn' type="submit">Send Message</button>
+          <button type="submit" className='contactus-btn'>Send Message</button>
         </form>
       </div>
       <Footer />
