@@ -36,6 +36,7 @@ router.post('/', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
   try {
+    console.log(req.body);
     const { error } = hrValidate(req.body);
     if (error) {
         return res.status(400).send({ message: error.details[0].message });

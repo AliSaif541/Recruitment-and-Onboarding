@@ -1,106 +1,148 @@
 html, body {
-  /* height: 100vh; */
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; /* Ensures full height */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  position: relative; /* Needed for absolute positioning of footer */
+  font-family: Arial, sans-serif; /* Sets a base font-family */
 }
 
 .Post-a-Job {
-  display: grid;
-  /* grid-template-columns: 1fr 4fr; */
-  /* height: 100vh; */
-  /* justify-items: center;
-  text-align: center; */
-  /* gap: 25px; */
-}
-
-.Post-a-Job-h1 {
-  margin-top: 50px;
-  text-align: start;
-  font-size: 40px;
-  margin-bottom: 25px;
-  font-family: Actor;
-  /* color: #333; */
-  font-weight: 500;
-  color: #16BBB2
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 40px); /* Adjusts height to ensure footer space */
+  width: 100%;
+  padding-bottom: 40px; /* Space for the footer */
 }
 
 .Post-a-Job-Container {
-  display: grid;
-  /* grid-template-rows: 1fr 2fr 0.5fr 6fr;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 960px; /* Maximum width constraint for large screens */
+  margin: 0 auto; /* Centers the container horizontally */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: start; */
-  /* height: 100vh; */
+  padding: 20px;
 }
 
 .Post-a-Job-Form {
-  /* align-self: start; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  margin-top: 50px;
-  min-width: 100%;
+  width: 100%; /* Full width to utilize available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form elements */
+  padding: 20px;
 }
 
-.job-type-radio {
-  display: grid;
-  grid-template-rows: repeat(6, 1fr);
-  gap: 25px;
-  justify-items: start;
-}
-
-.radio-h1 {
-  margin-top: 120px;
-  margin-bottom: 25px;
-  font-size: 18px;
-  margin-bottom: 25px;
-  font-family: Actor;
-  /* color: #333; */
-  font-weight: 500;
-}
-
-.particles-checkbox-container {
-  display: inline-block;
-}
-
-.Post-a-Job-input-div {
-  display: grid;
-  width: 100%;
+.Post-a-Job-input-div, .Post-a-Job-radio-div {
+  width: 100%; /* Full width for container flexibility */
+  max-width: 450px; /* Aligns with the form width management */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all input fields */
 }
 
 .paj-user-inp, .paj-user-inp-cv {
-  width: 450px;
-  margin-top: 15px;
-  border: 1px solid #e5e5e5;
-  box-sizing: border-box;
-  height: 42px;
-  border-radius: 5px;
+  width: 100%; /* Makes input fields take full container width */
+  margin-bottom: 15px; /* Consistent bottom margin */
+  height: 42px; /* Standard height for input fields */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Internal padding */
+  border: 1px solid #e5e5e5; /* Subtle border styling */
 }
 
 .paj-user-inp-cv {
-  height: 100px;
+  height: 100px; /* Larger field for descriptions */
 }
 
-.Form-Div {
-  display: grid;
+.job-type-radio {
+  width: 100%; /* Full width to align with input fields */
+  margin-top: 20px; /* Space before the job type section */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the radio buttons */
+}
+
+.radio-h1, .Post-a-Job-h1 {
+  width: 100%;
+  text-align: center; /* Centers the titles */
+  margin: 20px 0; /* Top and bottom margin */
+  font-size: 24px; /* Default font size for readability */
 }
 
 .login-btn-1 {
-  width: 175px;
-  height: 30px;
+  width: 200px; /* Fixed width for button */
+  height: 40px; /* Standard height */
   margin-top: 20px;
-  justify-self: start;
-}
-
-.custom-error {
-  justify-self: center;
-}
-
-.login-btn-1 {
   background-color: #3751FE;
   color: white;
-  border: white;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 .login-btn-1:hover {
-  cursor: pointer;
-  background-color: #0020ee;
+  background-color: #0020ee; /* Darker shade on hover */
+}
+
+.custom-error {
+  text-align: center;
+  color: red;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px; /* Ideal for readability across devices */
+  z-index: 1000; /* Keeps the footer above other content */
+}
+
+@media screen and (min-width: 768px) {
+  .Post-a-Job-Form {
+    flex-direction: row; /* Side-by-side layout for larger screens */
+    justify-content: space-evenly; /* Evenly spaces the columns */
+    align-items: flex-start; /* Aligns items at the top */
+  }
+
+  .Footer {
+    font-size: 18px; /* Slightly larger font size for tablets */
+  }
+  
+  .radio-h1, .Post-a-Job-h1 {
+    font-size: 26px; /* Larger font size for headers in tablet mode */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .paj-user-inp, .paj-user-inp-cv {
+    max-width: 100%; /* Allows input fields to expand fully on small screens */
+  }
+
+  .login-btn-1 {
+    width: 80%; /* Makes the button significantly wider on small screens */
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .Post-a-Job-h1, .radio-h1 {
+    font-size: 10px; /* Smaller font size for very small screens */
+  }
+
+  .login-btn-1 {
+    width: 100%; /* Maximizes button width for easier access */
+  }
+
+  .Footer {
+    font-size: 4px; /* Smaller font size for mobile devices */
+  }
 }
