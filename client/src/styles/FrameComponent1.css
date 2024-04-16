@@ -1,0 +1,255 @@
+.job-postings {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .jobs-title {
+    width: 1010px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .job-1,
+  .lorem-ipsum-dolor4 {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    debug_commit: 1de1738;
+    z-index: 1;
+  }
+  .job-1 {
+    margin: 0;
+    width: 268.4px;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .lorem-ipsum-dolor4 {
+    align-self: stretch;
+    height: 107.2px;
+    font-size: 24px;
+    line-height: 34px;
+    color: #555;
+  }
+  .job-posting {
+    width: 527px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50.8px;
+    min-width: 527px;
+    max-width: 100%;
+  }
+  .portfolio-updatebro-icon {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 1;
+  }
+  .portfolio-updatebro-wrapper {
+    height: 306px;
+    width: 374px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 27.7px;
+    box-sizing: border-box;
+    min-width: 374px;
+    max-width: 100%;
+  }
+  .job-listings,
+  .jobs-header {
+    align-self: stretch;
+    display: flex;
+    max-width: 100%;
+  }
+  .job-listings {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 30px;
+    color: #002b9a;
+  }
+  .jobs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18.6px;
+    flex-shrink: 0;
+  }
+  .learn-more1 {
+    position: relative;
+    font-size: 20px;
+    font-family: Actor;
+    color: #0148ff;
+    text-align: left;
+    display: inline-block;
+    min-width: 98px;
+    white-space: nowrap;
+  }
+  .frame-child2 {
+    width: 20px;
+    height: 14.7px;
+    position: relative;
+  }
+  .learn-more-btn,
+  .learn-more-btn-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+  }
+  .learn-more-btn {
+    cursor: pointer;
+    border: 2px solid #0148ff;
+    padding: 7px 28px 5px;
+    background-color: transparent;
+    width: 188px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1;
+  }
+  .app-developmentrafiki-icon {
+    align-self: stretch;
+    height: 251.6px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .dev-job-content {
+    height: 345.4px;
+    width: 374px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 374px;
+    max-width: 100%;
+  }
+ 
+  .job-2 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    min-width: 82px;
+  }
+  .lorem-ipsum-dolor5 {
+    align-self: stretch;
+    height: 107.2px;
+    font-size: 24px;
+    line-height: 34px;
+    color: #555;
+  }
+  .dev-job-info {
+    width: 527px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 49.4px;
+    min-width: 527px;
+    max-width: 100%;
+  }
+  .development-job,
+  .learn-more-btn-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 20px;
+  }
+  .learn-more-btn-parent {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 9.8px;
+    flex-shrink: 0;
+    font-size: 30px;
+    color: #002b9a;
+  }
+  .learn-more2 {
+    position: relative;
+    font-size: 20px;
+    font-family: Actor;
+    color: #0148ff;
+    text-align: left;
+    display: inline-block;
+    min-width: 98px;
+    white-space: nowrap;
+  }
+  .frame-child3 {
+    width: 20px;
+    height: 14.7px;
+    position: relative;
+  }
+  .service-title-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 0 0;
+  }
+  .service-title,
+  .service-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+  .service-title {
+    cursor: pointer;
+    border: 2px solid #0148ff;
+    padding: 7px 28px 5px;
+    background-color: transparent;
+    width: 188px;
+    border-radius: 100px;
+    justify-content: flex-start;
+    gap: 10px;
+    z-index: 1;
+  }
+
+  .jobs-content {
+    width: 1041px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 50.8px;
+    max-width: 100%;
+  }
+  .jobs-content-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px 46.2px 29px;
+    box-sizing: border-box;
+    max-width: 100%;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 40px;
+    color: #0148ff;
+    font-family: Actor;
+  }
+ 
