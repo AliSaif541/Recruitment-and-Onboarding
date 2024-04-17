@@ -9,7 +9,7 @@
     "start": "nodemon index.js",
     "build": "babel -d dist"
   },
-  "keywords": [],
+  "keywords": [], 
   "author": "",
   "license": "ISC",
   "dependencies": {
