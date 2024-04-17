@@ -49,7 +49,7 @@ router.post('/', upload.single('resume'), async (req, res) => {
         //     req.body.skills,
         //     req.body.cover_letter
         // )
-        const score = 50%;
+        const score = 50;
 
         const newApplicant = new jobApplicant({
             name: req.body.name,
