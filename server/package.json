@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "2",
   "description": "",
   "main": "server.js",
   "type": "commonjs",
@@ -9,6 +9,12 @@
     "start": "nodemon index.js",
     "build": "npm run build"
   },
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
   "keywords": [], 
   "author": "",
   "license": "ISC",
