@@ -19,11 +19,12 @@ app.use(express.json());
 app.use(cors());
 
 const server = http.createServer(app);
+const PORT = process.env.PORT || 3030;
 
 mongoose.connect(process.env.MONG_URL)
 .then(()=>{
-    app.listen(process.env.PORT, ()=>{
-        console.log(`listening on port ${process.env.PORT}`); 
+    app.listen(PORT, ()=>{
+        console.log(`listening on port ${PORT}`); 
         console.log("Connected to Database");
     })
 })
