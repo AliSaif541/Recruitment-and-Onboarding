@@ -66,7 +66,7 @@ const PostAJob = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        await axios.post('http://localhost:9000/api/job/jobPosting', jobPosting);
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/job/jobPosting', jobPosting);
       setError('Job Posted successfully');
     } catch (error) {
       setError(error);

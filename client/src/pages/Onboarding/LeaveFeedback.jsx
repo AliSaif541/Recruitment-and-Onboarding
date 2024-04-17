@@ -11,7 +11,7 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import ReviewHead from '../../components/Onboarding/ReviewHead';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
-function LeaveFeedback() {
+function LeaveFeedback({ user }) {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState('');
   const [error, setError] = useState(null);
@@ -23,13 +23,6 @@ function LeaveFeedback() {
   const handleReviewChange = (e) => {
     setReview(e.target.value);
   };
-
-  const token = localStorage.getItem("token");
-  let user = null;
-
-  if (token) {
-    user = jwtDecode(token);
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

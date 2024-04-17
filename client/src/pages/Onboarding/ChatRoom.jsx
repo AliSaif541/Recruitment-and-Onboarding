@@ -8,17 +8,10 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import OnboardingHeader from '../../components/OnboardingHeader';
 import HRHeader from '../../components/HRHeader';
 
-const Chatroom = () => {
+const Chatroom = ({ user }) => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-
-    const token = localStorage.getItem('token');
-    let user = null;
-
-    if (token) {
-        user = jwtDecode(token);
-    }
 
     const userName = user ? user.name : '';
 

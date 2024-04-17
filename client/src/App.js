@@ -153,14 +153,14 @@ function App() {
         <Route path="/approve-candidates" element={<HRApproval />} />
         <Route path="/upload-video" element={<UploadVideo />} />
         <Route path="/view-feedback" element={<FeedbackView />} />
-        <Route path="/chatroom" element={<ChatRoom />} />
+        <Route path="/chatroom" element={<ChatRoom user={user} />} />
         
         {/* Routes for Employee Onboarding Side */}
         <Route path="/onboarding" element={<OnboardingDashboard />} />
         <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
         <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
         <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
-        <Route path="/leave-feedback" element={<LeaveFeedback />} />
+        <Route path="/leave-feedback" element={<LeaveFeedback user={user} />} />
         
         {/* <Route path="/testing" element={<HRIntroPage />} /> */}
         <Route path="/interview" element={<Navigate replace to="/login" />} />
