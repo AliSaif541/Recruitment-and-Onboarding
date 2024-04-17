@@ -1,9 +1,9 @@
 .footer-real {
     width: 100%;
     display: grid;
-}
-
-.footer-text-container-real {
+  }
+  
+  .footer-text-container-real {
     background-color: #7cd3d2;
     width: 95%;
     height: 80px;
@@ -13,20 +13,66 @@
     display: grid;
     grid-template-columns: 25% 75%;
     align-items: center;
-}
-
-.devsinc-real {
+  }
+  
+  .devsinc-real {
     justify-self: start;
     padding-left: 50px;
-}
-
-.company-2022-real {
+  }
+  
+  .company-2022-real {
     position: absolute;
     justify-self: center;
-}
-
-.devsinc-real, .company-2022-real {
+  }
+  
+  .devsinc-real, .company-2022-real {
     font-size: 17px;
     font-family: Actor;
     color: #fff;
-}
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) { /* For tablets */
+    .footer-text-container-real {
+      grid-template-columns: 1fr; /* Stack columns vertically */
+      height: auto; /* Adjust height to content */
+      padding: 20px 0; /* Add padding top/bottom */
+    }
+  
+    .devsinc-real, .company-2022-real {
+      justify-self: center; /* Center both text blocks */
+      padding-left: 0; /* Remove padding left */
+      padding-top: 10px; /* Add padding top for spacing */
+    }
+  
+    .company-2022-real {
+      position: static; /* Disable absolute positioning */
+    }
+  }
+  
+  @media (max-width: 425px) { /* For large mobiles */
+    .footer-text-container-real {
+      padding: 10px 0; /* Less padding than tablet */
+    }
+  
+    .devsinc-real, .company-2022-real {
+      font-size: 15px; /* Smaller font size for readability */
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .devsinc-real, .company-2022-real {
+      font-size: 14px; /* Even smaller font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .footer-text-container-real {
+      width: 100%; /* Full width on smallest screens */
+    }
+  
+    .devsinc-real, .company-2022-real {
+      font-size: 13px; /* Smallest font size for readability */
+    }
+  }
+  

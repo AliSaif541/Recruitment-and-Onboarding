@@ -207,3 +207,59 @@
     }
   }
   
+
+
+/* Tablet (768px) specific styles */
+@media screen and (max-width: 768px) {
+  .by-joining-devsinc {
+    width: auto;  /* Full width on smaller screens */
+    font-size: 35px; /* Slightly smaller font size */
+    line-height: 45px; /* Adjust line height for better readability */
+    padding: 0 20px; /* Padding on both sides */
+  }
+
+  .install-our-top-rated {
+    width: 100%; /* Full width for the text block */
+    padding: 0 15px; /* Padding on both sides */
+  }
+
+  .benefit-card, .benefit-card1, .benefit-card2, .benefit-card3, .benefit-card4, .benefit-card5 {
+    padding: 15px; /* Smaller padding for the cards */
+    min-width: 250px; /* Minimum width for each card */
+  }
+
+  .group-benefit-cards, .group-benefit-cards1 {
+    gap: 10px; /* Smaller gap between cards */
+  }
+}
+
+/* Mobile (<=450px) specific styles */
+@media screen and (max-width: 450px) {
+  .by-joining-devsinc, .install-our-top-rated, .when-working-in-container, .with-weekend-ux-container, .ust-like-learners-container, .if-you-really-container, .one-of-the-container {
+    font-size: 21px; /* Uniform font size for consistency */
+    line-height: 26px; /* Adjust line height */
+    width: auto; /* Full width */
+    padding: 0 10px; /* Padding on both sides */
+  }
+
+  .group-benefits, .affordable-pricing-wrapper, .learner-satisfaction-wrapper, .multimedia-materials-wrapper {
+    font-size: 18px; /* Smaller font size for group titles */
+  }
+
+  .benefit-section {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center-align items */
+    padding: 10px 0; /* Padding top and bottom */
+  }
+
+  .group-benefit-cards, .group-benefit-cards1 {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center-align cards */
+  }
+
+  .benefit-card, .benefit-card1, .benefit-card2, .benefit-card3, .benefit-card4, .benefit-card5 {
+    width: 90%; /* Make cards take up most of the screen width */
+    min-width: auto; /* Remove min-width restriction */
+    max-width: none; /* Allow full width usage */
+  }
+}
