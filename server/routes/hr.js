@@ -5,6 +5,7 @@ const { HR, hrValidate } = require('../models/HR');
 
 router.post('/', async (req, res) => {
   try {
+    console.log(req.body);
     let user = await HR.findOne({ email: req.body.email });
 
     if (!user) {
