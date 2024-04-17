@@ -15,7 +15,6 @@ const HeaderDetailsFrame = ({ setCurrentJob }) => {
         const url = "http://localhost:9000/api/job";
         const response = await axios.get(url);
         setJobs(response.data);
-        console.log(response.data);
     }
 
   return (

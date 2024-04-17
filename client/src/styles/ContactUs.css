@@ -154,3 +154,73 @@ body, html {
   align-self: flex-end; /* Align button to the right */
   border-radius: 5px; /* Add border radius for curved edges */
 }
+
+/* Media Queries */
+@media (max-width: 768px) { /* For tablets */
+  .contactus-h1 {
+    font-size: 40px; /* Smaller font size for tablets */
+  }
+  .contact-us-container {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px;
+    height: auto;
+    margin-top: 100px; /* Smaller top margin */
+  }
+  .contact-us-body {
+    padding: 20px;
+  }
+  .contact-form .name-inputs {
+    flex-direction: column; /* Stack input fields vertically */
+  }
+}
+
+@media (max-width: 425px) { /* For large mobiles */
+  .contactus-h1 {
+    font-size: 30px; /* Smaller font size for mobiles */
+  }
+  .contact-us-container {
+    margin-top: 50px; /* Smaller top margin */
+  }
+  .contact-us-body h1,
+  .contact-us-body h2,
+  .contact-us-body h3,
+  .contact-us-body h4 {
+    font-size: 16px; /* Smaller font sizes for headings */
+  }
+  .contact-us-body {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .contactus-p {
+    font-size: 12px; /* Smaller paragraph font size */
+  }
+  .contact-us-body {
+    padding: 15px;
+  }
+  .social-icons img {
+    width: 15px; /* Smaller social icons */
+  }
+  .contact-us-body {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .contactus-h1,
+  .contactus-p {
+    font-size: 12px; /* Smaller font size for smallest screens */
+  }
+  .contact-us-container {
+    padding: 10px;
+    margin-top: 20px; /* Much smaller top margin */
+  }
+  .contact-form button {
+    width: auto; /* Full width button */
+    padding: 8px; /* Smaller padding */
+  }
+  .contact-us-body {
+    width: 90%;
+  }
+}

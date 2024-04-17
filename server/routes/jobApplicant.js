@@ -6,14 +6,17 @@ const nodemailer = require('nodemailer');
 const { jobApplicant, jobApplicantValidate } = require('../models/jobApplicant');
 const { Job, jobValidate } = require('../models/job');
 const { jobRecruiter } = require('../ML-Algo/Final_ML_RATING')
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
     secure: true,
     auth: {
-        user: 'recruitment.onboarding541@gmail.com',
-        pass: 'ksoa xcxe ohss aiaf',
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     }
 });
 
@@ -93,7 +96,6 @@ router.get('/', async (req, res) => {
 
 router.post('/reject', async (req, res) => {
     try {
-        console.log(req.body);
         const applicant = await jobApplicant.findOne({ email: req.body.email, jobID: req.body.jobID});
         if (!applicant) {
             return res.status(404).send({ message: "Applicant not found" });

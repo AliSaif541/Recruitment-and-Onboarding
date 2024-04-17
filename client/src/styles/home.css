@@ -70,28 +70,39 @@
 }
 
 .Aboutus-part-home {
-    border: 1px solid black;
-    border-radius: 50px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    
+    grid-template-columns: 1fr 2fr; 
     justify-self: center;
-    width: 80%;
-    background-color: var(--color-white);
-    /* border-right: 1px solid #c4d4ff; */
+    width: 80%; 
+     background: linear-gradient(to right, #e6f1ff, #ffffff); /* Adjust gradient so it covers the entire width */
+    padding: 50px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    border-radius: 100px; 
+    position: relative; 
+    margin-top: 10px;
+    align-items: center;
+    overflow: hidden; 
+}
+
+/* Pseudo-element for the border */
+.Aboutus-part-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px; 
+    pointer-events: none; 
+    border: 2px solid rgba(0, 0, 0, 0.03); 
+    box-sizing: border-box; 
 }
 
 .about-company-about {
-    font-size: inherit;
-    font-weight: 400;
-    font-family: inherit;
-    /* width: 206.8px;
-    height: 87.2px; */
-    display: grid;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-right: 25px;
-    /* margin-right: 25px; */
-    /* border-right: 1.5px solid black; */
 }
 
 .lorem-ipsum-dolor1 {
@@ -111,7 +122,6 @@
 
 .lorem-ipsum-dolor,
 .welcome-to-your-container {
-    /* position: absolute; */
     left: 80.7px;
     display: inline-block;
 }
@@ -131,9 +141,49 @@
 }
 
 .Careers-part-home {
-    display: grid;
-    margin-top: 35px;
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
 }
+
+
+.careers-title {
+    color: #002B9A;
+    font-size: 1.5rem;
+    grid-column: 1; /* Place the title in the first column */
+    align-self: center; /* Center the title vertically */
+    text-align: center; /* Center the title text */
+}
+
+.careers-section {
+    display: grid;
+    grid-template-columns: 200px auto; 
+    align-items: start; 
+    gap: 20px; 
+    background-color: #f9f9f9;
+    padding: 70px 50px;
+    max-width: 80%;
+    margin: 20px auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.careers-list {
+    align-items: start;
+    align-self: start;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 0; 
+    color: #666;
+    line-height: 1.6;
+    grid-column: 2; 
+}
+
+.careers-list li {
+    margin-bottom: 5px; 
+}
+
 
 .careers-about {
     display: grid;
@@ -180,54 +230,120 @@
 }
 
 .our-careers-heading {
-    text-align: center;
-    color: #0048FF;
+    max-width: 100%;
+    text-align: center; 
+    color: #0048FF; 
     font-weight: 400;
-    padding-top: 15px;
+    padding-bottom: 15px; 
+    margin-bottom: 20px;
+    margin-top: 10px; 
 }
 
 .job-postings-container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-}
-  
-.job-posting {
-    background-color: white;
+    
+
+  }
+
+.job-posting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-color: #f9f9f9; 
-}
+  }
 
-.job-posting h2 {
-    color: #333;
+.job-title {
+    color: #002B9A;
     margin-bottom: 10px;
-}
+  }
 
-.job-posting p {
+  .job-description {
     color: #666;
     line-height: 1.6;
-}
+  }
 
-.learn-more-btn,
-.view-all-btn {
+.learn-more-btn {
     padding: 10px 20px;
-    background-color: #16BBB2;
+    background-color: #4A90E2; 
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 0 auto;
+  }
 
-.learn-more-btn:hover,
-.view-all-btn:hover {
-    background-color: #118e88;
-}
+
+.job-illustration img {
+    max-width: 200px; 
+  }
+
+@media (max-width: 768px) {
+    .job-posting-row {
+      flex-direction: column;
+    }
+  
+    .job-illustration img {
+      margin: 20px auto;
+      display: block;
+    }
+  }
 
 .view-all-btn-container {
     text-align: center;
     padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+.contact-us-containerhome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%; 
+    box-sizing: border-box; 
+}
+
+.contact-us-bodyhome {
+    /* background: linear-gradient(to right, #e6f1ff, #ffffff); */
+    background-color: #f2f8ff;
+    padding: 30px;
+    border-radius: 8px;
+    color: black;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.contacttinfohome{
+    color:#002B9A;
+}
+
+.social-iconshome {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-iconshome img {
+    width: 20px; 
+    height: auto;
+    margin: 0 auto; 
+}
+
+.contacttt{
+    color: #454545;
 }

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const socketIo = require('socket.io');
 const http = require('http');
+const dotenv = require('dotenv');
 const jobRoutes = require("./routes/job");
 const HRRoutes = require("./routes/hr");
 const applicantRoutes = require("./routes/jobApplicant");
@@ -11,16 +12,18 @@ const videoRoutes = require('./routes/Video');
 const reviewRoutes = require('./routes/review');
 const trainingRoutes = require('./routes/TrainingModules');
 
+dotenv.config();
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 const server = http.createServer(app);
 
-mongoose.connect("mongodb://127.0.0.1:27017/recruitment")
+mongoose.connect(process.env.MONG_URL)
 .then(()=>{
-    app.listen(9000, ()=>{
-        console.log(`listening on port ${9000}`);
+    app.listen(process.env.PORT, ()=>{
+        console.log(`listening on port ${process.env.PORT}`); 
         console.log("Connected to Database");
     })
 })

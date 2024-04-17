@@ -3,12 +3,9 @@ import axios from 'axios';
 import '../../styles/HRDashboard/JobDetails.css';
 
 function JobDetails({ currentJobPosting }) {
-  console.log("currentJobPosting: ", currentJobPosting);
-
   const handleCompleteJob = async () => {
     try {
       await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'completed' });
-      console.log('Job completed successfully');
     } catch (error) {
       console.error('Error completing job:', error);
     }
@@ -17,7 +14,6 @@ function JobDetails({ currentJobPosting }) {
   const handleArchiveJob = async () => {
     try {
       await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'in-active' });
-      console.log('Job archived successfully');
     } catch (error) {
       console.error('Error archiving job:', error);
     }

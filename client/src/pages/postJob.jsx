@@ -67,7 +67,6 @@ const PostAJob = () => {
     e.preventDefault();
     try {
         await axios.post('http://localhost:9000/api/job/jobPosting', jobPosting);
-      console.log('Job Posted successfully');
       setError('Job Posted successfully');
     } catch (error) {
       setError(error);

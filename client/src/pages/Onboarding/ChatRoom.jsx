@@ -3,12 +3,15 @@ import { jwtDecode } from 'jwt-decode';
 import '../../styles/Onboarding/ChatRoom.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import animation from '../../images/Animation-ChatRoom.json'
+import animation from '../../images/Animation-ChatRoom.json';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
+import OnboardingHeader from '../../components/OnboardingHeader';
+import HRHeader from '../../components/HRHeader';
 
-const ChatRoom = () => {
+const Chatroom = () => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     const token = localStorage.getItem('token');
     let user = null;
@@ -20,18 +23,21 @@ const ChatRoom = () => {
     const userName = user ? user.name : '';
 
     const fetchMessages = async () => {
+        setIsLoading(true);
         try {
             const response = await fetch('http://localhost:9000/messages');
             const data = await response.json();
-            // Sort messages by timestamp before setting state
             const sortedMessages = data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
             setMessages(sortedMessages);
         } catch (error) {
             console.error('Error fetching messages:', error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
     const sendMessage = async () => {
+        if (!message.trim()) return;
         try {
             await fetch('http://localhost:9000/messages', {
                 method: 'POST',
@@ -40,9 +46,8 @@ const ChatRoom = () => {
                 },
                 body: JSON.stringify({ userName, message }),
             });
-
             setMessage('');
-            fetchMessages();
+            await fetchMessages();
         } catch (error) {
             console.error('Error sending message:', error);
         }
@@ -50,27 +55,31 @@ const ChatRoom = () => {
 
     useEffect(() => {
         fetchMessages();
-        const interval = setInterval(fetchMessages, 2000);
-
+        // Poll for new messages every 5 seconds
+        const interval = setInterval(fetchMessages, 5000);
         return () => clearInterval(interval);
     }, []);
 
-    // Filter messages for other users and current user
-    const otherUserMessages = messages.filter((msg) => msg.user !== userName);
-    const currentUserMessages = messages.filter((msg) => msg.user === userName);
+    const formatTimestamp = (timestamp) => {
+        const date = new Date(timestamp);
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        return `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    };
 
-    const description = "Join our vibrant chatroom where new employees can connect with fellow colleagues and HR professionals. Dive into discussions, share experiences, and build meaningful connections as you navigate your journey with us.";
+    const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
 
     return (
         <div>
-            <Header />
+            {user.role === "HR" ? <HRHeader /> : <OnboardingHeader />}
             <TrainingComponentHead title="Welcome to the Chatroom" description={description} animation={animation} />
             <div className="chat-room-container">
-
                 <div className="messages-container">
-                    <div className="other-messages">
-                        {otherUserMessages.map((message) => (
-                            <div key={message._id} className="message other-message">
+                    {isLoading ? (
+                        <div>Loading messages...</div>
+                    ) : (
+                        messages.map((message) => (
+                            <div key={message._id} className={`message ${message.user === userName ? 'own-message' : 'other-message'}`}>
                                 <div className="message-content">
                                     <div className="message-header">
                                         <span className="user-name">{message.user}</span>
@@ -79,21 +88,8 @@ const ChatRoom = () => {
                                     <div className="message-text">{message.message}</div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                    <div className="own-messages">
-                        {currentUserMessages.map((message) => (
-                            <div key={message._id} className="message own-message">
-                                <div className="message-content">
-                                    <div className="message-header">
-                                        <span className="timestamp">{formatTimestamp(message.timestamp)}</span>
-                                        <span className="user-name">{message.user}</span>
-                                    </div>
-                                    <div className="message-text">{message.message}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                        ))
+                    )}
                 </div>
                 <div className="message-input-container">
                     <input
@@ -102,6 +98,7 @@ const ChatRoom = () => {
                         placeholder="Type your message..."
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
+                        onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                     />
                     <button className="send-button" onClick={sendMessage}>
                         Send
@@ -113,13 +110,4 @@ const ChatRoom = () => {
     );
 };
 
-// Function to format timestamp
-const formatTimestamp = (timestamp) => {
-    const date = new Date(timestamp);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
-    return formattedTime;
-};
-
-export default ChatRoom;
+export default Chatroom;

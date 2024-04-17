@@ -9,7 +9,6 @@ const Header = () => {
   let user = null;
   if (token) {
     user = jwtDecode(token);
-    // console.log("user: ", user);
   }
 
   const handleLogout = () => {

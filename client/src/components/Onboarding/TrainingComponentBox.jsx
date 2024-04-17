@@ -12,10 +12,6 @@ const TrainingComponentBox = ({ _id, name, Description, imageURL, setCurrentModu
     });
   }
 
-  
-
-  // console.log("imageURL: ", data);
-
   return (
     <div className='box-Training' >
       <Link className="Link" onClick={handleClick} to={`/training/${index}`}><img src={imageURL} alt={name} /></Link>

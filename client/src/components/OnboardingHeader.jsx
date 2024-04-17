@@ -9,7 +9,6 @@ const OnboardingHeader = () => {
   let user = null;
   if (token) {
     user = jwtDecode(token);
-    // console.log("user: ", user);
   }
 
   const handleLogout = () => {
@@ -33,7 +32,6 @@ const OnboardingHeader = () => {
           <Link className="Link" to="/leave-feedback"><div>Leave Feedback</div></Link>
           <button className="frame-b2-real">
             {user ? <Link className="Link" onClick={handleLogout} to="/login"><div className="sign-in2-real">Sign Out</div></Link> : <Link className="Link" to="/login"><div className="sign-in2-real">Sign in</div></Link>}
-            {/* <div className="sign-in2-real">Sign in</div> */}
           </button>
         </div>
       </header>

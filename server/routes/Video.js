@@ -52,7 +52,6 @@ router.get('/recommended', async (req, res) => {
 });
   
 router.get('/training', async (req, res) => {
-  console.log(req.query);
   try {
     const videos = await Video.find({trainingModule: req.query.trainingModule});
     if (!videos) {

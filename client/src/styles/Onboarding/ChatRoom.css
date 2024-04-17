@@ -1,82 +1,95 @@
 .chat-room-container {
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 1px solid black;
-    height: 100vh; /* 85% of viewport height */
-    /* margin: auto; */
-    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    width: 80%; 
+    margin: 40px auto; 
+    border: 1px solid #dcdcdc;
+    background-color: #f2f8ff;
+    height: 90vh; 
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); 
 }
+
 
 .messages-container {
+    flex-grow: 1;
     display: flex;
-    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px 20px; 
 }
 
-.other-messages {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
+.message.other-message {
+    justify-content: flex-start; 
 }
 
-.own-messages {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-}
 
 .message {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    justify-content: flex-end; /* This pushes your messages to the right */
+    padding: 4px 0; /* Space between messages */
+    width: 100%; /* Ensures that message divs take the full width */
 }
 
 .message-content {
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 10px;
+    max-width: 60%; /* Max width for messages */
+    padding: 8px 10px; /* Padding inside the message bubble */
+    border-radius: 7.5px; /* Rounded corners like WhatsApp */
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13); /* Subtle shadow for depth */
+    word-wrap: break-word; /* Ensures text wraps within bubble */
+    margin-bottom: 20px; /* Added margin to accommodate timestamp */
+}
+
+.other-message .message-content {
+    background-color: #ffffff; /* White background for others' messages */
+    align-self: flex-start; /* Align others' messages to left */
+}
+
+.own-message .message-content {
+    background-color: #dcf8c6; /* Green background for user's own messages */
+    align-self: flex-end; /* Align user's messages to right */
 }
 
 .message-header {
+    font-size: 0.85em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
+    width: 100%; /* Added to ensure header takes full width */
+    position: relative; /* Relative positioning for timestamp absolute positioning */
+}
+
+.timestamp {
+    color: #999; /* Grey color for timestamp */
 }
 
 .user-name {
     font-weight: bold;
 }
 
-.timestamp {
-    font-size: 12px;
-}
-
 .message-input-container {
     display: flex;
-    width: 100%;
-    margin-top: 10px;
+    border-top: 1px solid #dcdcdc;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light background for the input area */
 }
 
 .message-input {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; 
+    margin-right: 10px; 
 }
 
 .send-button {
     padding: 10px 20px;
     border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #7cd3d2; 
+    border-radius: 20px; 
+    color: white;
     cursor: pointer;
 }
 
 .send-button:hover {
-    background-color: #0056b3;
+    background-color: #00796b; /* Darker shade on hover */
 }

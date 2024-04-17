@@ -61,13 +61,11 @@ function UploadVideo() {
       description,
       trainingModule
     };
-    console.log("videoData: ", videoData);
 
     try {
       setErrorMsg('Uploading data...'); // Display uploading message
       await axios.post('http://localhost:9000/api/video', videoData);
       setErrorMsg('Video uploaded successfully');
-      console.log('Video Uploaded successfully');
     } catch (error) {
       console.error('Error uploading data:', error);
       setErrorMsg('Error uploading data');

@@ -29,7 +29,6 @@ function LeaveFeedback() {
 
   if (token) {
     user = jwtDecode(token);
-    console.log("userReview: ", user);
   }
 
   const handleSubmit = async (e) => {

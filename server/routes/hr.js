@@ -29,7 +29,6 @@ router.post('/', async (req, res) => {
     
     res.status(200).send({ data: token, message: `Logged in successfully!` });
   } catch (err) {
-    console.log(err);
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });
@@ -75,11 +74,9 @@ router.post('/verify', async (req, res) => {
 
 router.get('/unverified', async (req, res) => {
   try {
-    console.log("Hello");
     const unverifiedPeople = await HR.find({ verified: 0 });
     res.status(200).send({ data: unverifiedPeople });
   } catch (error) {
-    console.log(error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });
@@ -97,7 +94,6 @@ router.post('/update-verification', async (req, res) => {
     await person.save();
     res.status(200).send({ message: 'Verification status updated successfully' });
   } catch (error) {
-    console.log(error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });

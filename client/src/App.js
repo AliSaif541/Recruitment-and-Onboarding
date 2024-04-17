@@ -29,15 +29,16 @@ import FeedbackView from './pages/Onboarding/FeedbackView';
 import ErrorPage from './components/ErrorPage';
 import HRHeader from './components/HRHeader';
 import HRIntroPage from './pages/Onboarding/HRIntroPage';
+import OnboardingDashboard from './pages/Onboarding/OnboardingDashboard';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyChMXfx7NRyh6yL-6z84E42LEoeP06QJbs",
-  authDomain: "recruitment-and-onboardi-222bb.firebaseapp.com",
-  projectId: "recruitment-and-onboardi-222bb",
-  storageBucket: "recruitment-and-onboardi-222bb.appspot.com",
-  messagingSenderId: "212429357606",
-  appId: "1:212429357606:web:53f75db4597cafeb689ce7",
-  measurementId: "G-1N7VFH9Q6S"
+const firebaseConfig = { 
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -108,16 +109,17 @@ function App() {
         {!user && <Route path="/view-feedback" element={<Login />} />}
         {!user && <Route path="/upload-video" element={<Login />} />}
         {!user && <Route path="/hr-onboarding" element={<Login />} />}
+        {!user && <Route path="/onboarding" element={<Login />} />}
 
-        {user && user.role != "HR" && <Route path="/postjob" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/hrjob/:id" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/user/:id" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/hr" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/interview" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/approve-candidates" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/view-feedback" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/upload-video" element={<Login />} />}
-        {user && user.role != "HR" && <Route path="/hr-onboarding" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/postjob" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/hrjob/:id" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/user/:id" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/hr" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/interview" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/approve-candidates" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/view-feedback" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/upload-video" element={<Login />} />}
+        {user && user.role !== "HR" && <Route path="/hr-onboarding" element={<Login />} />}
 
         {!user && <Route path="/chatroom" element={<Login />} />}
         {!user && <Route path="/training-modules" element={<Login />} />}
@@ -150,6 +152,7 @@ function App() {
         <Route path="/chatroom" element={<ChatRoom />} />
         
         {/* Routes for Employee Onboarding Side */}
+        <Route path="/onboarding" element={<OnboardingDashboard />} />
         <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
         <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
         <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />

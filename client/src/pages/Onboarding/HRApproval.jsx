@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ApprovalBox from '../../components/Onboarding/ApprovalBox';
-import axios from 'axios'; // Import Axios for making HTTP requests
+import axios from 'axios';
 import HRHeader from '../../components/HRHeader';
 
 const HRApproval = () => {
@@ -11,8 +11,8 @@ const HRApproval = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
         try {
-          const response = await axios.get('http://localhost:9000/api/hr/unverified'); // Make a GET request to fetch unverified candidates
-          setCandidates(response.data.data); // Update state with fetched candidates
+          const response = await axios.get('http://localhost:9000/api/hr/unverified');
+          setCandidates(response.data.data);
         } catch (error) {
           console.error('Error fetching candidates:', error);
         }
@@ -23,8 +23,8 @@ const HRApproval = () => {
 
   const handleApprove = async (candidateId) => {
     try {
-      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: 1 }); // Make a POST request to update verification status
-      setCandidates(candidates.filter(candidate => candidate._id !== candidateId)); // Update state to remove the approved candidate
+      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: 1 });
+      setCandidates(candidates.filter(candidate => candidate._id !== candidateId)); 
     } catch (error) {
       console.error('Error approving candidate:', error);
     }
@@ -32,8 +32,8 @@ const HRApproval = () => {
 
   const handleReject = async (candidateId) => {
     try {
-      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: -1 }); // Make a POST request to update verification status
-      setCandidates(candidates.filter(candidate => candidate._id !== candidateId)); // Update state to remove the rejected candidate
+      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: -1 }); 
+      setCandidates(candidates.filter(candidate => candidate._id !== candidateId));
     } catch (error) {
       console.error('Error rejecting candidate:', error);
     }

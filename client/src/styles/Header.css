@@ -53,3 +53,60 @@ body {
   border: 2px solid #e6a8c2;
   box-sizing: border-box;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) { /* For tablets */
+  .logo-img-real {
+    height: 80px;
+  }
+  .header2-real {
+    grid-template-columns: 1fr 3fr;
+  }
+  .navbar1-real {
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 15px;
+  }
+  .frame-b2-real {
+    width: 100px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 425px) { /* For large mobiles */
+  .header2-real {
+    grid-template-columns: 2fr 3fr;
+    padding: 10px 5px; /* Adjusted padding for more spacing */
+  }
+  .navbar1-real {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 13px; /* Further reduced font size */
+    gap: 10px; /* Increased gap between nav items */
+    margin-right: 10px; /* Reduced margin */
+  }
+  .frame-b2-real {
+    width: 80px; /* Further reduced button width */
+    padding: 6px 16px; /* Adjusted padding */
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-img-real {
+    height: 50px; /* Further reduced logo size */
+  }
+  .header2-real {
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar1-real {
+    font-size: 11px; /* Further reduced font size */
+    padding: 0 5px; /* Adjusted padding */
+    gap: 8px; /* Adjusted gap for nav items */
+  }
+  .frame-b2-real {
+    padding: 5px 14px; /* Further reduced padding */
+  }
+}

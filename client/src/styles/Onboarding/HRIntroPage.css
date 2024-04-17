@@ -102,3 +102,40 @@
     width: 80%;
 }
 }
+
+.dashboard-title-container {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 80%;
+  justify-self: center;
+  margin: auto;
+  margin-bottom: 25px
+}
+
+.dashboard-title {
+  font-weight: bold;
+  font-size: 35px;
+  /* margin-bottom: 25px; */
+  /* color: #7cd3d2; */
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+}
+
+.dashboard-subtext {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.dashboard-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-image-container img {
+  max-width: 80%;
+  height: auto;
+  border: #2c3e50 1px solid;
+  border-radius: 20px;
+}

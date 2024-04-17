@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Review, reviewValidate } = require('../models/Review');
 
 router.post('/', async (req, res) => {
-  console.log(req.body);
     try {
       const { rating, date, name, role, review } = req.body;
       const newReview = new Review({

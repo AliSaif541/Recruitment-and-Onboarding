@@ -105,7 +105,7 @@ img {
 
 .signup-btn:hover {
     cursor: pointer;
-    background-color: #e5e5e5;
+    background-color: #0020ee;
 }
 
 .login-btn:hover {
@@ -117,4 +117,49 @@ img {
     display: grid;
     grid-template-rows: 1fr 2fr 0.5fr 6fr;
     align-items: center;
+}
+/* Media Queries for Tablet */
+@media (max-width: 768px) {
+    .SignUp {
+        grid-template-columns: 1fr; /* Single column for smaller devices */
+    }
+
+    .Img-Part, .SignUP-Container {
+        width: 100%;
+    }
+
+    .SignUp-Form, .signup-input-div {
+        width: 80%;
+        justify-self: center;
+    }
+
+    .user-inp {
+        width: 100%;
+    }
+
+    img {
+        max-width: 60%; /* Smaller max width for tablets */
+        max-height: 60%; /* Smaller max height for better aspect ratio */
+    }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+    .Title, .Headings {
+        font-size: 20px;
+    }
+
+    .Welcome {
+        font-size: 16px;
+    }
+
+    .login-btn, .signup-btn {
+        width: 80px;
+        height: 30px;
+    }
+
+    img {
+        max-width: 80%; /* Slightly larger for mobile */
+        max-height: 80%;
+    }
 }

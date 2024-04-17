@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import HRHeader from '../components/HRHeader';
 
 function UserProfile({ currentApplicant }) {
-  console.log("currentApplicant: ", currentApplicant);
   return (
     <div className='userprofile-container'>
       <HRHeader />

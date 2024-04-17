@@ -27,7 +27,6 @@ function SignUp() {
 			const url = "http://localhost:9000/api/hr/signup";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
-			console.log(res.message);
 		} catch (error) {
 			setError(error.response.data.message);
 		}

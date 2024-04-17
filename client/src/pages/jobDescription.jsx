@@ -5,7 +5,6 @@ import JobForm from "../components/JobForm";
 import "../styles/Job.css";
 
 function JobDescription({ currentJob }) {
-  console.log("currentJob", currentJob);
   if (!currentJob) {
     return <div>Loading job details...</div>; 
   }

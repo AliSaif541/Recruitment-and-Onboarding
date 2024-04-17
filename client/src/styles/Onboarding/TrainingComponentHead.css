@@ -1,55 +1,115 @@
 .content-container {
-    background-color: #7cd3d2;
+  background-color: #7cd3d2;
+  width: 100%;
+  margin: 0;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.info-text {
+  color: #fff;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.info-text-h2 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-text-p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-right: 25px;
+}
+
+.animation-container {
+  width: 50%;
+  padding-bottom: 25px;
+}
+
+.box-container {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) { /* For tablets */
+  .content-container {
     width: 100%;
-    margin: 0;
+  }
+  .info-box {
+      flex-direction: column;
+      padding: 10px;
   }
 
-  
-  .info-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  .info-text, .animation-container {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 10px;
   }
-  
-  .info-text {
-    color: #fff;
-    width: 50%;
-    margin-left: 5%;
-    /* align-items: start; */
-  }
-  
+
   .info-text-h2 {
-    font-weight: bold;
-    /* margin-bottom: 10px; */
-    /* color: black; */
-    margin: 0;
-    /* margin-top: -50px; */
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px; /* Smaller font size for tablets */
   }
 
   .info-text-p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin-right: 25px;
+      font-size: 14px; /* Smaller paragraph font size */
   }
-  
-  .animation-container {
-    width: 50%;
-    /* height: 4 times the height of your header; */
-    /* overflow: hidden; */
-    padding-bottom: 25px;
-  }
-  
+
   .box-container {
-    display: flex;
-    /* width: 90%; */
-    padding-left: 5%;
-    padding-right: 5%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 35px;
-    /* justify-items: center; */
+      gap: 20px; /* Smaller gap between boxes */
   }
+}
+
+@media (max-width: 425px) { /* For large mobiles */
+  .info-text-h2 {
+      font-size: 25px; /* Even smaller font size for large mobiles */
+  }
+
+  .info-text-p {
+      font-size: 12px; /* Smaller text font size for better readability */
+  }
+
+  .box-container {
+      padding-left: 2%;
+      padding-right: 2%;
+      gap: 15px; /* Further reduced gap for compact layout */
+  }
+}
+
+@media (max-width: 375px) {
+  .info-text-h2 {
+      font-size: 22px; /* Smaller font size for medium mobiles */
+  }
+
+  .info-text-p {
+      margin-right: 10px; /* Reduced margin for tighter layout */
+  }
+}
+
+@media (max-width: 320px) {
+  .info-text-h2 {
+      font-size: 20px; /* Smallest font size for smallest screens */
+  }
+
+  .info-text-p {
+      font-size: 11px; /* Smallest paragraph font size for readability */
+  }
+
+  .box-container {
+      gap: 10px; /* Minimal gap to maximize space */
+  }
+}

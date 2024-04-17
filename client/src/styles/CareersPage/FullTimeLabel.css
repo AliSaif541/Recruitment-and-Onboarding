@@ -64,6 +64,7 @@
 .hago-label-1 {
   cursor: pointer;
   border: 0;
+  margin-top: -40px;
   padding: 10px 31px 10px 30px;
   background-color: transparent;
   border-radius: 100px;
@@ -178,8 +179,5 @@
   .join-our-team-container-1 {
     font-size: 23px;
     line-height: 34px;
-  }
-  .lorem-ipsum-dolor-1 {
-    /* Add any additional styles here */
   }
 }

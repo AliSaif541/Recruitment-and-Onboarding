@@ -1,55 +1,146 @@
 body {
-    margin: 0;
-  }
-  
+  margin: 0;
+}
+
+.logo-img-real {
+  cursor: pointer;
+  height: 100px;
+}
+
+.Link {
+  text-decoration: none;
+  color: #333;
+}
+
+.header2-real {
+  background-color: #7cd3d2;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.navbar1-real-onboarding {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 2.5fr 2.5fr 2fr;
+  justify-self: end;
+  align-items: center;
+  margin-right: 25px;
+  font-size: 14px;
+  font-family: Actor;
+  color: #333;
+}
+
+.sign-in2-real {
+  font-size: 17px;
+  font-family: Actor;
+  color: #333;
+}
+
+.frame-b2-real {
+  cursor: pointer;
+  border: 2px solid #ffc1dc;
+  padding: 10px 24px 10px 28px;
+  background-color: transparent;
+  width: 117px;
+  border-radius: 100px;
+}
+
+.frame-b2-real:hover {
+  background-color: rgba(230, 168, 194, 0.09);
+  border: 2px solid #e6a8c2;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
   .logo-img-real {
-    cursor: pointer;
-    height: 100px;
+      height: 80px;
   }
-  
-  .Link {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .header2-real {
-    background-color: #7cd3d2;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-  }
-  
+
   .navbar1-real-onboarding {
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 2.5fr 2.5fr 2fr;
-    justify-self: end;
-    align-items: center;
-    margin-right: 25px;
-    font-size: 17px;
-    font-family: Actor;
-    color: #333;
+      grid-template-columns: repeat(5, 1fr);
+      margin-right: 10px;
+      font-size: 12px;
   }
-  
+
   .sign-in2-real {
-    font-size: 17px;
-    font-family: Actor;
-    color: #333;
+      font-size: 15px;
   }
-  
+
   .frame-b2-real {
-    cursor: pointer;
-    border: 2px solid #ffc1dc;
-    padding: 10px 24px 10px 28px;
-    background-color: transparent;
-    width: 117px;
-    border-radius: 100px;
+      width: 100px;
+      padding: 8px 20px;
   }
-  
-  .frame-b2-real:hover {
-    background-color: rgba(230, 168, 194, 0.09);
-    border: 2px solid #e6a8c2;
-    box-sizing: border-box;
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 425px) {
+  .header2-real {
+      grid-template-columns: 1fr;
+      padding: 10px;
   }
+
+  .logo-img-real {
+      height: 60px;
+  }
+
+  .navbar1-real-onboarding {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+      font-size: 10px;
+  }
+
+  .sign-in2-real {
+      font-size: 14px;
+  }
+
+  .frame-b2-real {
+      width: 90px;
+      padding: 6px 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-img-real {
+      height: 50px;
+  }
+
+  .sign-in2-real {
+      font-size: 13px;
+  }
+
+  .frame-b2-real {
+      width: 85px;
+      padding: 5px 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header2-real {
+      display: flex; /* Align items horizontally */
+      flex-direction: row; /* Ensure they flow left to right */
+      align-items: center; /* Center items vertically */
+  }
+
+  .logo-img-real {
+      height: 45px;
+  }
+
+  .navbar1-real-onboarding {
+      flex-wrap: wrap; /* Allow items to wrap onto the next line if space is constrained */
+  }
+
+  .sign-in2-real {
+      font-size: 12px;
+  }
+
+  .frame-b2-real {
+      width: 80px;
+      padding: 4px 12px;
+  }
+}

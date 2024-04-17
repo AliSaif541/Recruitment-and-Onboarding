@@ -22,7 +22,6 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
           }
         });
         setVideosData(response.data);
-        console.log("videoData", response.data);
       } catch (error) {
         console.error('Error fetching training modules:', error);
       }

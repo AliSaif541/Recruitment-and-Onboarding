@@ -20,7 +20,6 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
         const response = await axios.get(url);
         const filteredArray = response.data.filter(item => item.jobID === currentJobPosting._id);
         setApplicants(filteredArray);
-        console.log("filtered: ", filteredArray);
     }
 
     

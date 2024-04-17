@@ -21,7 +21,6 @@ function FeedbackView() {
       const response = await axios.get('http://localhost:9000/api/review');
       let data = await response.data;
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
-      console.log("data: ", data)
       setReviews(data);
       setLoading(false);
     } catch (error) {

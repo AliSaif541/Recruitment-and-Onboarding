@@ -15,8 +15,6 @@ function Interview({ currentApplicant, currentJobPosting }) {
   const handleScheduleInterview = async (event) => {
     event.preventDefault();
 
-    console.log(dateTime, time, note);
-
     try {
       const response = await axios.post('http://localhost:9000/api/jobApplicant/Interview', {
         recipient: currentApplicant.email,

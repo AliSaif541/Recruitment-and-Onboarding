@@ -21,8 +21,8 @@ const ReviewHead = ({title, description}) => {
                     preserveAspectRatio: 'xMidYMid slice'
                     }
                 }}
-                height={300} // Adjust the height as needed
-                width={400} // Adjust the width as needed
+                height={300} 
+                width={400} 
                 />
             </div>
         </div>

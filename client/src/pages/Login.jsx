@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import pic from "../images/clip-message.png"
 import "../styles/Login.css"
 import { Link } from "react-router-dom";
@@ -23,7 +24,20 @@ function Login() {
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			
-            window.location = '/hr';
+            const token = localStorage.getItem("token");
+
+            let user = null;
+
+            if (token) {
+                user = jwtDecode(token);
+                // console.log("user: ", user);
+            }
+
+            if (user.role === "HR") {
+                window.location = '/hr';
+            } else {
+                window.location = '/onboarding';
+            }
 		} catch (error) {
 			setError(error.response.data.message);
 		}

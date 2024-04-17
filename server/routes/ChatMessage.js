@@ -8,15 +8,13 @@ router.get('/', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Internal Server Error" });
-    } 
-});
+    }
+}); 
 
 router.post('/', async (req, res) => {
     try {
-        console.log(req.body);
         let user = req.body.userName;
         message = req.body.message;
-        console.log("user: ", user);
  
         if (!user || !message) {
             return res
