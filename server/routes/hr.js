@@ -30,6 +30,7 @@ router.post('/', async (req, res) => {
     
     res.status(200).send({ data: token, message: `Logged in successfully!` });
   } catch (err) {
+    console.log("error: ", err);
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });
