@@ -15,6 +15,12 @@
       "use": "@vercel/node"
     }
   ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
   "keywords": [], 
   "author": "",
   "license": "ISC",
