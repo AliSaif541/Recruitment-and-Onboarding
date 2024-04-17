@@ -7,7 +7,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import HRHeader from '../../components/HRHeader';
 
-function UploadVideo() {
+function UploadVideo({user, setUser}) {
   const [videoUrl, setVideoUrl] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [title, setTitle] = useState('');
@@ -74,7 +74,7 @@ function UploadVideo() {
 
   return (
     <div>
-      <HRHeader />
+      <HRHeader user={user} setUser={setUser} />
       <form onSubmit={handleSubmit}>
         
         <div className="upload-container">

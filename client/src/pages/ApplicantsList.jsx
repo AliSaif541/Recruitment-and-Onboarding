@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import CandidateList from '../components/hrDashboard/CandidateList';
 import HRHeader from "../components/HRHeader";
 
-const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
+const ApplicantsList = ({currentJobPosting, setCurrentApplicant, user, setUser}) => {
     const [applicants, setApplicants] = useState([]);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     
     return (
         <div className='applicant-list-container-x'>
-            <HRHeader />
+            <HRHeader user={user} setUser={setUser} />
             <div className='job-details-container'>
             <JobDetails currentJobPosting={currentJobPosting} />
             </div>

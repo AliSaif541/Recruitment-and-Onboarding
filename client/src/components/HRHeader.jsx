@@ -7,7 +7,7 @@ import Fade from '@mui/material/Fade';
 import logo from "../images/devsinc-logo.png";
 import "../styles/HRHeader.css";
 
-const HRHeader = () => {
+const HRHeader = ({ user, setUser}) => {
   const [applicantAnchorEl, setApplicantAnchorEl] = useState(null);
   const [onboardingAnchorEl, setOnboardingAnchorEl] = useState(null);
   const [dashboardAnchorEl, setDashboardAnchorEl] = useState(null);
@@ -41,7 +41,7 @@ const HRHeader = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    setUser(null);
     window.location.reload();
   };
 

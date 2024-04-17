@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Sidebar from '../components/Sidebar';
 import '../styles/HRDashboard/HRDashboard.css';
 import JobBlocks from '../components/hrDashboard/JobBlocks';
 import Header from '../components/Header';
@@ -9,7 +8,7 @@ import HRHeader from '../components/HRHeader';
 import Briefcase from '../images/briefcase.svg';
 import { Link } from 'react-router-dom';
 
-const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
+const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant, user, setUser }) => {
     const [jobs, setJobs] = useState([]);
     const [activeJobs, setActiveJobs] = useState([]);
     const [nonActiveJobs, setNonActiveJobs] = useState([]);
@@ -54,7 +53,7 @@ const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
 
     return (
         <div className='HR-Dashboard'>
-            <HRHeader />
+            <HRHeader user={user} setUser={setUser} />
             <h1 className='hr-dashboard-h1'>Current Jobs Posted</h1>
             <div className='hr-dashboard-container'>
                 <div className="main-hr-dashboard">

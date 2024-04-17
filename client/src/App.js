@@ -30,7 +30,6 @@ import ErrorPage from './components/ErrorPage';
 import HRHeader from './components/HRHeader';
 import HRIntroPage from './pages/Onboarding/HRIntroPage';
 import OnboardingDashboard from './pages/Onboarding/OnboardingDashboard';
-import { useUser } from './Controllers/UserContext';
 
 const firebaseConfig = { 
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -133,34 +132,34 @@ function App() {
         {!user && <Route path="/onboarding" element={<Login />} />}
 
         {/* Routes for Job Applicant Side */}
-        <Route path="/" element={<Home />} />
-        <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} />} />
-        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} />} />
-        <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/" element={<Home user={user} setUser={setUser} />} />
+        <Route path="/careers" element={<CareersPage setCurrentJob={setCurrentJob} user={user} setUser={setUser} />} />
+        <Route path='/job/:id' element={<JobDescription currentJob={currentJob} user={user} setUser={setUser} />} />
+        <Route path="/aboutus" element={<Aboutus user={user} setUser={setUser} />} />
+        <Route path="/contactus" element={<ContactUs user={user} setUser={setUser} />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
 
         {/* Routes for HR Job Side */}
-        <Route path='postjob' element={<PostJob />} />
-        <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
-        <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} />} />
-        <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} />} />
-        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} />} />
+        <Route path='postjob' element={<PostJob user={user} setUser={setUser} />} />
+        <Route path="/hr" element={<HRDashboard setCurrentJobPosting={setCurrentJobPosting} setCurrentApplicant={setCurrentApplicant} user={user} setUser={setUser} />} />
+        <Route path='/hrjob/:id' element={<ApplicantsList currentJobPosting={currentJobPosting} setCurrentApplicant={setCurrentApplicant} user={user} setUser={setUser} />} />
+        <Route path='/user/:id' element={<UserProfile currentApplicant={currentApplicant} user={user} setUser={setUser} />} />
+        <Route path='interview' element={<Interview currentApplicant={currentApplicant} currentJobPosting={currentJobPosting} user={user} setUser={setUser} />} />
         
         {/* Routes for HR Onboarding Side */}
-        <Route path="/hr-onboarding" element={<HRIntroPage />} />
-        <Route path="/approve-candidates" element={<HRApproval />} />
-        <Route path="/upload-video" element={<UploadVideo />} />
-        <Route path="/view-feedback" element={<FeedbackView />} />
-        <Route path="/chatroom" element={<ChatRoom user={user} />} />
+        <Route path="/hr-onboarding" element={<HRIntroPage user={user} setUser={setUser} />} />
+        <Route path="/approve-candidates" element={<HRApproval user={user} setUser={setUser} />} />
+        <Route path="/upload-video" element={<UploadVideo user={user} setUser={setUser} />} />
+        <Route path="/view-feedback" element={<FeedbackView user={user} setUser={setUser} />} />
+        <Route path="/chatroom" element={<ChatRoom user={user} setUser={setUser} />} />
         
         {/* Routes for Employee Onboarding Side */}
-        <Route path="/onboarding" element={<OnboardingDashboard />} />
-        <Route path="/training-modules" element={<TrainingModules setCurrentModule={setCurrentModule} />} />
-        <Route path="/video/:id" element={<PlayVideo currentVideo={currentVideo} />} />
-        <Route path="/training/:id" element={<TrainingVideos currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
-        <Route path="/leave-feedback" element={<LeaveFeedback user={user} />} />
+        <Route path="/onboarding" element={<OnboardingDashboard user={user} setUser={setUser} />} />
+        <Route path="/training-modules" element={<TrainingModules user={user} setUser={setUser} setCurrentModule={setCurrentModule} />} />
+        <Route path="/video/:id" element={<PlayVideo user={user} setUser={setUser} currentVideo={currentVideo} />} />
+        <Route path="/training/:id" element={<TrainingVideos user={user} setUser={setUser} currentModule={currentModule} setCurrentVideo={setCurrentVideo} />} />
+        <Route path="/leave-feedback" element={<LeaveFeedback user={user} setUser={setUser} />} />
         
         {/* <Route path="/testing" element={<HRIntroPage />} /> */}
         <Route path="/interview" element={<Navigate replace to="/login" />} />

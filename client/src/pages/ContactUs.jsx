@@ -7,7 +7,7 @@ import discordLogo from '../images/discordLogo.png'; // Import the discordLogo i
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-function ContactUs() {
+function ContactUs({user, setUser}) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -31,7 +31,7 @@ function ContactUs() {
 
   return (
     <div>
-      <Header />
+      <Header user={user} setUser={setUser} />
       <h1 className='contactus-h1'>Contact Us</h1>
       <p className='contactus-p'>Any question or remarks? Just write us a message!</p>
       <div className="contact-us-container">

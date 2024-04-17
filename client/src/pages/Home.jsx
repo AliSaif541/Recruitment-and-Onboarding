@@ -8,11 +8,11 @@ import twitterLogo from '../images/twitterLogo.png'; // Import the twitterLogo i
 import discordLogo from '../images/discordLogo.png'; // Import the discordLogo image
 
 
-function Home() {
+function Home({ user, setUser}) {
 
   return (
     <div className="company-website-homepage">
-      <Header />
+      <Header user={user} setUser={setUser} />
       <FullTimeLabel />
 
       <div className="Aboutus-part-home">

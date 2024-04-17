@@ -11,12 +11,12 @@ import HRHeader from '../../components/HRHeader';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 import Footer from '../../components/Footer';
 
-function HRIntroPage() {
+function HRIntroPage({ user, setUser}) {
     const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
 
     return (
         <div>
-            <HRHeader />
+            <HRHeader user={user} setUser={setUser} />
             <TrainingComponentHead title='Welcome to the HR Platform' description={description} animation={animation} />
 
             <div className="hr-intro-container">

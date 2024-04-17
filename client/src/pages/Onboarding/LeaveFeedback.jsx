@@ -11,7 +11,7 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import ReviewHead from '../../components/Onboarding/ReviewHead';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
-function LeaveFeedback({ user }) {
+function LeaveFeedback({ user, setUser }) {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState('');
   const [error, setError] = useState(null);
@@ -49,7 +49,7 @@ function LeaveFeedback({ user }) {
 
   return (
     <div>
-      <OnboardingHeader />
+      <OnboardingHeader user={user} setUser={setUser} />
       <TrainingComponentHead title={"Leave Feedback"} description={description} animation={animation} />
       <h1 className='review-h1'>Write Review</h1>
       <p className='review-p'>Give us your honest review. Don't hesitate to critique!</p>

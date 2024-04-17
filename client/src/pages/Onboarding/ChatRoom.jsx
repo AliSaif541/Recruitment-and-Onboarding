@@ -8,7 +8,7 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import OnboardingHeader from '../../components/OnboardingHeader';
 import HRHeader from '../../components/HRHeader';
 
-const Chatroom = ({ user }) => {
+const Chatroom = ({ user, setUser }) => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -64,7 +64,7 @@ const Chatroom = ({ user }) => {
 
     return (
         <div>
-            {user.role === "HR" ? <HRHeader /> : <OnboardingHeader />}
+            {user.role === "HR" ? <HRHeader user={user} setUser={setUser} /> : <OnboardingHeader user={user} setUser={setUser} />}
             <TrainingComponentHead title="Welcome to the Chatroom" description={description} animation={animation} />
             <div className="chat-room-container">
                 <div className="messages-container">

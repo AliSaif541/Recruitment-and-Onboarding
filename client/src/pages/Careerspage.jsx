@@ -6,10 +6,10 @@ import "../styles/CareersPage/CareersPage.css"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const CareersPage = ({ setCurrentJob }) => {
+const CareersPage = ({ setCurrentJob, user, setUser }) => {
   return (
     <div className="careers-page">
-      <Header />
+      <Header user={user} setUser={setUser} />
       <main className="time-label">
         <FullTimeLabel />
         <HeaderDetailsFrame setCurrentJob={setCurrentJob} />

@@ -5,7 +5,7 @@ import ApprovalBox from '../../components/Onboarding/ApprovalBox';
 import axios from 'axios';
 import HRHeader from '../../components/HRHeader';
 
-const HRApproval = () => {
+const HRApproval = ({user, setUser}) => {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const HRApproval = () => {
 
   return (
     <div>
-      <HRHeader />
+      <HRHeader user={user} setUser={setUser} />
       <div className="approve-candidate-page">
         <h1 className="page-title-approval-box">Approve Candidates</h1>
         <div className="candidates-list-approval-box">

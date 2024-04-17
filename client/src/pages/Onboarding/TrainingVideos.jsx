@@ -10,7 +10,7 @@ import '../../styles/Onboarding/TrainingVideos.css';
 import { Link } from 'react-router-dom';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
-function TrainingVideos({ currentModule, setCurrentVideo }) {
+function TrainingVideos({ currentModule, setCurrentVideo, user, setUser }) {
   const [videosData, setVideosData] = useState([]);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
 
   return (
     <div className="training-videos-list-container">
-        <OnboardingHeader />
+        <OnboardingHeader user={user} setUser={setUser} />
         <TrainingComponentHead title={currentModule.name} description={currentModule.Description} animation={animation}/>
         <h2 className="box-container-h2">Explore our diverse range of training videos!</h2>
         <div className="training-video-grid">

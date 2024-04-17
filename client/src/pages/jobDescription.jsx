@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import JobForm from "../components/JobForm";
 import "../styles/Job.css";
 
-function JobDescription({ currentJob }) {
+function JobDescription({ currentJob, user, setUser }) {
   if (!currentJob) {
     return <div>Loading job details...</div>; 
   }
@@ -15,7 +15,7 @@ function JobDescription({ currentJob }) {
 
   return (
     <div className="job">
-      <Header />
+      <Header user={user} setUser={setUser} />
       <div className='JobDesHeading'>
         <h1 className="Heading-Name">{currentJob.name || 'Job Title'}</h1>
         <h3 className="Heading-Location">{currentJob.location || 'Location'}</h3>

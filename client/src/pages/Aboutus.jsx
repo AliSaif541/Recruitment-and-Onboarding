@@ -6,11 +6,11 @@ import "../styles/Aboutus/Aboutus.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Aboutus = () => {
+const Aboutus = ({ user, setUser}) => {
   return (
     <div className="frame-container-ab">
       <main className="about-us-ab">
-        <Header />
+        <Header user={user} setUser={setUser} />
         <section className="rectangle-frame-ab">
           <AboutUSHead />
           <TextSectionImg />

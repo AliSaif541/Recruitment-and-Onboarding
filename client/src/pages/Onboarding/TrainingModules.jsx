@@ -10,7 +10,7 @@ import TrainingComponentHead from "../../components/Onboarding/TrainingComponent
 import '../../styles/Onboarding/TrainingModules.css';
 import OnboardingHeader from "../../components/OnboardingHeader";
 
-const TrainingModules = ({ setCurrentModule }) => {
+const TrainingModules = ({ setCurrentModule, user, setUser }) => {
     const [moduleData, setModuleData] = useState([]);
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const TrainingModules = ({ setCurrentModule }) => {
 
     return (
         <div className="Training-Modules-Container">
-            <OnboardingHeader />
+            <OnboardingHeader user={user} setUser={setUser} />
             <TrainingComponentHead title={"Training Modules"} description={description} animation={animation}  />
             <h2 className="box-container-h2">Explore our diverse range of training modules!</h2>
             <div className="box-container">

@@ -4,21 +4,14 @@ import { jwtDecode } from "jwt-decode";
 import "../styles/OnboardingHeader.css";
 import logo from "../images/devsinc-logo.png"
 
-const OnboardingHeader = () => {
-  const token = localStorage.getItem("token");
-  let user = null;
-  if (token) {
-    user = jwtDecode(token);
-  }
-
+const OnboardingHeader = ({ user, setUser}) => {
   const handleLogout = () => {
-		localStorage.removeItem("token");
-	};
+    setUser(null);
+  };
 
   const handleClick = () => {
     window.location.href = "/onboarding";
 	};
-  
 
     return (
       <header className="header2-real">

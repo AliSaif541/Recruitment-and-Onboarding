@@ -4,21 +4,21 @@ import { jwtDecode } from "jwt-decode";
 import "../styles/Header.css";
 import logo from "../images/devsinc-logo.png"
 
-const Header = () => {
-  const token = localStorage.getItem("token");
-  let user = null;
-  if (token) {
-    user = jwtDecode(token);
-  }
+const Header = ({ user, setUser }) => {
+  // const token = localStorage.getItem("token");
+  // let user = null;
+  // if (token) {
+  //   user = jwtDecode(token);
+  // }
 
   const handleLogout = () => {
+    setUser(null);
 		localStorage.removeItem("token");
 	};
 
   const handleClick = () => {
     window.location.href = "/";
 	};
-  
 
     return (
       <header className="header2-real">

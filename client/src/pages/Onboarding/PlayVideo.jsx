@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import '../../styles/Onboarding/PlayVideo.css';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
-function PlayVideo({ currentVideo }) {
+function PlayVideo({ currentVideo, user, setUser }) {
   const hardcodedVideoId = currentVideo._id;
 
   const [videoData, setVideoData] = useState(null);
@@ -55,7 +55,7 @@ function PlayVideo({ currentVideo }) {
 
   return (
     <div>
-      <OnboardingHeader />
+      <OnboardingHeader user={user} setUser={setUser} />
       <div className='play-videos-container'>
         <div className="video-main-content">
           <video controls className="video-player">

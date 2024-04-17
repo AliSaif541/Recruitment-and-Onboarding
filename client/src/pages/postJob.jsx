@@ -5,7 +5,7 @@ import axios from 'axios';
 import HRHeader from "../components/HRHeader";
 import Footer from "../components/Footer";
 
-const PostAJob = () => {
+const PostAJob = ({ user, setUser}) => {
   const [jobPosting, setJobPosting] = useState({ 
     name: '', 
     company: '',
@@ -76,7 +76,7 @@ const PostAJob = () => {
 
   return (
     <div className="Post-a-Job">
-      <HRHeader />
+      <HRHeader user={user} setUser={setUser} />
       <div className="Post-a-Job-Container">
         <form className="Post-a-Job-Form" onSubmit={handleSubmit}>
           <div>

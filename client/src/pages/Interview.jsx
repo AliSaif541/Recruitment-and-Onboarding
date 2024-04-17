@@ -6,7 +6,7 @@ import axios from 'axios';
 import HRHeader from '../components/HRHeader';
 
 
-function Interview({ currentApplicant, currentJobPosting }) {
+function Interview({ currentApplicant, currentJobPosting, user, setUser }) {
   const [dateTime, setDateTime] = useState('');
   const [time, setTime] = useState('');
   const [note, setNote] = useState('');
@@ -34,7 +34,7 @@ function Interview({ currentApplicant, currentJobPosting }) {
 
   return (
     <div className='interview-container'>
-      <HRHeader />
+      <HRHeader user={user} setUser={setUser} />
       <div className='interview-body-container'>
         <div className="interview-body">
           <h1 className="schedule-heading">Schedule Meeting with {currentApplicant.name}</h1>
