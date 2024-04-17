@@ -36,6 +36,7 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
+  console.log(req.body);
   try {
     const { error } = hrValidate(req.body);
     if (error) {
@@ -54,7 +55,7 @@ router.post('/signup', async (req, res) => {
     res.status(201).send({ message: "User created successfully!" });
 
   } catch (err) {
-    res.status(500).json({msg: "Internal Server Error"});
+    res.status(500).json({msg: "Internal Server Error:", err});
   }
 });
 
