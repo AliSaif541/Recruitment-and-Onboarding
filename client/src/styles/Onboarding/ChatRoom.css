@@ -64,7 +64,9 @@
 
 .user-name {
     font-weight: bold;
+    padding-right: 20px;
 }
+
 
 .message-input-container {
     display: flex;
