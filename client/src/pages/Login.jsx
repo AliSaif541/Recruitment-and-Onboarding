@@ -5,12 +5,11 @@ import pic from "../images/clip-message.png"
 import "../styles/Login.css"
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({ setUser }) {
     const [data, setData] = useState({ 
         email: "", 
         password: "",
     });
-
 	const [error, setError] = useState("");
 
     const handleChange = ({ currentTarget: input }) => {
@@ -21,19 +20,10 @@ function Login() {
 		e.preventDefault();
 		try {
 			const url = "https://recruitment-and-onboarding-backend.vercel.app/api/hr";
-			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data);
-			
-            const token = localStorage.getItem("token");
+			const { data: res } = await axios.post(url, data);			
+            setUser(res.data);
 
-            let user = null;
-
-            if (token) {
-                user = jwtDecode(token);
-                // console.log("user: ", user);
-            }
-
-            if (user.role === "HR") {
+            if (res.data.role === "HR") {
                 window.location = '/hr';
             } else {
                 window.location = '/onboarding';

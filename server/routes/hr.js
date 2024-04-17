@@ -22,13 +22,13 @@ router.post('/', async (req, res) => {
       return res.status(401).send({ message: 'Please verify your email' });
     }
     
-    const token = jwt.sign(
-      { _id: user._id, role: user.role, email: user.email, name: user.name},
-      'DB-Proj',
-      { expiresIn: '1h' }
-    );
+    // const token = jwt.sign(
+    //   { _id: user._id, role: user.role, email: user.email, name: user.name},
+    //   'DB-Proj',
+    //   { expiresIn: '1h' }
+    // );
     
-    res.status(200).send({ data: token, message: `Logged in successfully!` });
+    res.status(200).send({ data: user, message: `Logged in successfully!` });
   } catch (err) {
     console.log("error: ", err);
     res.status(500).send({ message: 'Internal Server Error' });

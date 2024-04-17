@@ -30,6 +30,7 @@ import ErrorPage from './components/ErrorPage';
 import HRHeader from './components/HRHeader';
 import HRIntroPage from './pages/Onboarding/HRIntroPage';
 import OnboardingDashboard from './pages/Onboarding/OnboardingDashboard';
+import { useUser } from './Controllers/UserContext';
 
 const firebaseConfig = { 
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -64,15 +65,13 @@ function App() {
     const storedVideo = sessionStorage.getItem('currentVideo');
     return storedVideo ? JSON.parse(storedVideo) : [];
   });
+  const [user, setUser]  = useState(() => {
+    const storedUser = sessionStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : [];
+  });
 
-  const token = localStorage.getItem("token");
-
-  let user = null;
-
-  if (token) {
-    user = jwtDecode(token);
-    // console.log("user: ", user);
-  }
+  // const { user } = useUser();
+  // console.log("user: ", user);
   
   useEffect(() => {
     sessionStorage.setItem('currentJob', JSON.stringify(currentJob));
@@ -96,6 +95,11 @@ function App() {
     sessionStorage.setItem('currentVideo', JSON.stringify(currentVideo));
     console.log("currentVideo: ", currentVideo);
   }, [currentVideo]);
+  
+  useEffect(() => {
+    sessionStorage.setItem('user', JSON.stringify(user));
+    console.log("user: ", user);
+  }, [user]);
 
   return (
     <BrowserRouter>
@@ -135,7 +139,7 @@ function App() {
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setUser={setUser} />} />
 
         {/* Routes for HR Job Side */}
         <Route path='postjob' element={<PostJob />} />
