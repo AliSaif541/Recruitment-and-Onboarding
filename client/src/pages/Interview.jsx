@@ -16,7 +16,7 @@ function Interview({ currentApplicant, currentJobPosting }) {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:9000/api/jobApplicant/Interview', {
+      const response = await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant/Interview', {
         recipient: currentApplicant.email,
         jobID: currentApplicant.jobID,
         date: dateTime,

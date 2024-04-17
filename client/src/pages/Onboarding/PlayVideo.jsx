@@ -16,7 +16,7 @@ function PlayVideo({ currentVideo }) {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/video', {
+        const response = await axios.get('https://recruitment-and-onboarding-backend.vercel.app/api/video', {
           params: {
             hardcodedVideoId: hardcodedVideoId
           }
@@ -31,7 +31,7 @@ function PlayVideo({ currentVideo }) {
 
     const fetchRecommendedVideos = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/video/recommended', {
+        const response = await axios.get('https://recruitment-and-onboarding-backend.vercel.app/api/video/recommended', {
           params: {
             trainingModule: currentVideo.trainingModule
           }

@@ -5,7 +5,7 @@ import '../../styles/HRDashboard/JobDetails.css';
 function JobDetails({ currentJobPosting }) {
   const handleCompleteJob = async () => {
     try {
-      await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'completed' });
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/job/active', { _id: currentJobPosting._id, active: 'completed' });
     } catch (error) {
       console.error('Error completing job:', error);
     }
@@ -13,7 +13,7 @@ function JobDetails({ currentJobPosting }) {
 
   const handleArchiveJob = async () => {
     try {
-      await axios.post('http://localhost:9000/api/job/active', { _id: currentJobPosting._id, active: 'in-active' });
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/job/active', { _id: currentJobPosting._id, active: 'in-active' });
     } catch (error) {
       console.error('Error archiving job:', error);
     }

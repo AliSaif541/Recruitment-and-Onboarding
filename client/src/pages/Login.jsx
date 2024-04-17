@@ -20,7 +20,7 @@ function Login() {
     const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:9000/api/hr";
+			const url = "https://recruitment-and-onboarding-backend.vercel.app/api/hr";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			

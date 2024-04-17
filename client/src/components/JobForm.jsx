@@ -100,7 +100,7 @@ const JobForm = ({ currentJob }) => {
     });
 
     try {
-      await axios.post('http://localhost:9000/api/jobApplicant', formData, {
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

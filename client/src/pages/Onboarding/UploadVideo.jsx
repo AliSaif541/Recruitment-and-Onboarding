@@ -64,7 +64,7 @@ function UploadVideo() {
 
     try {
       setErrorMsg('Uploading data...'); // Display uploading message
-      await axios.post('http://localhost:9000/api/video', videoData);
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/video', videoData);
       setErrorMsg('Video uploaded successfully');
     } catch (error) {
       console.error('Error uploading data:', error);

@@ -12,7 +12,7 @@ const HeaderDetailsFrame = ({ setCurrentJob }) => {
     }, []);
 
     const getJobs = async (e) => {
-        const url = "http://localhost:9000/api/job";
+        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/job";
         const response = await axios.get(url);
         setJobs(response.data);
     }

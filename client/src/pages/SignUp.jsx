@@ -24,7 +24,7 @@ function SignUp() {
     const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:9000/api/hr/signup";
+			const url = "https://recruitment-and-onboarding-backend.vercel.app/api/hr/signup";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 		} catch (error) {

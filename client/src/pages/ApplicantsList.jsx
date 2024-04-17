@@ -16,7 +16,7 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant}) => {
     }, []);
 
     const getApplicants = async (e) => {
-        const url = "http://localhost:9000/api/jobApplicant";
+        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant";
         const response = await axios.get(url);
         const filteredArray = response.data.filter(item => item.jobID === currentJobPosting._id);
         setApplicants(filteredArray);

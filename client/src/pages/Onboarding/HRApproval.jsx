@@ -11,7 +11,7 @@ const HRApproval = () => {
   useEffect(() => {
     const fetchCandidates = async () => {
         try {
-          const response = await axios.get('http://localhost:9000/api/hr/unverified');
+          const response = await axios.get('https://recruitment-and-onboarding-backend.vercel.app/api/hr/unverified');
           setCandidates(response.data.data);
         } catch (error) {
           console.error('Error fetching candidates:', error);
@@ -23,7 +23,7 @@ const HRApproval = () => {
 
   const handleApprove = async (candidateId) => {
     try {
-      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: 1 });
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/hr/update-verification', { _id: candidateId, verified: 1 });
       setCandidates(candidates.filter(candidate => candidate._id !== candidateId)); 
     } catch (error) {
       console.error('Error approving candidate:', error);
@@ -32,7 +32,7 @@ const HRApproval = () => {
 
   const handleReject = async (candidateId) => {
     try {
-      await axios.post('http://localhost:9000/api/hr/update-verification', { _id: candidateId, verified: -1 }); 
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/hr/update-verification', { _id: candidateId, verified: -1 }); 
       setCandidates(candidates.filter(candidate => candidate._id !== candidateId));
     } catch (error) {
       console.error('Error rejecting candidate:', error);

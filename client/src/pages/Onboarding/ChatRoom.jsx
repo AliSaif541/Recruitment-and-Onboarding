@@ -25,7 +25,7 @@ const Chatroom = () => {
     const fetchMessages = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:9000/messages');
+            const response = await fetch('https://recruitment-and-onboarding-backend.vercel.app/messages');
             const data = await response.json();
             const sortedMessages = data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
             setMessages(sortedMessages);
@@ -39,7 +39,7 @@ const Chatroom = () => {
     const sendMessage = async () => {
         if (!message.trim()) return;
         try {
-            await fetch('http://localhost:9000/messages', {
+            await fetch('https://recruitment-and-onboarding-backend.vercel.app/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

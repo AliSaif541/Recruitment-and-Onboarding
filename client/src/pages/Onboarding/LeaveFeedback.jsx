@@ -35,7 +35,7 @@ function LeaveFeedback() {
     e.preventDefault();
 
     try {
-      const url = "http://localhost:9000/api/review";
+      const url = "https://recruitment-and-onboarding-backend.vercel.app/api/review";
       const date = new Date(); // Get current date
       const { data: res } = await axios.post(url, {
         rating,

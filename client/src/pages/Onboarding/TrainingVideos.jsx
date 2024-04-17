@@ -16,7 +16,7 @@ function TrainingVideos({ currentModule, setCurrentVideo }) {
   useEffect(() => {
     const fetchVideoData = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/api/video/training', {
+        const response = await axios.get('https://recruitment-and-onboarding-backend.vercel.app/api/video/training', {
           params: {
             trainingModule: currentModule.name
           }

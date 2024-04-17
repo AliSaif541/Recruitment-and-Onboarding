@@ -20,7 +20,7 @@ function UserBody({ currentApplicant }) {
     };
 
     const handleRejection = async () => {
-        const url = "http://localhost:9000/api/jobApplicant/reject";
+        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant/reject";
 
         const postData = {
             email: currentApplicant.email,

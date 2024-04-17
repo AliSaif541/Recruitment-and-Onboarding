@@ -25,7 +25,7 @@ const HRDashboard = ({ setCurrentJobPosting, setCurrentApplicant }) => {
     }, [jobs, searchQuery]);
 
     const getJobs = async () => {
-        const url = "http://localhost:9000/api/job";
+        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/job";
         try {
             const response = await axios.get(url);
             setJobs(response.data);
