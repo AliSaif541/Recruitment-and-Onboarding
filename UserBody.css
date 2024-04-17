@@ -1,0 +1,181 @@
+.box {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  margin: 10px;
+}
+
+.profile-info h2 {
+  color: #16BBB2;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0;
+  position: relative; /* Position relative for pseudo-element */
+  padding-bottom: 10px; /* Space for the line */
+}
+
+.profile-info h2:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #E8E8E8;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.location {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.location-item {
+  display: grid;
+  justify-items: center;
+}
+
+.location-item span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #888e91;
+}
+
+.location-item span:nth-child(2) {
+  color: #000000;
+}
+
+.text-box-container {
+  display: grid;
+  margin-top: 20px;
+  padding: 0px;
+  text-align: left;
+}
+
+.text-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.text-box-header {
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: left;
+  color: #16BBB2;
+  margin-top: 20px;
+  position: relative; /* Position relative for pseudo-element */
+  padding-bottom: 10px; /* Space for the line */
+}
+
+.text-box-header:after {
+  content: '';
+  display: block;
+  width: 100%; /* Adjust if a shorter line is needed */
+  height: 1px;
+  background-color: #E8E8E8;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.text-box-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #16BBB2;
+}
+
+.div-map {
+  justify-self: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Removing the margin-bottom from the last div-map will ensure that 
+   the line is closer to the heading above the next text box */
+.div-map:last-child {
+  margin-bottom: 0;
+}
+
+.div-map p {
+  margin: 5px 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.skills {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.skill-item {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 1px solid #E8E8E8;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* Ensure left alignment of the candidate note */
+.candidate-note p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.candidate-note h3 {
+  font-weight: bold;
+  margin-bottom: 0; /* No space below heading to keep line close */
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.resume-container {
+  margin-top: 15px;
+}
+
+.resume-div {
+  display: grid;
+  text-align: center;
+}
+
+.see-resume {
+  color: #16BBB2;
+  text-decoration: underline;
+  margin-bottom: 30px;
+  align-self: center;
+  text-align: center;
+  justify-self: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.schedule-interview {
+  display: inline-block;
+  padding: 15px 90px;
+  background-color: #7cd3d2;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+}
+
+.schedule-interview:hover {
+  cursor: pointer;
+  background-color: #339392;
+}
