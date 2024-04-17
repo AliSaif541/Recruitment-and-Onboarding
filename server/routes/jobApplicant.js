@@ -38,18 +38,17 @@ router.post('/', upload.single('resume'), async (req, res) => {
             return res.status(404).send({ message: "Job not found" });
         }
 
-        // const score = jobRecruiter(
-        //     job.skillsNeeded,
-        //     job.description,
-        //     job.requirements,
-        //     job.job_type,
-        //     req.body.years_of_exp,
-        //     req.body.education,
-        //     req.body.experience,
-        //     req.body.skills,
-        //     req.body.cover_letter
-        // )
-        const score = 50;
+        const score = jobRecruiter(
+            job.skillsNeeded,
+            job.description,
+            job.requirements,
+            job.job_type,
+            req.body.years_of_exp,
+            req.body.education,
+            req.body.experience,
+            req.body.skills,
+            req.body.cover_letter
+        )
 
         const newApplicant = new jobApplicant({
             name: req.body.name,
