@@ -1,92 +1,257 @@
-/* .job-blocks-container {
+/* Base CSS for laptop version */
+.HR-Dashboard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  
+  .hr-dashboard-h1 {
+    justify-self: center;
+    font-family: Actor;
+    color: #7cd3d2;
+    font-size: 45px;
+  }
+  
+  .header-hr-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .search-bar-hr-dashboard {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+  }
+  
+  .search-bar-hr-dashboard input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    margin-right: 10px;
+    height: 25px;
+  }
+  
+  .search-bar-hr-dashboard button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #16BBB2;
+    margin-right: 10px;
+  }
+  
+  .add-job-btn-hr-dashboard {
+    border: none;
+    background-color: #16BBB2;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .vertical-boxes-hr-dashboard {
+    display: flex;
+    justify-content: space-between;
     gap: 25px;
-    padding: 20px;
+  }
+  
+  .status-text-hr-dashboard {
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: Actor;
+    justify-self: center;
+  }
+  
+  .nested-box-hr-dashboard {
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: 275px;
+  }
+  
+  .nested-box-heading {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+  }
+  
+  .h2-hr-dashboard {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  
+  .p-hr-dashboard {
+    margin-top: 0;
+    text-align: left;
+    font-size: 12px;
+  }
+  
+  .small-boxes-hr-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .small-box-hr-dashboard {
+    width: 60px;
+    height: 30px;
+    background-color: #16BBB2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-} */
-
-.job-blocks-box {
-    width: 320px;
-    height: 210px;
-    background-color: #f1f1f1;
-    border-radius: 15px; /* Curved edges */
-    margin: 10px;
-}
-
-.job-blocks-header {
+    color: #ffffff;
+    font-size: 12px;
+  }
+  
+  .location-info-hr-dashboard {
+    font-size: 12px;
     display: flex;
-    align-items: center; /* Align items vertically */
-}
-
-.job-blocks-header img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
-}
-
-.job-blocks-title {
-    color: #293E72;
+  }
+  
+  .salary-info-hr-dashboard {
+    font-size: 12px;
     font-weight: bold;
-    font-size: 18px;
-    margin: 0;
-}
+  }
+  
+  .job-blocks-box {
+      width: 320px;
+      height: 210px;
+      background-color: #f1f1f1;
+      border-radius: 15px;
+      margin: 10px;
+  }
+  
+  .job-blocks-header {
+      display: flex;
+      align-items: center;
+  }
+  
+  .job-blocks-header img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+      margin-top: 10px;
+  }
+  
+  .job-blocks-title {
+      color: #293E72;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0;
+  }
+  
+  .job-blocks-title span {
+      color: black;
+      font-size: 20px; 
+      margin-left: 100px;
+  }
+  
+  .job-blocks-subtext {
+      font-size: 16px;
+      margin-left: 60px;
+      margin-top: -10px;
+      margin-bottom: 10px; 
+  }
+  
+  .job-blocks-content {
+      text-align: center;
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 5px;
+  }
+  
+  .job-blocks-c1 {
+      font-size: 16px;
+  }
+  
+  .job-blocks-c2 {
+      margin-left: 30px;
+      font-size: 16px;
+  }
+  
+  .job-blocks-additional-info {
+      text-align:left;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+  }
+  
+  .job-blocks-applications {
+      font-size: 16px;
+      margin-right: 70px;
+  }
+  
+  .job-blocks-applications span {
+      font-weight: bold;
+      font-size: 28px;
+      color: #7CD3D2;
+  }
+  
+  .job-blocks-in-lastweek {
+      margin-top: 28px;
+      font-size: 16px;
+      color: #7CD3D2;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .hr-dashboard-h1 {
+      font-size: 35px;
+    }
+    .vertical-boxes-hr-dashboard {
+      flex-direction: column;
+    }
 
-.job-blocks-title span {
-    color: black;
-    font-size: 20px; 
-    margin-left: 100px;
-}
+    .small-boxes-hr-dashboard {
+        flex-direction: space-between;
+    }
 
-.job-blocks-subtext {
-    font-size: 16px;
-    margin-left: 60px;
-    margin-top: -10px;
-    margin-bottom: 10px; 
-}
-
-.job-blocks-content {
-    text-align: center;
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-.job-blocks-c1 {
-    font-size: 16px;
-}
+    .nested-box-hr-dashboard {
+      width: auto;
+    }
+    .job-blocks-box {
+      width: auto;
+    }
+  }
   
-.job-blocks-c2 {
-    margin-left: 30px;
-    font-size: 16px;
-}
+  @media (max-width: 425px) {
+    .hr-dashboard-h1 {
+      font-size: 30px;
+    }
+    .status-text-hr-dashboard, .h2-hr-dashboard, .p-hr-dashboard, .job-blocks-title, .job-blocks-subtext {
+      font-size: 14px;
+    }
+    .job-blocks-c1, .job-blocks-c2, .job-blocks-applications, .job-blocks-in-lastweek {
+      font-size: 12px;
+    }
+  }
   
-.job-blocks-additional-info {
-    text-align: left;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    margin-top: 2px;
-}
+  @media (max-width: 375px) {
+    .hr-dashboard-h1 {
+      font-size: 28px;
+    }
+  }
   
-.job-blocks-applications {
-    font-size: 16px;
-    margin-right: 70px;
-}
-  
-.job-blocks-applications span {
-    font-weight: bold;
-    font-size: 28px;
-    color: #7CD3D2;
-}
-  
-.job-blocks-in-lastweek {
-    margin-top: 28px;
-    font-size: 16px;
-    color: #7CD3D2;
-}
-  
+  @media (max-width: 320px) {
+    .hr-dashboard-h1 {
+      font-size: 25px;
+    }
+  }

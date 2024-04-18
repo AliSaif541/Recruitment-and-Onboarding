@@ -16,10 +16,14 @@ const ApplicantsList = ({currentJobPosting, setCurrentApplicant, user, setUser})
     }, []);
 
     const getApplicants = async (e) => {
-        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant";
-        const response = await axios.get(url);
-        const filteredArray = response.data.filter(item => item.jobID === currentJobPosting._id);
-        setApplicants(filteredArray);
+        try {
+            const url = "https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant";
+            const response = await axios.get(url);
+            const filteredArray = response.data.filter(item => item.jobID === currentJobPosting._id);
+            setApplicants(filteredArray);
+        } catch (error) {
+            console.error("Error fetching Applicants:", error);
+        }
     }
 
     

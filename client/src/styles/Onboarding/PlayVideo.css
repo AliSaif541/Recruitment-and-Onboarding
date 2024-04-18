@@ -51,7 +51,7 @@
   
   .recommended-title {
     margin: 0;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
     color: #333;
@@ -76,3 +76,33 @@
     font-size: 20px;
     font-weight: 600;
   }
+
+  /* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .play-videos-container {
+    grid-template-columns: 100%; /* Display videos in a single column */
+  }
+
+  .video-main-content {
+    text-align: center;
+  }
+
+  .video-player {
+    height: auto; /* Let the video adjust its height based on aspect ratio */
+    margin: auto; /* Center the video player */
+    margin-bottom: 25px;
+  }
+
+  .play-video-info {
+    margin: 0 auto; /* Center the video info */
+    max-width: 90%; /* Limit the width of the video info */
+  }
+
+  .recommended-videos {
+    text-align: center;
+  }
+
+  .recommended-video {
+    grid-template-columns: 1fr; /* Display recommended videos in a single column */
+  }
+}

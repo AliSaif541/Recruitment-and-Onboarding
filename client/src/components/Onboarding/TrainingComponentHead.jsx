@@ -20,8 +20,8 @@ const TrainingComponentHead = ({title, description, animation}) => {
                     preserveAspectRatio: 'xMidYMid slice'
                     }
                 }}
-                height={300} // Adjust the height as needed
-                width={400} // Adjust the width as needed
+                max-height={300}
+                max-width={350}
                 />
             </div>
         </div>

@@ -1,108 +1,161 @@
 body, html {
-    margin: 0;
-  }
-  
+  margin: 0;
+}
+
+.review-h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Actor;
+  font-weight: 500;
+  color: #16BBB2;
+}
+
+.review-p {
+  text-align: center;
+  font-family: Actor;
+  font-size: 18px;
+  color: #333;
+  font-weight: 400;
+}
+
+.review-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 800px;
+  border: 2px solid black;
+  border-radius: 15px;
+  height: auto;
+}
+
+.review-animation-body {
+  background-color: #16BBB2;
+  padding: 30px;
+  border-radius: 8px;
+  color: white;
+  flex: 1;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.review-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-form label {
+  font-family: Actor;
+  color: #333;
+  font-weight: 400;
+}
+
+.review-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  outline: none;
+  padding: 8px;
+}
+
+.review-form textarea:focus {
+  border-color: white;
+}
+
+.review-form button {
+  background-color: #16BBB2;
+  color: white;
+  padding: 10px;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.star-rating {
+  font-size: 24px;
+}
+
+.star, .star-filled {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-filled {
+  color: #fdd835;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) { /* Tablet */
   .review-h1 {
-    text-align: center;
-    font-size: 50px;
-    font-family: Actor;
-    /* color: #333; */
-    font-weight: 500;
-    color: #16BBB2
+    font-size: 40px;
   }
-  
   .review-p {
-    text-align: center;
-    font-family: Actor;
-    font-size: 18px;
-    color:#333;
-    font-weight: 400;
+    font-size: 16px;
   }
-  
-  .review-btn {
-    color: white;
-    border: white;
-    cursor: pointer;
-  }
-  
   .review-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    margin: auto;
-    margin-top: 150px;
-    max-width: 800px;
-    border: 2px solid black;
-    border-radius: 15px;
-    height: auto; /* Remove fixed height */
-    margin-top: 0;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 0px;
   }
-  
-  .review-animation-body {
-    background-color: #16BBB2;
-    padding: 30px; 
-    border-radius: 8px; /* Reduced border radius */
-    color: white;
-    flex: 1; /* Take up remaining space */
-  }
-  
+  .review-animation-body,
   .review-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Reduced gap */
-    flex: 1; /* Take up remaining space */
+    padding: 20px;
+  }
+}
+
+@media (max-width: 425px) { /* Mobile Large */
+  .review-h1 {
+    font-size: 30px;
+  }
+  .review-p {
+    font-size: 14px;
+  }
+  .review-container {
+    margin-top: 0px;
+    padding: 0px;
   }
   
-  .review-form .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px; /* Reduced gap */
-    /* margin-bottom: 30px; Adjusted margin */
+}
+
+@media (max-width: 375px) { /* Mobile Medium */
+  .review-h1 {
+    font-size: 28px;
+  }
+  .review-p {
+    font-size: 13px;
+  }
+  .review-container {
+    padding: 0px;
+    margin-top: 0px;
   }
   
-  .review-form label {
-    font-family: Actor;
-    color: #333;
-    font-weight: 400;
-    /* height: 50px; */
+}
+
+@media (max-width: 320px) { /* Mobile Small */
+  .review-h1 {
+    font-size: 26px;
   }
-  
-  .review-form textarea {
-    /* border: none;  */
-    border: 1px solid #ccc; 
-    border-radius: 5px;
-    height: 50px;
-    outline: none;
-    padding: 8px; /* Added padding */
+  .review-p {
+    font-size: 12px;
   }
-  
-  .review-form textarea:focus {
-    border-color: white; /* Change border color on focus */
+  .review-container {
+    padding: 0px;
+    margin-top: 0px;
   }
-  
-  .review-form button {
-    background-color: #16BBB2;
-    color: white; /* Added text color */
-    padding: 10px; /* Default padding */
-    width: fit-content; /* Adjusted width */
-    border: none; /* Removed border */
-    border-radius: 5px; /* Add border radius for curved edges */
-    align-self: right; /* Center button */
-  }
-  
-  .star-rating {
-    font-size: 24px; /* Adjust star size */
-  }
-  
-  .star {
-    color: #ccc; /* Default star color */
-    cursor: pointer;
-  }
-  
-  .star-filled {
-    color: #fdd835; /* Filled star color */
-    cursor: pointer;
-  }
-  
+}

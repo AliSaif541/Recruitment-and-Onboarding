@@ -3,22 +3,18 @@ body, html {
 }
 
 .Feedback-content-container {
-  /* max-width: 800px;  Centering the boxes with a max-width */
   margin: auto;
   padding: 20px;
-  background-color: #f4f4f9;  /* Light grayish background */
+  background-color: #f4f4f9;
   display: grid;
   justify-items: center;
 }
 
 .Feedback-h2 {
   font-weight: bold;
-  /* margin-bottom: 10px; */
-  /* color: black; */
   margin: 0;
   margin-top: 25px;
   justify-self: center;
-  /* margin-top: -50px; */
   font-size: 25px;
   margin-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,33 +25,27 @@ body, html {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 25px;
-  gap: 10px;  /* Space between boxes */
+  gap: 10px;
 }
 
 .feedback-box {
   width: 300px;
   min-height: 100px;
-}
-
-.feedback-box {
-width: 300px;
-min-height: 100px;
-position: relative; 
-background-color: #ffffff;
-border: 1px solid #ddd;
-padding: 15px;
-border-radius: 5px;
+  position: relative; 
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .Feedback-date {
-position: absolute;
-bottom: 5px; /* Adjust this value to control vertical positioning */
-right: 5px; /* Adjust this value to control horizontal positioning */
-margin: 0;
-margin-top: 5px;
-font-size: 0.85rem; /* Adjust as needed */
-/* font-weight: 600; */
-color: grey; /* Or any color you prefer */
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: grey;
 }
 
 .feedback-header {
@@ -69,8 +59,6 @@ color: grey; /* Or any color you prefer */
 .feedback-name {
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 .star-rating {
@@ -79,13 +67,13 @@ color: grey; /* Or any color you prefer */
 }
 
 .star {
-  color: #ccc;  /* Default star color */
+  color: #ccc;
   cursor: pointer;
   font-size: 1.5rem;
 }
 
 .star-filled {
-  color: #fdd835;  /* Filled star color */
+  color: #fdd835;
 }
 
 .Feedback-role {
@@ -101,9 +89,51 @@ color: grey; /* Or any color you prefer */
   margin-top: 5px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (min-width: 768px) {
-  .box {
-    flex: 0 0 calc(25% - 20px);  /* Adjusting so 4 boxes fit per row on wider screens */
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .Feedback-h2 {
+    font-size: 22px; /* Smaller font size for tablets */
+  }
+
+  .feedback-box {
+    width: 90%; /* Make feedback boxes fill container more */
+  }
+
+  .feedback-name, .Feedback-role, .feedback-comment {
+    font-size: 0.85rem; /* Slightly smaller text on tablets */
+  }
+
+  .star {
+    font-size: 1.2rem; /* Smaller stars */
+  }
+}
+
+@media (max-width: 425px) {
+  .Feedback-content-container {
+    padding: 10px; /* Less padding for small screens */
+  }
+
+  .feedback-box {
+    width: 100%; /* Boxes take full width on small mobile devices */
+  }
+}
+
+@media (max-width: 375px) {
+  .feedback-name, .Feedback-role, .feedback-comment {
+    font-size: 0.8rem; /* Even smaller text for smaller mobile devices */
+  }
+
+  .star {
+    font-size: 1rem; /* Even smaller stars */
+  }
+}
+
+@media (max-width: 320px) {
+  .Feedback-h2 {
+    font-size: 20px; /* Smallest font size for the smallest screens */
+  }
+
+  .star {
+    font-size: 0.9rem; /* Smallest stars */
   }
 }

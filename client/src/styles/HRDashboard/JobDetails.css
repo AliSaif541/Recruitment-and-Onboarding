@@ -108,7 +108,7 @@
     /* flex-direction: row; */
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr;
-    color: #16BBB2;
+    /* color: #16BBB2; */
   }
 
   .Job-info-text button {

@@ -36,8 +36,7 @@ function HRIntroPage({ user, setUser}) {
                                 preserveAspectRatio: 'xMidYMid slice'
                                 }
                             }}
-                            height={250}
-                            width={350}
+                            className="animation-container-real"
                         />
                     </div>
                 </section>
@@ -53,8 +52,7 @@ function HRIntroPage({ user, setUser}) {
                                 preserveAspectRatio: 'xMidYMid slice'
                                 }
                             }}
-                            height={250}
-                            width={350}
+                            className="animation-container-real"
                         />
                     </div>
                     <div className="feature-content-2">
@@ -80,8 +78,7 @@ function HRIntroPage({ user, setUser}) {
                                     preserveAspectRatio: 'xMidYMid slice'
                                     }
                                 }}
-                                height={250}
-                                width={350}
+                                className="animation-container-real"
                         />
                     </div>
                 </section>
@@ -97,8 +94,7 @@ function HRIntroPage({ user, setUser}) {
                                 preserveAspectRatio: 'xMidYMid slice'
                                 }
                             }}
-                            height={250}
-                            width={350}
+                            className="animation-container-real"
                         />
                     </div>
                     <div className="feature-content-2">

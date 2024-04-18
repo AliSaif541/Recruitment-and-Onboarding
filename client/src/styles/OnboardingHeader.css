@@ -1,5 +1,6 @@
-body {
+html, body {
   margin: 0;
+  max-width: 100%;
 }
 
 .logo-img-real {
@@ -14,7 +15,7 @@ body {
 
 .header2-real {
   background-color: #7cd3d2;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   display: grid;
@@ -28,7 +29,7 @@ body {
   justify-self: end;
   align-items: center;
   margin-right: 25px;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Actor;
   color: #333;
 }
@@ -74,6 +75,9 @@ body {
       width: 100px;
       padding: 8px 20px;
   }
+  .onboarding-header-div {
+    padding-right: 10px;
+  }
 }
 
 /* Responsive adjustments for mobile phones */
@@ -103,6 +107,9 @@ body {
       width: 90px;
       padding: 6px 18px;
   }
+  .onboarding-header-div {
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -117,6 +124,9 @@ body {
   .frame-b2-real {
       width: 85px;
       padding: 5px 15px;
+  }
+  .onboarding-header-div {
+    padding-right: 10px;
   }
 }
 
@@ -137,10 +147,17 @@ body {
 
   .sign-in2-real {
       font-size: 12px;
+    }
+    
+    .onboarding-header-div {
+    padding-right: 10px;
+    padding-right: 10px;
   }
 
   .frame-b2-real {
       width: 80px;
       padding: 4px 12px;
+      justify-self: end;
+      margin-top: 5px;
   }
 }

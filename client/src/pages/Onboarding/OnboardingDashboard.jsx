@@ -12,13 +12,14 @@ import animation from '../../images/Animation-Dashboard.json'
 import HRHeader from '../../components/HRHeader';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
 import Footer from '../../components/Footer';
+import OnboardingHeader from '../../components/OnboardingHeader';
 
 function OnboardingDashboard({ user, setUser}) {
     const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
 
     return (
         <div>
-            <HRHeader user={user} setUser={setUser} />
+            <OnboardingHeader user={user} setUser={setUser} />
             <TrainingComponentHead title='Welcome to the Devsinc Onboarding Platform' description={description} animation={animation} />
             
             <div className="dashboard-title-container">
@@ -35,24 +36,23 @@ function OnboardingDashboard({ user, setUser}) {
 
 
             <div className="hr-intro-container">
-                <section className="feature-section" data-aos="fade-up">
+            <section className="feature-section" data-aos="fade-up">
                     <div className="feature-content">
-                        <h2>Leave Feedback</h2>
-                        <p>Listening to employee feedback is crucial for building a positive work environment...</p>
-                        <Link to="/leave-feedback" className="feature-link">Visit Feedback Page</Link>
+                        <h2>Chatroom</h2>
+                        <p>Our integrated chatroom fosters real-time communication and collaboration.</p>
+                        <Link to="/chatroom" className="feature-link">Join the Chatroom</Link>
                     </div>
                     <div className="feature-image">
                         <Lottie
-                            options={{
-                                loop: true,
-                                autoplay: true,
-                                animationData: feedback,
-                                rendererSettings: {
-                                preserveAspectRatio: 'xMidYMid slice'
-                                }
-                            }}
-                            height={250}
-                            width={350}
+                                options={{
+                                    loop: true,
+                                    autoplay: true,
+                                    animationData: chatroom,
+                                    rendererSettings: {
+                                    preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                className="animation-container-real"
                         />
                     </div>
                 </section>
@@ -68,35 +68,33 @@ function OnboardingDashboard({ user, setUser}) {
                                 preserveAspectRatio: 'xMidYMid slice'
                                 }
                             }}
-                            height={250}
-                            width={350}
+                            className="animation-container-real"
                         />
                     </div>
                     <div className="feature-content-2">
                         <h2>Training Modules</h2>
-                        <p>Empower your team with knowledge through our dynamic training modules...</p>
-                        <Link to="/upload-video" className="feature-link">Upload Training Material</Link>
+                        <p>Dive into our diverse range of modules covering everything from company culture and policies to job-specific tasks and industry insights.</p>
+                        <Link to="/training-modules" className="feature-link">Training Modules</Link>
                     </div>
                 </section>
 
                 <section className="feature-section" data-aos="fade-up">
                     <div className="feature-content">
-                        <h2>Chatroom</h2>
-                        <p>Our integrated chatroom fosters real-time communication and collaboration...</p>
-                        <Link to="/chatroom" className="feature-link">Join the Chatroom</Link>
+                        <h2>Leave Feedback</h2>
+                        <p>We value your input! Share your thoughts on your onboarding experience here.</p>
+                        <Link to="/leave-feedback" className="feature-link">Give Feedback</Link>
                     </div>
                     <div className="feature-image">
                         <Lottie
-                                options={{
-                                    loop: true,
-                                    autoplay: true,
-                                    animationData: chatroom,
-                                    rendererSettings: {
-                                    preserveAspectRatio: 'xMidYMid slice'
-                                    }
-                                }}
-                                height={250}
-                                width={350}
+                            options={{
+                                loop: true,
+                                autoplay: true,
+                                animationData: feedback,
+                                rendererSettings: {
+                                preserveAspectRatio: 'xMidYMid slice'
+                                }
+                            }}
+                            className="animation-container-real"
                         />
                     </div>
                 </section>
