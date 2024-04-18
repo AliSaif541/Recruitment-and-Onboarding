@@ -6,7 +6,8 @@ import FullTimeLabel from "../components/CareersPage/FullTimeLabel";
 import instaLogo from '../images/instaLogo.png'; // Import the instaLogo image
 import twitterLogo from '../images/twitterLogo.png'; // Import the twitterLogo image
 import discordLogo from '../images/discordLogo.png'; // Import the discordLogo image
-
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Home() {
   const [jobs, setJobs] = useState([]);
@@ -62,17 +63,15 @@ function Home() {
 
       <div className="job-postings-container">
         <h1 className="our-careers-heading">Job Postings</h1>
-        {/* Job Postings List */}
         {jobs.map((job, index) => (
           <div key={index} className="job-posting-row">
             <div className="job-posting">
-              <h2 className="job-title">{job.title}</h2>
-              <p className="job-description">{job.description}</p>
-              <Link to={`/job-detail/${job.id}`} className="learn-more-btn">Learn More →</Link>
+              <h2 className="job-title">{job.name}</h2>
+              <p className="job-description">{job.description.slice(0,100)}</p>
+              <Link to={`/careers`} className="learn-more-btn">Learn More →</Link>
             </div>
           </div>
         ))}
-        {/* View All Button */}
         {jobs.length > 0 && (
           <div className="view-all-btn-container">
             <Link to="/careers" className="view-all-btn">View All Job Postings</Link>
