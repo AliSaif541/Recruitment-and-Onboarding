@@ -118,22 +118,23 @@ img {
     grid-template-rows: 1fr 2fr 0.5fr 6fr;
     align-items: center;
 }
+
 /* Media Queries for Tablet */
 @media (max-width: 768px) {
-    .SignUp {
+    .Login {
         grid-template-columns: 1fr; /* Single column for smaller devices */
     }
 
-    .Img-Part, .SignUP-Container {
+    .Img-Part, .Input-Container {
         width: 100%;
     }
 
-    .SignUp-Form, .signup-input-div {
+    .Input-Form, .Form-Div, .input-div {
         width: 80%;
         justify-self: center;
     }
 
-    .user-inp {
+    .custom-user-inp {
         width: 100%;
     }
 
