@@ -32,7 +32,7 @@ const OnboardingHeader = () => {
           <Link className="Link" to="/training-modules"><div className="onboarding-header-div">Training Modules</div></Link>
           <Link className="Link" to="/leave-feedback"><div className="onboarding-header-div">Leave Feedback</div></Link>
           <button className="frame-b2-real">
-            {user ? <Link className="Link" onClick={handleLogout} to="/login"><div className="sign-in2-real">Sign Out</div></Link> : <Link className="Link" to="/login"><div className="sign-in2-real">Sign in</div></Link>}
+            {(user !== null) ? <Link className="Link" onClick={handleLogout} to="/login"><div className="sign-in2-real">Sign Out</div></Link> : <Link className="Link" to="/login"><div className="sign-in2-real">Sign in</div></Link>}
             {/* <div className="sign-in2-real">Sign in</div> */}
           </button>
         </div>

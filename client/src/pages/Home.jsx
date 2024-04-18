@@ -9,6 +9,17 @@ import discordLogo from '../images/discordLogo.png'; // Import the discordLogo i
 
 
 function Home() {
+  const [jobs, setJobs] = useState([]);
+
+    useEffect(() => {
+        getJobs()
+    }, []);
+
+    const getJobs = async (e) => {
+        const url = "https://recruitment-and-onboarding-backend.vercel.app/api/job";
+        const response = await axios.get(url);
+        setJobs(response.data.slice(0, 2));
+    }
 
   return (
     <div className="company-website-homepage">
@@ -51,28 +62,22 @@ function Home() {
 
       <div className="job-postings-container">
         <h1 className="our-careers-heading">Job Postings</h1>
-
-        {/* Job #1 */}
-        <div className="job-posting-row">
-          <div className="job-posting">
-            <h2 className="job-title">Software Engineer</h2>
-            <p className="job-description">Join our team as a Software Engineer and work on exciting projects that push the boundaries of innovation. We're looking for creative problem-solvers who are passionate about technology.</p>
-            <Link to="/job-detail/1" className="learn-more-btn">Learn More →</Link>
+        {/* Job Postings List */}
+        {jobs.map((job, index) => (
+          <div key={index} className="job-posting-row">
+            <div className="job-posting">
+              <h2 className="job-title">{job.title}</h2>
+              <p className="job-description">{job.description}</p>
+              <Link to={`/job-detail/${job.id}`} className="learn-more-btn">Learn More →</Link>
+            </div>
           </div>
-        </div>
-
-        {/* Job #2 */}
-        <div className="job-posting-row">
-          <div className="job-posting">
-            <h2 className="job-title">Quality Assurance Analyst</h2>
-            <p className="job-description">We're seeking a detail-oriented Quality Assurance Analyst to ensure the quality and reliability of our software products. Join us in maintaining high standards and delivering exceptional user experiences.</p>
-            <Link to="/job-detail/2" className="learn-more-btn">Learn More →</Link>
+        ))}
+        {/* View All Button */}
+        {jobs.length > 0 && (
+          <div className="view-all-btn-container">
+            <Link to="/careers" className="view-all-btn">View All Job Postings</Link>
           </div>
-        </div>
-
-        <div className="view-all-btn-container">
-          <Link to="/careers" className="view-all-btn">View All Job Postings</Link>
-        </div>
+        )}
       </div>
 
       <div className="contact-us-containerhome">
