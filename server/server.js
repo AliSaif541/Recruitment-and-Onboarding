@@ -34,7 +34,7 @@ mongoose.connect(process.env.MONG_URL)
 
 const io = new Server(server, {
     cors: {
-      origin: `http://localhost:3000`,
+      origin: `https://recruitment-and-onboarding.vercel.app`,
       methods: ["GET", "POST"],
     },
     // https://recruitment-and-onboarding.vercel.app/

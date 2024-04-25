@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import io from "socket.io-client";
 import '../../styles/Onboarding/ChatRoom.css';
 
-const socket = io.connect("http://localhost:9000");
+const socket = io.connect("https://recruitment-and-onboarding-backend.vercel.app/");
 
 const Chatroom = ({ user, setUser }) => {
     const [messages, setMessages] = useState([]);
@@ -34,7 +34,7 @@ const Chatroom = ({ user, setUser }) => {
     const fetchMessages = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://localhost:9000/messages');
+            const response = await fetch('https://recruitment-and-onboarding-backend.vercel.app/messages');
             const data = await response.json();
             const sortedMessages = data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
             setMessages(sortedMessages);
@@ -48,7 +48,7 @@ const Chatroom = ({ user, setUser }) => {
     const sendMessage = async () => {
         if (!message.trim()) return;
         try {
-            await fetch('http://localhost:9000/messages', {
+            await fetch('https://recruitment-and-onboarding-backend.vercel.app/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
