@@ -12,7 +12,7 @@ function UploadVideo({user, setUser}) {
   const [imageUrl, setImageUrl] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [trainingModule, setTrainingModule] = useState('');
+  const [trainingModule, setTrainingModule] = useState('Software Engineering');
   const [uploadReady, setUploadReady] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -30,7 +30,7 @@ function UploadVideo({user, setUser}) {
     if (file) {
       const storageRef = firebase.storage().ref();
       const fileRef = storageRef.child(file.name);
-      setErrorMsg('Uploading data...'); // Display uploading message
+      setErrorMsg('Uploading data...');
       fileRef.put(file).then(() => {
         fileRef.getDownloadURL().then(url => {
           setImageUrl(url);
@@ -63,7 +63,8 @@ function UploadVideo({user, setUser}) {
     };
 
     try {
-      setErrorMsg('Uploading data...'); // Display uploading message
+      // setErrorMsg('Uploading data...');
+      console.log("videoData: ", videoData);
       await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/video', videoData);
       setErrorMsg('Video uploaded successfully');
     } catch (error) {

@@ -30,7 +30,7 @@ conn.once('open', () => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-router.post('/', upload.single('resume'), async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         
         const job = await Job.findOne({ _id: req.body.jobID });
@@ -63,7 +63,7 @@ router.post('/', upload.single('resume'), async (req, res) => {
             skills: req.body.skills,
             education: JSON.parse(req.body.education), 
             experience: JSON.parse(req.body.experience),
-            resume: req.file.buffer.toString('base64'),
+            resume: req.body.resume,
             rating: (score/100)*5,
             stage: req.body.stage,
             jobID: req.body.jobID

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import firebase from "firebase/compat/app";
+import 'firebase/compat/storage';
 import axios from 'axios';
 import "../styles/jobForm.css"
 
@@ -20,7 +22,7 @@ const JobForm = ({ currentJob }) => {
       { title: '', company: '', from: '', to: '', rolesResponsibilities: '' }
     ],
     skills: [],
-    resume: null,
+    resume: '',
     rating: '0',
     stage: 'applicant',
     jobID: currentJob._id,
@@ -46,8 +48,20 @@ const JobForm = ({ currentJob }) => {
     setJobApplicant({ ...jobApplicant, experience: updatedExperience });
   };
 
-  const handleFileChange = (e) => {
-    setJobApplicant({ ...jobApplicant, resume: e.target.files[0] });
+  const handleFileChange = async (e) => {
+    const file = e.target.files[0];
+    const storageRef = firebase.storage().ref();
+    const fileRef = storageRef.child(file.name);
+    try {
+      fileRef.put(file).then(() => {
+        fileRef.getDownloadURL().then(url => {
+          setJobApplicant({ ...jobApplicant, resume: url });
+        });
+      });
+    } catch (error) {
+      console.error('Error uploading resume:', error);
+      setError('Error uploading resume');
+    }
   };
 
   const handleAddEducation = () => {
@@ -86,25 +100,21 @@ const JobForm = ({ currentJob }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const formData = new FormData();
-    Object.entries(jobApplicant).forEach(([key, value]) => {
-      if (key === 'education' || key === 'experience') {
-        formData.append(key, JSON.stringify(value));
-      } else if (key === 'skills') {
-        value.forEach((skill) => {
-          formData.append('skills', skill);
-        });
-      } else {
-        formData.append(key, value);
-      }
-    });
+    // const formData = new FormData();
+    // Object.entries(jobApplicant).forEach(([key, value]) => {
+    //   if (key === 'education' || key === 'experience') {
+    //     formData.append(key, JSON.stringify(value));
+    //   } else if (key === 'skills') {
+    //     value.forEach((skill) => {
+    //       formData.append('skills', skill);
+    //     });
+    //   } else {
+    //     formData.append(key, value);
+    //   }
+    // });
 
     try {
-      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant', jobApplicant);
       setError('Application Submitted successfully');
     } catch (error) {
       console.error('Error uploading data:', error);
