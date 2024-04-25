@@ -1,26 +1,24 @@
-.box {
-  position: relative;
-  display: grid;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  margin: 10px;
-}
-
-.profile-info {
-  text-align: center;
+.box-userbody {
+  margin-left: 25px;
 }
 
 .profile-info h2 {
   color: #16BBB2;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 30px;
   margin: 0;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-.profile-info p {
-  margin: 5px 0 0;
+.text-box-container h3, .skills h3, .candidate-note h3, .resume-container h3, .actions h3 {
+  color: #16BBB2;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.text-box-container p, .skills p, .candidate-note p {
+  font-size: 15px;
 }
 
 .location {
@@ -33,7 +31,6 @@
 .location-item {
   display: grid;
   justify-items: center;
-  flex-direction: column;
 }
 
 .location-item span {
@@ -46,53 +43,6 @@
   color: #000000;
 }
 
-.text-box-container {
-  display: grid;
-  margin-top: 20px;
-  padding: 0px;
-}
-
-.text-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-
-.text-box-header {
-  grid-column: span 2; 
-  font-weight: bold;
-  font-size: 1.8rem;
-  text-align: center;
-  justify-self: center;
-  color: #16BBB2;
-  margin-top: 20px;
-}
-
-
-.text-box-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #16BBB2;
-}
-
-.div-map {
-  justify-self: center;
-}
-
-.skills {
-  margin-top: 15px;
-  /* display: grid; */
-  margin-bottom: 15px;
-  text-align: center;
-  /* justify-items: center; */
-}
-
-.skills h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .skill-item {
   display: inline-block;
   padding: 10px 15px;
@@ -103,26 +53,12 @@
   margin-bottom: 10px;
   margin-top: 20px;
 }
-
-.candidate-note {
-  margin-top: 5px;
-}
-
-.candidate-note h3 {
-  font-weight: bold;
-}
-
-.candidate-note p {
-  text-align: center;
-  margin: 0;
-}
-
-.actions {
-  margin-top: 20px;
-  display: flex;
+.actions-btn {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px;
   justify-content: center;
-  gap: 80px;
-}
+} 
 
 .resume-container {
   margin-top: 15px;
@@ -157,5 +93,21 @@
 
 .schedule-interview:hover {
   cursor: pointer;
-  background-color: #339392;;
+  background-color: #339392;
+}
+
+@media (max-width: 768px) {
+  .location {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+    gap: 20px;
+  }
+  
+  .location-item {
+    display: grid;
+    justify-items: center;
+  }
 }

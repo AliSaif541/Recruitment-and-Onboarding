@@ -31,7 +31,7 @@ function UserBody({ currentApplicant }) {
     };
 
     return (
-        <div className="box">
+        <div className="box-userbody">
             <div className="profile-info">
                 <h2>{currentApplicant.name}</h2>
             </div>
@@ -90,8 +90,11 @@ function UserBody({ currentApplicant }) {
                 </div>
             </div>
             <div className="actions">
-                <button onClick={handleRejection} className="schedule-interview">Reject Candidate</button>
-                <Link className="Link" to={`/interview`}><button className="schedule-interview">Schedule Interview</button></Link>
+                <h3 className="text-box-header">Applicant Future</h3>
+                <div className="actions-btn">
+                    <button onClick={handleRejection} className="schedule-interview">Reject Candidate</button>
+                    <Link className="Link" to={`/interview`}><button className="schedule-interview">Schedule Interview</button></Link>
+                </div>
             </div>
         </div>
     );

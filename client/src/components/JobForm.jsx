@@ -104,19 +104,6 @@ const JobForm = ({ currentJob }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // const formData = new FormData();
-    // Object.entries(jobApplicant).forEach(([key, value]) => {
-    //   if (key === 'education' || key === 'experience') {
-    //     formData.append(key, JSON.stringify(value));
-    //   } else if (key === 'skills') {
-    //     value.forEach((skill) => {
-    //       formData.append('skills', skill);
-    //     });
-    //   } else {
-    //     formData.append(key, value);
-    //   }
-    // });
 
     try {
       console.log(jobApplicant);

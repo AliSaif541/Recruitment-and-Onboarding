@@ -31,7 +31,7 @@ const Header = ({ user, setUser }) => {
           <Link className="Link" to="/careers"><div>Career Page</div></Link>
           <Link className="Link" to="/contactus"><div>Contact Us</div></Link>
           <button className="frame-b2-real">
-            {(user !== null) ? <Link onClick={handleLogout} className="Link" to="/login"><div className="sign-in2-real">Sign in</div></Link> : <Link className="Link" onClick={handleLogout} to="/login"><div className="sign-in2-real">Sign Out</div></Link>}
+            {(user === null) ? <Link onClick={handleLogout} className="Link" to="/login"><div className="sign-in2-real">Sign in</div></Link> : <Link className="Link" onClick={handleLogout} to="/login"><div className="sign-in2-real">Sign Out</div></Link>}
             {/* <div className="sign-in2-real">Sign in</div> */}
           </button>
         </div>

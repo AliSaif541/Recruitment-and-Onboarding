@@ -11,7 +11,7 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import ReviewHead from '../../components/Onboarding/ReviewHead';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
-function LeaveFeedback() {
+function LeaveFeedback({ user, setUser}) {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState('');
   const [error, setError] = useState(null);
@@ -24,19 +24,11 @@ function LeaveFeedback() {
     setReview(e.target.value);
   };
 
-  const token = localStorage.getItem("token");
-  let user = null;
-
-  if (token) {
-    user = jwtDecode(token);
-    console.log("userReview: ", user);
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const url = "http://localhost:9000/api/review";
+      const url = "https://recruitment-and-onboarding-backend.vercel.app/api/review";
       const date = new Date(); // Get current date
       const { data: res } = await axios.post(url, {
         rating,
@@ -49,7 +41,7 @@ function LeaveFeedback() {
       setError("Review Submitted Succesfully!");
 
     } catch (error) {
-      setError(error.response.data.message);
+      setError(error.response.message.toString());
     }
   };
 
@@ -57,7 +49,7 @@ function LeaveFeedback() {
 
   return (
     <div>
-      <OnboardingHeader />
+      <OnboardingHeader user={user} setUser={setUser} />
       <TrainingComponentHead title={"Leave Feedback"} description={description} animation={animation} />
       <h1 className='review-h1'>Write Review</h1>
       <p className='review-p'>Give us your honest review. Don't hesitate to critique!</p>

@@ -86,7 +86,7 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <span className="location-label">Location - </span>
                 <span className="location-value">{applicant.city}</span>
                 <span className="type-label"> Rating - </span>
-                <span className="type-value">{` `}{applicant.rating}</span>
+                <span className="type-value">{` ${applicant.rating.toFixed(2)}`}</span>
               </p>
               <hr className="divider" />
               <div className="skills-candidate">
@@ -116,7 +116,7 @@ function CandidateList({ applicants, setCurrentApplicant }) {
                 <span className="location-label">Location - </span>
                 <span className="location-value">{applicant.city}</span>
                 <span className="type-label"> Rating - </span>
-                <span className="type-value">{` `}{applicant.rating}</span>
+                <span className="type-value">` ${applicant.rating.toFixed(2)}`</span>
               </p>
               <hr className="divider" />
               <div className="skills-candidate">

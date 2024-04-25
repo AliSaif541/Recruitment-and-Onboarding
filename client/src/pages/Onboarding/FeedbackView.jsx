@@ -18,7 +18,7 @@ function FeedbackView({ user, setUser}) {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get('http://localhost:9000/api/review');
+      const response = await axios.get('https://recruitment-and-onboarding-backend.vercel.app/api/review');
       let data = await response.data;
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
       setReviews(data);

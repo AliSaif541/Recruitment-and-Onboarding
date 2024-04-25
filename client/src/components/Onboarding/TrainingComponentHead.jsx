@@ -10,7 +10,7 @@ const TrainingComponentHead = ({title, description, animation}) => {
                 <h2 className="info-text-h2" >{title}</h2>
                 <p className="info-text-p">{description} </p>
             </div>
-            <div className="animation-container">
+            <div className="animation-container-head">
                 <Lottie
                 options={{
                     loop: true,
@@ -20,8 +20,8 @@ const TrainingComponentHead = ({title, description, animation}) => {
                     preserveAspectRatio: 'xMidYMid slice'
                     }
                 }}
-                max-height={300}
-                max-width={350}
+                // height={300}
+                // width={400}
                 />
             </div>
         </div>
