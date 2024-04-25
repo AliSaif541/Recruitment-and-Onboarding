@@ -49,12 +49,15 @@ const JobForm = ({ currentJob }) => {
   };
 
   const handleFileChange = async (e) => {
+    console.log("Hello");
     const file = e.target.files[0];
     const storageRef = firebase.storage().ref();
     const fileRef = storageRef.child(file.name);
+    console.log("Uploading file ");
     try {
       fileRef.put(file).then(() => {
         fileRef.getDownloadURL().then(url => {
+          console.log("Resume url: " + url);
           setJobApplicant({ ...jobApplicant, resume: url });
         });
       });
@@ -114,6 +117,7 @@ const JobForm = ({ currentJob }) => {
     // });
 
     try {
+      console.log(jobApplicant);
       await axios.post('https://recruitment-and-onboarding-backend.vercel.app/api/jobApplicant', jobApplicant);
       setError('Application Submitted successfully');
     } catch (error) {

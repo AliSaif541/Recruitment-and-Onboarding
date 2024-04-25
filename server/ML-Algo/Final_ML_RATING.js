@@ -32,10 +32,10 @@ function jobRecruiter(Skills_Needed, Job_Description, Job_Requirements, Job_Type
     var jobRequirementsStr = arrayToCSV(Job_Requirements);
     var skillsStr = arrayToCSV(Skills);
 
-    var education = JSON.parse(Education); 
-    var educationStr = educationExperienceToCSV(education);
-    var experience = JSON.parse(Experience); 
-    var experienceStr = experienceToCSV(experience);
+    // var education = JSON.parse(Education); 
+    var educationStr = educationExperienceToCSV(Education);
+    // var experience = JSON.parse(Experience); 
+    var experienceStr = experienceToCSV(Experience);
 
     var cleanedSkillsNeeded = cleanText(skillsNeededStr);
     var cleanedJobDescription = cleanText(Job_Description);
