@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import io from "socket.io-client";
 import '../../styles/Onboarding/ChatRoom.css';
 
-const socket = io.connect("https://recruitment-and-onboarding-backend.vercel.app/");
+const socket = io.connect("https://recruitment-and-onboarding-backend.vercel.app");
 
 const Chatroom = ({ user, setUser }) => {
     const [messages, setMessages] = useState([]);
