@@ -49,15 +49,17 @@ const JobForm = ({ currentJob }) => {
   };
 
   const handleFileChange = async (e) => {
-    console.log("Hello");
+    // console.log("Hello");
     const file = e.target.files[0];
     const storageRef = firebase.storage().ref();
     const fileRef = storageRef.child(file.name);
-    console.log("Uploading file ");
+    // console.log("Uploading file ");
+    setError("Uploading Resume");
     try {
       fileRef.put(file).then(() => {
         fileRef.getDownloadURL().then(url => {
           console.log("Resume url: " + url);
+          setError("Resume Uploaded");
           setJobApplicant({ ...jobApplicant, resume: url });
         });
       });
