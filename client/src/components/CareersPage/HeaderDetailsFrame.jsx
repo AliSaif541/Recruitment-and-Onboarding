@@ -14,7 +14,7 @@ const HeaderDetailsFrame = ({ setCurrentJob }) => {
     const getJobs = async (e) => {
         const url = "https://recruitment-and-onboarding-backend.vercel.app/api/job";
         const response = await axios.get(url);
-        setJobs(response.data);
+        setJobs(response.data.filter(job => job.active !== "completed"));
     }
 
   return (

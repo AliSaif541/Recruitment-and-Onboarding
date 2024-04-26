@@ -32,7 +32,7 @@ function Home() {
           <p className="about-company1-about">About Company</p>
         </h1>
         <div className="careers-lorem-ipsum-dolor1">
-          Join DEVSINC, the future of software solutions. We are a team of talented and passionate individuals who are dedicated to providing the best software solutions to our clients. We are always looking for new talent to join our team. If you are passionate about software development, testing, or IT consulting, we want to hear from you. Check out our job postings below to see if there is a position that is right for you.
+          Join DEVSINC, the future of software solutions. We are always looking for new talent to join our team. If you are passionate about software development, testing, or IT consulting, we want to hear from you. Check out our job postings below to see if there is a position that is right for you.
         </div>
       </div>
 

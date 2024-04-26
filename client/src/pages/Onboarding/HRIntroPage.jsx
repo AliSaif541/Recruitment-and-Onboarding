@@ -12,7 +12,7 @@ import TrainingComponentHead from '../../components/Onboarding/TrainingComponent
 import Footer from '../../components/Footer';
 
 function HRIntroPage({ user, setUser}) {
-    const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
+    const description = "From viewing feedback to uploading training materials, and helping other employees in the chatroom, our platform offers tools to foster communication, collaboration and efficiency within your organization.";
 
     return (
         <div>

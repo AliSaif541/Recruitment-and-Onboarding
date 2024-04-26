@@ -15,7 +15,7 @@ import Footer from '../../components/Footer';
 import OnboardingHeader from '../../components/OnboardingHeader';
 
 function OnboardingDashboard({ user, setUser}) {
-    const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
+    const description = "Get ready for an immersive onboarding experience designed to introduce you to our company culture, processes, and your fellow colleagues. Dive into our diverse range of features, including real-time communication in our integrated chatroom, comprehensive training modules covering company culture, policies, and job-specific tasks, and the opportunity to provide feedback to help us improve your onboarding journey.";
 
     return (
         <div>
@@ -31,7 +31,7 @@ function OnboardingDashboard({ user, setUser}) {
             </div>
             <div className="dashboard-title-container">
                 <h1 className="dashboard-title">Our Diverse Onboarding Platform</h1>
-                <p className="dashboard-subtext">Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.</p>
+                <p className="dashboard-subtext">Get ready for an immersive onboarding experience designed to introduce you to our company culture, processes, and your fellow colleagues. Let's embark on this journey together and make your transition into our team seamless and enjoyable.</p>
             </div>
 
 

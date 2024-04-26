@@ -34,18 +34,13 @@ mongoose.connect(process.env.MONG_URL)
 
 const io = new Server(server, {
     cors: {
-      origin: `https://recruitment-and-onboarding.vercel.app/chatroom`,
+      origin: `https://recruitment-and-onboarding.vercel.app`,
       methods: ["GET", "POST"],
     },
-    // https://recruitment-and-onboarding.vercel.app/
 });
 
 io.on("connection", (socket) => {
-  console.log("USER CONNECTED:", socket.id);
-
-//   socket.on("join_room", (roomId) => {
-//     socket.join(roomId);
-//   });
+  // console.log("USER CONNECTED:", socket.id);
 
   socket.on("message_sent", (data) => {
     io.emit("message_sent", data);

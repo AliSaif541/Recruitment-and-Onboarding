@@ -86,7 +86,7 @@ function UserBody({ currentApplicant }) {
             <div className='resume-container'>
                 <h3 className="text-box-header">Resume</h3>
                 <div className='resume-div'>
-                    <p onClick={viewResume} className="see-resume">See Resume</p>
+                    <a href={currentApplicant.resume} className="see-resume">See Resume</a>
                 </div>
             </div>
             <div className="actions">

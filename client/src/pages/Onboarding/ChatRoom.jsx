@@ -1,35 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
-import HRHeader from '../../components/HRHeader';
-import OnboardingHeader from '../../components/OnboardingHeader';
+import { jwtDecode } from 'jwt-decode';
+import '../../styles/Onboarding/ChatRoom.css';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import animation from '../../images/Animation-ChatRoom.json';
 import TrainingComponentHead from '../../components/Onboarding/TrainingComponentHead';
-import Footer from '../../components/Footer';
-import io from "socket.io-client";
-import '../../styles/Onboarding/ChatRoom.css';
-
-const socket = io.connect("https://recruitment-and-onboarding-backend.vercel.app");
+import OnboardingHeader from '../../components/OnboardingHeader';
+import HRHeader from '../../components/HRHeader';
 
 const Chatroom = ({ user, setUser }) => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-    const messagesEndRef = useRef(null); // Ref for scrolling to the bottom
+    const chatroomRef = useRef(null);
 
     const userName = user ? user.name : '';
-
-    useEffect(() => {
-        // Scroll to the bottom when messages change
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages]);
-
-    useEffect(() => {
-        socket.on("message_sent", (data) => {
-            fetchMessages();
-        });
-
-        fetchMessages();
-
-    }, []);
 
     const fetchMessages = async () => {
         setIsLoading(true);
@@ -55,12 +40,24 @@ const Chatroom = ({ user, setUser }) => {
                 },
                 body: JSON.stringify({ userName, message }),
             });
-            socket.emit("message_sent");
             setMessage('');
+            const currentScrollPosition = chatroomRef.current.scrollTop;
+            fetchMessages().then(() => {
+                chatroomRef.current.scrollTop = currentScrollPosition;
+            });
         } catch (error) {
             console.error('Error sending message:', error);
         }
     };
+
+    useEffect(() => {
+        const currentScrollPosition = chatroomRef.current.scrollTop;
+        fetchMessages().then(() => {
+            chatroomRef.current.scrollTop = currentScrollPosition;
+        });
+        const interval = setInterval(fetchMessages, 7500);
+        return () => clearInterval(interval);
+    }, []);
 
     const formatTimestamp = (timestamp) => {
         const date = new Date(timestamp);
@@ -69,9 +66,7 @@ const Chatroom = ({ user, setUser }) => {
         return `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
     };
 
-    const description = "Our comprehensive HR platform is designed to facilitate a streamlined workflow. Our comprehensive HR platform is designed to facilitate a streamlined workflow.";
-
-
+    const description = "Welcome to our integrated chatroom, where HR professionals and new employees can connect in real-time. Engage in seamless communication, ask questions, seek assistance, and foster collaboration within your organization.";
     return (
         <div>
             {user.role === "HR" ? <HRHeader user={user} setUser={setUser} /> : <OnboardingHeader user={user} setUser={setUser} />}
@@ -81,22 +76,19 @@ const Chatroom = ({ user, setUser }) => {
                     {isLoading ? (
                         <div>Loading messages...</div>
                     ) : (
-                        <>
-                            {messages.map((message) => (
-                                <div key={message._id} className={`message ${message.user === userName ? 'own-message' : 'other-message'}`}>
-                                    <div className="message-content">
-                                        <div className="message-header">
-                                            <span className="user-name">{message.user}</span>
-                                            <span className="timestamp">{formatTimestamp(message.timestamp)}</span>
-                                        </div>
-                                        <div className="message-text">{message.message}</div>
+                        messages.map((message) => (
+                            <div key={message._id} className={`message ${message.user === userName ? 'own-message' : 'other-message'}`}>
+                                <div className="message-content">
+                                    <div className="message-header">
+                                        <span className="user-name">{message.user}</span>
+                                        <span className="timestamp">{formatTimestamp(message.timestamp)}</span>
                                     </div>
+                                    <div className="message-text">{message.message}</div>
                                 </div>
-                            ))}
-                            {/* Empty div to scroll to when new messages are added */}
-                            <div ref={messagesEndRef} />
-                        </>
+                            </div>
+                        ))
                     )}
+                    <div ref={chatroomRef}></div>
                 </div>
                 <div className="message-input-container">
                     <input
@@ -105,7 +97,6 @@ const Chatroom = ({ user, setUser }) => {
                         placeholder="Type your message..."
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        // onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                     />
                     <button className="send-button" onClick={sendMessage}>
                         Send
