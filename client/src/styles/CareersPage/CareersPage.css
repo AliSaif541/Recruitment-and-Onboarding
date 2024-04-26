@@ -1,39 +1,37 @@
-  .time-label {
-    display: flex;
-    justify-content: flex-start;
-    box-sizing: border-box;
-  }
-  
-  
-  .careers-page,
-  .time-label {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .time-label {
-    width: 1367px;
-    /* padding: 0 20px; */
-    gap: 64px 0;
-    max-width: 100%;
-  }
-  
-  .careers-page {
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    overflow: hidden;
-    gap: 45px 0;
-    letter-spacing: normal;
-  }
-  
-  @media screen and (max-width: 750px) {
-    .time-label {
-      gap: 64px 0;
-    }
-    .careers-page {
-      gap: 45px 0;
-    }
-  }
+.time-label {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
 
-  
+
+.careers-page,
+.time-label {
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-label {
+  width: 1367px;
+  /* padding: 0 20px; */
+  gap: 64px 0;
+  max-width: 100%;
+}
+
+.careers-page {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  gap: 45px 0;
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 750px) {
+  .time-label {
+    gap: 64px 0;
+  }
+  .careers-page {
+    gap: 45px 0;
+  }
+}

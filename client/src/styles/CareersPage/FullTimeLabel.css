@@ -15,7 +15,7 @@
 .lorem-ipsum-dolor-1 {
   margin: 0;
   position: relative;
-  font-weight: 400;
+  font-weight: 300;
   font-family: inherit;
   display: inline-block;
   flex-shrink: 0;
@@ -34,8 +34,10 @@
   width: 583.9px;
   height: 134.1px;
   font-size: 17px;
-  line-height: 36px;
+  line-height: 20px;
   max-width: 100%;
+  /* word-wrap: break-word;
+  width: 1000px; */
 }
 
 .setup-label-1 {
@@ -49,22 +51,16 @@
 
 .learn-more-1 {
   position: relative;
-  font-size: 17px;
+  font-size: 15px;
   font-family: Actor;
   color: #fff;
   text-align: left;
 }
 
-.hago-label-child-1 {
-  height: 14.7px;
-  width: 20px;
-  position: relative;
-}
 
 .hago-label-1 {
   cursor: pointer;
   border: 0;
-  margin-top: -40px;
   padding: 10px 31px 10px 30px;
   background-color: transparent;
   border-radius: 100px;
@@ -175,9 +171,48 @@
   }
 }
 
+/* Responsive adjustments */
 @media screen and (max-width: 450px) {
   .join-our-team-container-1 {
     font-size: 23px;
     line-height: 34px;
+  }
+
+  /* Align the learn more button with text properly */
+  .hago-label-1 {
+    margin-top: 20px; /* Adjust margin-top to position the button correctly */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+    /* Hide the learn more button on mobile */
+    .learn-more-1,
+    .hago-label-1 {
+      display: none;
+    }
+  
+    /* Other responsive adjustments as needed */
+    .lorem-ipsum-dolor-1 {
+      width: auto; /* Auto width for flexible adjustment */
+      padding: 0 15px; /* Add padding to prevent text touching the screen edges */
+    }
+
+  /* Adjust the layout of icons and text */
+  .hago-label-child-1,
+  .country-marker-icon-1 {
+    width: auto; /* Let the icon take as much space as it needs */
+    height: auto; /* Same for height */
+    display: block; /* Stack the icon if necessary */
+    margin: 0 auto; /* Center the icon */
+  }
+
+  .lorem-ipsum-dolor-1 {
+    width: 583.9px;
+    height: 134.1px;
+    font-size: 17px;
+    line-height: 20px;
+    max-width: 100%;
+    margin-bottom: 90px;
+    /* word-wrap: break-word;
+    width: 1000px; */
   }
 }

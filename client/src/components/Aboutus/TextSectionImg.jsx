@@ -24,17 +24,14 @@ const TextSectionImg = () => {
             </h1>
             <div className="at-devsinc-the-container">
               <span>
-                At <span className="omar-text">DevSinc</span>, the chief determination is to clear the minds of our students
-                about their goals, while making them consistent in their
-                ambitions and pushing them to be confident for their journey
-                towards the course of time.
+                At <span className="omar-text">DevSinc</span>, our commitment is to lead in the digital transformation, providing globally agile services to clients in different countries. In these times of recent changes, our ever-growing pool of resilient tech heads drives the IT world toward a future where innovation meets the demands of an ever-evolving digital era.
               </span>
             </div>
           </div>
           <div className="arrow-forward-rounded-frame">
             <div className="you-will-find-container">
               <p className="you-will-find">
-                You will find every little thing on the internet with just a click of your hand, but here we believe that without knowledge and practice, the internet may even fail you in your life.
+              Our determination fuels relentless pursuit, turning challenges intOur one-in-all business models.
               </p>
             </div>
           </div>

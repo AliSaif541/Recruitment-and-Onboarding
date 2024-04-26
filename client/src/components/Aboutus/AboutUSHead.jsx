@@ -19,17 +19,12 @@ const AboutUSHead = () => {
           <h1 className="about-us2-ab">About Us</h1>
           <h1 className="devsinc-providing-the-container-ab">
             <span className="providing-the-best-ab">
-              <span className="omar-text">DEVSINC</span> providing the best opportunities to students around the globe.
+              <span className="omar-text">DEVSINC</span> providing the best opportunities to people around the globe.
             </span>
           </h1>
           <div className="devsinc-is-a-container-ab">
             <span className="is-a-uiux-ab">
-              <span className="omar-text">DevSinc</span> is a UI/UX Design Academy in Delhi involved in User Experience
-              and User Interface Training and Consulting. It was started in 2023
-              and passionate towards User Interface Design/ User Experience
-              Design, Human Computer Interaction Design. We are all about gushing
-              towards competence to acquire knowledge and have a wide
-              understanding by offering top courses in UI/UX design which are required for your personal growth.
+              <span className="omar-text">DevSinc</span> helps companies deliver innovative technology solutions to power their growth by unlocking access to passionate and experienced engineers and solution providers. While Devsinc has been growing in a tech landscape for more than a decade, I recognize the challenges businesses face in managing digital systems. As the world transforms into a global village, our vision goes beyond. We aim to reimagine IT solutions into smart, agile, and AI-enhanced digital assets.
             </span>
           </div>
           <button className="button2-ab" onClick={handleJoinUsClick}>
